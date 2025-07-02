@@ -1,0 +1,11 @@
+#!/bin/tcsh
+
+#SBATCH --account=local
+#SBATCH --partition=COMPUTE
+#SBATCH --array=7
+#SBATCH --cpus-per-task 1
+#SBATCH --mem-per-cpu 100M
+
+./$script ${SLURM_ARRAY_TASK_ID} $plist $dplist $demmask $id
+
+
