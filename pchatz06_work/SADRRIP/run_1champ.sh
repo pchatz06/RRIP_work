@@ -10,8 +10,8 @@
 # setenv RESULTS $v1
 # setenv SCRIPTS $v2
 
-setenv RESULTS /home/mzako001/Thesis_Gcc/SADRRIP/Results
-setenv SCRIPTS /home/mzako001/Thesis_Gcc/SADRRIP
+setenv RESULTS /home/pchatz06/RRIP_work/pchatz06_work/SADRRIP/Results
+setenv SCRIPTS /home/pchatz06/RRIP_work/pchatz06_work/SADRRIP
 
 
 setenv TRACE_DIR /mnt/beegfs/iconst01/spec2017/

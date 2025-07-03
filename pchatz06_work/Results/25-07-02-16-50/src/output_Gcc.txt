@@ -1,0 +1,4788 @@
+nohup: ignoring input
+New compilationDir is /home/mzako001/Thesis_Gcc/Results/25-04-18-17-35/assembly_compilation/
+Debug Inputs
+Population size: 50
+Mutation Rate: 0.02
+Crossover Rate: 1.0
+Crossover Type: one point crossover
+Ellitism: true
+Selection Method: Tournament
+Tournament selection size: 5
+ResultsDir: /home/mzako001/Thesis_Gcc/Results/
+compilationDir: /home/mzako001/Thesis_Gcc/Results/25-04-18-17-35/assembly_compilation/
+loop Size: 20
+Percentage clue? :True
+amount per instruction type in the loop:
+{'LOAD': 5, 'RFO': 5, 'PREFETCH': 5, 'WRITEBACK': 5}
+actual loop size is 20
+Available operands
+
+id Dem
+values 
+['%0', '%1', '%2', '%3', '%4']
+max 4294967296
+min 0
+stride 1
+
+id Inse
+values 
+['%0', '%1', '%2', '%3']
+max 4294967296
+min 0
+stride 1
+
+id SelfProm
+values 
+['%0', '%1', '%2']
+max 4294967296
+min 0
+stride 1
+
+End of available operands
+
+Available instructions
+
+name Demotion_Clean
+type LOAD
+format L_DemClean op1
+numOfOperands 1
+	Dem
+
+name Demotion_Dirty
+type LOAD
+format L_DemDirty op1
+numOfOperands 1
+	Dem
+
+name Insertion
+type LOAD
+format L_Insert op1
+numOfOperands 1
+	Inse
+
+name SelfPromotion_Clean
+type LOAD
+format L_SPromClean op1
+numOfOperands 1
+	SelfProm
+
+name SelfPromotion_Dirty
+type LOAD
+format L_SPromDirty op1
+numOfOperands 1
+	SelfProm
+
+name Demotion_Clean
+type RFO
+format R_DemClean op1
+numOfOperands 1
+	Dem
+
+name Demotion_Dirty
+type RFO
+format R_DemDirty op1
+numOfOperands 1
+	Dem
+
+name Insertion
+type RFO
+format R_Insert op1
+numOfOperands 1
+	Inse
+
+name SelfPromotion_Clean
+type RFO
+format R_SPromClean op1
+numOfOperands 1
+	SelfProm
+
+name SelfPromotion_Dirty
+type RFO
+format R_SPromDirty op1
+numOfOperands 1
+	SelfProm
+
+name Demotion_Clean
+type PREFETCH
+format P_DemClean op1
+numOfOperands 1
+	Dem
+
+name Demotion_Dirty
+type PREFETCH
+format P_DemDirty op1
+numOfOperands 1
+	Dem
+
+name Insertion
+type PREFETCH
+format P_Insert op1
+numOfOperands 1
+	Inse
+
+name SelfPromotion_Clean
+type PREFETCH
+format P_SPromClean op1
+numOfOperands 1
+	SelfProm
+
+name SelfPromotion_Dirty
+type PREFETCH
+format P_SPromDirty op1
+numOfOperands 1
+	SelfProm
+
+name Demotion_Clean
+type WRITEBACK
+format W_DemClean op1
+numOfOperands 1
+	Dem
+
+name Demotion_Dirty
+type WRITEBACK
+format W_DemDirty op1
+numOfOperands 1
+	Dem
+
+name Insertion
+type WRITEBACK
+format W_Insert op1
+numOfOperands 1
+	Inse
+
+name SelfPromotion_Clean
+type WRITEBACK
+format W_SPromClean op1
+numOfOperands 1
+	SelfProm
+
+name SelfPromotion_Dirty
+type WRITEBACK
+format W_SPromDirty op1
+numOfOperands 1
+	SelfProm
+
+End of available instructions
+
+register initialization
+End of  inputs
+
+Parent 1 chosen : 25
+Parent 2 chosen : 7
+The children created are 51 and 52
+Parent 1 chosen : 28
+Parent 2 chosen : 25
+The children created are 53 and 54
+Parent 1 chosen : 24
+Parent 2 chosen : 15
+The children created are 55 and 56
+The instruction from individual 56 was mutated from R_DemClean %0 to R_DemClean %4
+The instruction from individual 56 was mutated from R_Insert %3 to R_Insert %0
+Parent 1 chosen : 12
+Parent 2 chosen : 7
+The children created are 57 and 58
+Parent 1 chosen : 9
+Parent 2 chosen : 21
+The children created are 59 and 60
+Parent 1 chosen : 49
+Parent 2 chosen : 25
+The children created are 61 and 62
+The instruction from individual 61 was mutated from W_SPromClean %2 to W_SPromClean %2
+The instruction from individual 62 was mutated from W_DemDirty %4 to W_DemDirty %2
+Parent 1 chosen : 11
+Parent 2 chosen : 26
+The children created are 63 and 64
+The instruction from individual 64 was mutated from L_SPromClean %2 to L_SPromClean %0
+Parent 1 chosen : 11
+Parent 2 chosen : 15
+The children created are 65 and 66
+Parent 1 chosen : 9
+Parent 2 chosen : 10
+The children created are 67 and 68
+The instruction from individual 67 was mutated from W_Insert %2 to W_Insert %3
+Parent 1 chosen : 10
+Parent 2 chosen : 49
+The children created are 69 and 70
+The instruction from individual 70 was mutated from L_DemClean %3 to L_DemClean %2
+Parent 1 chosen : 28
+Parent 2 chosen : 36
+The children created are 71 and 72
+The instruction from individual 72 was mutated from P_SPromDirty %2 to P_SPromDirty %0
+Parent 1 chosen : 42
+Parent 2 chosen : 49
+The children created are 73 and 74
+Parent 1 chosen : 38
+Parent 2 chosen : 47
+The children created are 75 and 76
+The instruction from individual 76 was mutated from R_DemDirty %3 to R_DemDirty %4
+Parent 1 chosen : 7
+Parent 2 chosen : 29
+The children created are 77 and 78
+Parent 1 chosen : 11
+Parent 2 chosen : 21
+The children created are 79 and 80
+The instruction from individual 79 was mutated from L_DemDirty %2 to L_DemDirty %0
+The instruction from individual 79 was mutated from R_SPromClean %1 to R_SPromClean %1
+The instruction from individual 80 was mutated from R_DemDirty %1 to R_DemDirty %1
+Parent 1 chosen : 47
+Parent 2 chosen : 15
+The children created are 81 and 82
+The instruction from individual 81 was mutated from W_SPromDirty %0 to W_SPromDirty %2
+Parent 1 chosen : 41
+Parent 2 chosen : 15
+The children created are 83 and 84
+Parent 1 chosen : 25
+Parent 2 chosen : 15
+The children created are 85 and 86
+Parent 1 chosen : 49
+Parent 2 chosen : 9
+The children created are 87 and 88
+The instruction from individual 87 was mutated from R_Insert %2 to R_Insert %3
+The instruction from individual 87 was mutated from P_SPromDirty %0 to P_SPromDirty %2
+Parent 1 chosen : 23
+Parent 2 chosen : 44
+The children created are 89 and 90
+The instruction from individual 89 was mutated from R_Insert %0 to R_Insert %1
+The instruction from individual 90 was mutated from P_DemDirty %4 to P_DemDirty %1
+Parent 1 chosen : 10
+Parent 2 chosen : 23
+The children created are 91 and 92
+The instruction from individual 92 was mutated from P_SPromDirty %0 to P_SPromDirty %1
+The instruction from individual 92 was mutated from W_DemClean %4 to W_DemClean %2
+Parent 1 chosen : 44
+Parent 2 chosen : 47
+The children created are 93 and 94
+Parent 1 chosen : 36
+Parent 2 chosen : 44
+The children created are 95 and 96
+Parent 1 chosen : 13
+Parent 2 chosen : 19
+The children created are 97 and 98
+The instruction from individual 97 was mutated from W_SPromDirty %2 to W_SPromDirty %0
+The instruction from individual 98 was mutated from W_SPromDirty %0 to W_SPromDirty %2
+Parent 1 chosen : 24
+Parent 2 chosen : 28
+The children created are 99 and 100
+Parent 1 chosen : 80
+Parent 2 chosen : 82
+The children created are 101 and 102
+Parent 1 chosen : 69
+Parent 2 chosen : 82
+The children created are 103 and 104
+Parent 1 chosen : 66
+Parent 2 chosen : 68
+The children created are 105 and 106
+Parent 1 chosen : 69
+Parent 2 chosen : 92
+The children created are 107 and 108
+The instruction from individual 107 was mutated from W_SPromDirty %0 to W_SPromDirty %1
+Parent 1 chosen : 66
+Parent 2 chosen : 68
+The children created are 109 and 110
+Parent 1 chosen : 85
+Parent 2 chosen : 92
+The children created are 111 and 112
+Parent 1 chosen : 52
+Parent 2 chosen : 89
+The children created are 113 and 114
+The instruction from individual 114 was mutated from P_Insert %2 to P_Insert %0
+Parent 1 chosen : 91
+Parent 2 chosen : 82
+The children created are 115 and 116
+The instruction from individual 116 was mutated from L_Insert %1 to L_Insert %2
+Parent 1 chosen : 68
+Parent 2 chosen : 84
+The children created are 117 and 118
+Parent 1 chosen : 89
+Parent 2 chosen : 84
+The children created are 119 and 120
+Parent 1 chosen : 92
+Parent 2 chosen : 60
+The children created are 121 and 122
+Parent 1 chosen : 73
+Parent 2 chosen : 55
+The children created are 123 and 124
+The instruction from individual 124 was mutated from P_DemDirty %1 to P_DemDirty %1
+Parent 1 chosen : 80
+Parent 2 chosen : 59
+The children created are 125 and 126
+The instruction from individual 125 was mutated from L_DemDirty %2 to L_DemDirty %1
+The instruction from individual 125 was mutated from P_SPromDirty %0 to P_SPromDirty %0
+Parent 1 chosen : 69
+Parent 2 chosen : 64
+The children created are 127 and 128
+The instruction from individual 127 was mutated from R_SPromClean %0 to R_SPromClean %0
+Parent 1 chosen : 59
+Parent 2 chosen : 66
+The children created are 129 and 130
+The instruction from individual 129 was mutated from R_DemDirty %2 to R_DemDirty %3
+Parent 1 chosen : 68
+Parent 2 chosen : 91
+The children created are 131 and 132
+Parent 1 chosen : 84
+Parent 2 chosen : 69
+The children created are 133 and 134
+The instruction from individual 134 was mutated from P_SPromDirty %2 to P_SPromDirty %1
+Parent 1 chosen : 89
+Parent 2 chosen : 59
+The children created are 135 and 136
+The instruction from individual 135 was mutated from R_DemClean %3 to R_DemClean %2
+The instruction from individual 135 was mutated from W_DemDirty %4 to W_DemDirty %0
+The instruction from individual 136 was mutated from L_SPromClean %0 to L_SPromClean %2
+Parent 1 chosen : 75
+Parent 2 chosen : 89
+The children created are 137 and 138
+Parent 1 chosen : 98
+Parent 2 chosen : 62
+The children created are 139 and 140
+The instruction from individual 139 was mutated from L_Insert %0 to L_Insert %3
+The instruction from individual 139 was mutated from P_DemDirty %3 to P_DemDirty %0
+Parent 1 chosen : 69
+Parent 2 chosen : 67
+The children created are 141 and 142
+Parent 1 chosen : 69
+Parent 2 chosen : 73
+The children created are 143 and 144
+The instruction from individual 143 was mutated from W_DemDirty %4 to W_DemDirty %3
+The instruction from individual 144 was mutated from L_DemClean %2 to L_DemClean %1
+The instruction from individual 144 was mutated from L_SPromClean %0 to L_SPromClean %1
+Parent 1 chosen : 66
+Parent 2 chosen : 82
+The children created are 145 and 146
+Parent 1 chosen : 64
+Parent 2 chosen : 84
+The children created are 147 and 148
+Parent 1 chosen : 82
+Parent 2 chosen : 92
+The children created are 149 and 150
+Parent 1 chosen : 149
+Parent 2 chosen : 115
+The children created are 151 and 152
+Parent 1 chosen : 104
+Parent 2 chosen : 120
+The children created are 153 and 154
+The instruction from individual 154 was mutated from R_DemDirty %1 to R_DemDirty %0
+Parent 1 chosen : 102
+Parent 2 chosen : 146
+The children created are 155 and 156
+Parent 1 chosen : 133
+Parent 2 chosen : 84
+The children created are 157 and 158
+Parent 1 chosen : 149
+Parent 2 chosen : 145
+The children created are 159 and 160
+Parent 1 chosen : 138
+Parent 2 chosen : 131
+The children created are 161 and 162
+Parent 1 chosen : 145
+Parent 2 chosen : 104
+The children created are 163 and 164
+The instruction from individual 163 was mutated from L_DemClean %4 to L_DemClean %4
+Parent 1 chosen : 84
+Parent 2 chosen : 141
+The children created are 165 and 166
+The instruction from individual 166 was mutated from L_DemDirty %3 to L_DemDirty %0
+The instruction from individual 166 was mutated from W_DemDirty %3 to W_DemDirty %1
+Parent 1 chosen : 104
+Parent 2 chosen : 118
+The children created are 167 and 168
+Parent 1 chosen : 120
+Parent 2 chosen : 147
+The children created are 169 and 170
+The instruction from individual 170 was mutated from L_DemDirty %3 to L_DemDirty %4
+Parent 1 chosen : 109
+Parent 2 chosen : 149
+The children created are 171 and 172
+The instruction from individual 171 was mutated from P_DemClean %0 to P_DemClean %4
+The instruction from individual 172 was mutated from P_Insert %3 to P_Insert %0
+Parent 1 chosen : 107
+Parent 2 chosen : 145
+The children created are 173 and 174
+The instruction from individual 173 was mutated from W_DemDirty %4 to W_DemDirty %2
+Parent 1 chosen : 147
+Parent 2 chosen : 102
+The children created are 175 and 176
+Parent 1 chosen : 84
+Parent 2 chosen : 148
+The children created are 177 and 178
+Parent 1 chosen : 106
+Parent 2 chosen : 146
+The children created are 179 and 180
+Parent 1 chosen : 143
+Parent 2 chosen : 105
+The children created are 181 and 182
+Parent 1 chosen : 118
+Parent 2 chosen : 105
+The children created are 183 and 184
+The instruction from individual 184 was mutated from P_Insert %3 to P_Insert %0
+Parent 1 chosen : 149
+Parent 2 chosen : 104
+The children created are 185 and 186
+The instruction from individual 185 was mutated from W_DemClean %0 to W_DemClean %2
+Parent 1 chosen : 120
+Parent 2 chosen : 145
+The children created are 187 and 188
+Parent 1 chosen : 118
+Parent 2 chosen : 143
+The children created are 189 and 190
+The instruction from individual 190 was mutated from W_Insert %0 to W_Insert %3
+Parent 1 chosen : 120
+Parent 2 chosen : 109
+The children created are 191 and 192
+The instruction from individual 192 was mutated from L_DemClean %4 to L_DemClean %2
+The instruction from individual 192 was mutated from P_SPromDirty %0 to P_SPromDirty %0
+The instruction from individual 192 was mutated from W_DemDirty %1 to W_DemDirty %4
+Parent 1 chosen : 107
+Parent 2 chosen : 118
+The children created are 193 and 194
+The instruction from individual 194 was mutated from W_SPromClean %2 to W_SPromClean %1
+Parent 1 chosen : 133
+Parent 2 chosen : 105
+The children created are 195 and 196
+The instruction from individual 195 was mutated from L_Insert %0 to L_Insert %1
+Parent 1 chosen : 133
+Parent 2 chosen : 126
+The children created are 197 and 198
+The instruction from individual 198 was mutated from L_Insert %0 to L_Insert %1
+The instruction from individual 198 was mutated from W_DemDirty %4 to W_DemDirty %3
+Parent 1 chosen : 143
+Parent 2 chosen : 145
+The children created are 199 and 200
+The instruction from individual 199 was mutated from W_Insert %3 to W_Insert %0
+Parent 1 chosen : 168
+Parent 2 chosen : 185
+The children created are 201 and 202
+Parent 1 chosen : 186
+Parent 2 chosen : 163
+The children created are 203 and 204
+The instruction from individual 204 was mutated from L_SPromDirty %0 to L_SPromDirty %1
+Parent 1 chosen : 185
+Parent 2 chosen : 163
+The children created are 205 and 206
+Parent 1 chosen : 158
+Parent 2 chosen : 168
+The children created are 207 and 208
+The instruction from individual 208 was mutated from R_SPromClean %1 to R_SPromClean %1
+Parent 1 chosen : 168
+Parent 2 chosen : 153
+The children created are 209 and 210
+Parent 1 chosen : 120
+Parent 2 chosen : 195
+The children created are 211 and 212
+The instruction from individual 212 was mutated from L_Insert %1 to L_Insert %3
+Parent 1 chosen : 168
+Parent 2 chosen : 152
+The children created are 213 and 214
+Parent 1 chosen : 168
+Parent 2 chosen : 163
+The children created are 215 and 216
+Parent 1 chosen : 200
+Parent 2 chosen : 169
+The children created are 217 and 218
+Parent 1 chosen : 164
+Parent 2 chosen : 152
+The children created are 219 and 220
+Parent 1 chosen : 120
+Parent 2 chosen : 200
+The children created are 221 and 222
+The instruction from individual 221 was mutated from P_SPromClean %0 to P_SPromClean %2
+The instruction from individual 222 was mutated from R_Insert %0 to R_Insert %1
+Parent 1 chosen : 189
+Parent 2 chosen : 168
+The children created are 223 and 224
+Parent 1 chosen : 153
+Parent 2 chosen : 154
+The children created are 225 and 226
+Parent 1 chosen : 153
+Parent 2 chosen : 171
+The children created are 227 and 228
+The instruction from individual 227 was mutated from L_SPromDirty %0 to L_SPromDirty %2
+The instruction from individual 228 was mutated from L_DemDirty %4 to L_DemDirty %4
+Parent 1 chosen : 186
+Parent 2 chosen : 154
+The children created are 229 and 230
+Parent 1 chosen : 189
+Parent 2 chosen : 174
+The children created are 231 and 232
+Parent 1 chosen : 158
+Parent 2 chosen : 153
+The children created are 233 and 234
+The instruction from individual 233 was mutated from L_DemDirty %4 to L_DemDirty %4
+Parent 1 chosen : 153
+Parent 2 chosen : 190
+The children created are 235 and 236
+The instruction from individual 235 was mutated from L_DemClean %4 to L_DemClean %1
+The instruction from individual 236 was mutated from W_SPromClean %2 to W_SPromClean %2
+Parent 1 chosen : 158
+Parent 2 chosen : 153
+The children created are 237 and 238
+Parent 1 chosen : 186
+Parent 2 chosen : 159
+The children created are 239 and 240
+Parent 1 chosen : 189
+Parent 2 chosen : 120
+The children created are 241 and 242
+The instruction from individual 241 was mutated from L_SPromDirty %0 to L_SPromDirty %0
+The instruction from individual 242 was mutated from R_Insert %0 to R_Insert %3
+Parent 1 chosen : 154
+Parent 2 chosen : 163
+The children created are 243 and 244
+Parent 1 chosen : 153
+Parent 2 chosen : 152
+The children created are 245 and 246
+Parent 1 chosen : 189
+Parent 2 chosen : 120
+The children created are 247 and 248
+The instruction from individual 247 was mutated from R_DemClean %4 to R_DemClean %4
+The instruction from individual 247 was mutated from R_SPromDirty %1 to R_SPromDirty %0
+The instruction from individual 248 was mutated from W_Insert %3 to W_Insert %3
+Parent 1 chosen : 153
+Parent 2 chosen : 154
+The children created are 249 and 250
+The instruction from individual 250 was mutated from L_SPromDirty %0 to L_SPromDirty %1
+The instruction from individual 250 was mutated from W_Insert %1 to W_Insert %1
+Parent 1 chosen : 214
+Parent 2 chosen : 248
+The children created are 251 and 252
+Parent 1 chosen : 225
+Parent 2 chosen : 234
+The children created are 253 and 254
+Parent 1 chosen : 214
+Parent 2 chosen : 242
+The children created are 255 and 256
+Parent 1 chosen : 246
+Parent 2 chosen : 221
+The children created are 257 and 258
+The instruction from individual 258 was mutated from R_Insert %3 to R_Insert %1
+Parent 1 chosen : 208
+Parent 2 chosen : 223
+The children created are 259 and 260
+The instruction from individual 260 was mutated from L_Insert %0 to L_Insert %1
+Parent 1 chosen : 201
+Parent 2 chosen : 216
+The children created are 261 and 262
+Parent 1 chosen : 232
+Parent 2 chosen : 242
+The children created are 263 and 264
+Parent 1 chosen : 168
+Parent 2 chosen : 208
+The children created are 265 and 266
+The instruction from individual 265 was mutated from W_DemClean %0 to W_DemClean %4
+The instruction from individual 266 was mutated from L_Insert %0 to L_Insert %2
+Parent 1 chosen : 208
+Parent 2 chosen : 209
+The children created are 267 and 268
+Parent 1 chosen : 223
+Parent 2 chosen : 208
+The children created are 269 and 270
+Parent 1 chosen : 223
+Parent 2 chosen : 222
+The children created are 271 and 272
+Parent 1 chosen : 223
+Parent 2 chosen : 201
+The children created are 273 and 274
+Parent 1 chosen : 234
+Parent 2 chosen : 218
+The children created are 275 and 276
+Parent 1 chosen : 214
+Parent 2 chosen : 221
+The children created are 277 and 278
+The instruction from individual 278 was mutated from W_SPromDirty %1 to W_SPromDirty %1
+Parent 1 chosen : 222
+Parent 2 chosen : 249
+The children created are 279 and 280
+Parent 1 chosen : 242
+Parent 2 chosen : 247
+The children created are 281 and 282
+Parent 1 chosen : 223
+Parent 2 chosen : 242
+The children created are 283 and 284
+The instruction from individual 283 was mutated from R_Insert %0 to R_Insert %3
+Parent 1 chosen : 223
+Parent 2 chosen : 237
+The children created are 285 and 286
+The instruction from individual 286 was mutated from P_DemClean %4 to P_DemClean %0
+Parent 1 chosen : 208
+Parent 2 chosen : 237
+The children created are 287 and 288
+Parent 1 chosen : 216
+Parent 2 chosen : 249
+The children created are 289 and 290
+The instruction from individual 289 was mutated from L_SPromClean %0 to L_SPromClean %2
+Parent 1 chosen : 249
+Parent 2 chosen : 201
+The children created are 291 and 292
+The instruction from individual 292 was mutated from L_SPromClean %0 to L_SPromClean %2
+Parent 1 chosen : 201
+Parent 2 chosen : 223
+The children created are 293 and 294
+The instruction from individual 294 was mutated from R_SPromDirty %1 to R_SPromDirty %0
+Parent 1 chosen : 216
+Parent 2 chosen : 237
+The children created are 295 and 296
+The instruction from individual 296 was mutated from W_DemDirty %1 to W_DemDirty %3
+Parent 1 chosen : 225
+Parent 2 chosen : 208
+The children created are 297 and 298
+The instruction from individual 297 was mutated from L_DemClean %4 to L_DemClean %0
+The instruction from individual 298 was mutated from P_DemDirty %1 to P_DemDirty %3
+Parent 1 chosen : 218
+Parent 2 chosen : 216
+The children created are 299 and 300
+The instruction from individual 300 was mutated from W_SPromDirty %1 to W_SPromDirty %2
+Parent 1 chosen : 269
+Parent 2 chosen : 273
+The children created are 301 and 302
+Parent 1 chosen : 293
+Parent 2 chosen : 261
+The children created are 303 and 304
+The instruction from individual 304 was mutated from W_Insert %2 to W_Insert %2
+Parent 1 chosen : 293
+Parent 2 chosen : 299
+The children created are 305 and 306
+Parent 1 chosen : 259
+Parent 2 chosen : 283
+The children created are 307 and 308
+The instruction from individual 308 was mutated from L_Insert %0 to L_Insert %1
+The instruction from individual 308 was mutated from R_Insert %3 to R_Insert %3
+Parent 1 chosen : 266
+Parent 2 chosen : 274
+The children created are 309 and 310
+The instruction from individual 309 was mutated from W_Insert %2 to W_Insert %0
+The instruction from individual 310 was mutated from L_DemClean %4 to L_DemClean %4
+Parent 1 chosen : 266
+Parent 2 chosen : 255
+The children created are 311 and 312
+Parent 1 chosen : 269
+Parent 2 chosen : 264
+The children created are 313 and 314
+The instruction from individual 314 was mutated from W_SPromClean %1 to W_SPromClean %1
+Parent 1 chosen : 274
+Parent 2 chosen : 277
+The children created are 315 and 316
+Parent 1 chosen : 283
+Parent 2 chosen : 266
+The children created are 317 and 318
+Parent 1 chosen : 260
+Parent 2 chosen : 255
+The children created are 319 and 320
+Parent 1 chosen : 260
+Parent 2 chosen : 273
+The children created are 321 and 322
+Parent 1 chosen : 273
+Parent 2 chosen : 269
+The children created are 323 and 324
+The instruction from individual 324 was mutated from L_SPromDirty %0 to L_SPromDirty %1
+Parent 1 chosen : 242
+Parent 2 chosen : 283
+The children created are 325 and 326
+The instruction from individual 325 was mutated from P_SPromClean %1 to P_SPromClean %2
+The instruction from individual 326 was mutated from L_Insert %0 to L_Insert %2
+Parent 1 chosen : 283
+Parent 2 chosen : 268
+The children created are 327 and 328
+Parent 1 chosen : 270
+Parent 2 chosen : 259
+The children created are 329 and 330
+Parent 1 chosen : 260
+Parent 2 chosen : 273
+The children created are 331 and 332
+The instruction from individual 332 was mutated from W_DemDirty %4 to W_DemDirty %1
+Parent 1 chosen : 286
+Parent 2 chosen : 269
+The children created are 333 and 334
+Parent 1 chosen : 264
+Parent 2 chosen : 283
+The children created are 335 and 336
+The instruction from individual 336 was mutated from W_DemDirty %3 to W_DemDirty %2
+Parent 1 chosen : 259
+Parent 2 chosen : 269
+The children created are 337 and 338
+The instruction from individual 337 was mutated from L_DemClean %4 to L_DemClean %3
+The instruction from individual 337 was mutated from W_Insert %2 to W_Insert %1
+The instruction from individual 338 was mutated from P_Insert %3 to P_Insert %1
+Parent 1 chosen : 259
+Parent 2 chosen : 266
+The children created are 339 and 340
+Parent 1 chosen : 242
+Parent 2 chosen : 255
+The children created are 341 and 342
+The instruction from individual 342 was mutated from R_Insert %3 to R_Insert %3
+Parent 1 chosen : 270
+Parent 2 chosen : 264
+The children created are 343 and 344
+The instruction from individual 344 was mutated from P_DemDirty %3 to P_DemDirty %1
+Parent 1 chosen : 264
+Parent 2 chosen : 266
+The children created are 345 and 346
+Parent 1 chosen : 283
+Parent 2 chosen : 260
+The children created are 347 and 348
+The instruction from individual 348 was mutated from W_DemClean %0 to W_DemClean %0
+Parent 1 chosen : 274
+Parent 2 chosen : 260
+The children created are 349 and 350
+The instruction from individual 349 was mutated from R_Insert %0 to R_Insert %1
+Parent 1 chosen : 314
+Parent 2 chosen : 332
+The children created are 351 and 352
+Parent 1 chosen : 330
+Parent 2 chosen : 346
+The children created are 353 and 354
+The instruction from individual 354 was mutated from L_DemDirty %4 to L_DemDirty %3
+Parent 1 chosen : 309
+Parent 2 chosen : 308
+The children created are 355 and 356
+Parent 1 chosen : 311
+Parent 2 chosen : 319
+The children created are 357 and 358
+The instruction from individual 358 was mutated from W_SPromDirty %1 to W_SPromDirty %2
+Parent 1 chosen : 346
+Parent 2 chosen : 321
+The children created are 359 and 360
+Parent 1 chosen : 319
+Parent 2 chosen : 317
+The children created are 361 and 362
+The instruction from individual 361 was mutated from W_DemDirty %4 to W_DemDirty %0
+The instruction from individual 362 was mutated from W_SPromClean %1 to W_SPromClean %2
+The instruction from individual 362 was mutated from W_SPromDirty %1 to W_SPromDirty %2
+Parent 1 chosen : 315
+Parent 2 chosen : 345
+The children created are 363 and 364
+Parent 1 chosen : 309
+Parent 2 chosen : 350
+The children created are 365 and 366
+The instruction from individual 365 was mutated from R_Insert %0 to R_Insert %0
+The instruction from individual 365 was mutated from R_SPromClean %1 to R_SPromClean %0
+The instruction from individual 365 was mutated from R_SPromDirty %1 to R_SPromDirty %0
+The instruction from individual 366 was mutated from W_SPromClean %1 to W_SPromClean %2
+Parent 1 chosen : 327
+Parent 2 chosen : 309
+The children created are 367 and 368
+The instruction from individual 368 was mutated from P_DemClean %4 to P_DemClean %4
+Parent 1 chosen : 260
+Parent 2 chosen : 309
+The children created are 369 and 370
+The instruction from individual 369 was mutated from P_DemDirty %3 to P_DemDirty %1
+The instruction from individual 370 was mutated from L_SPromDirty %0 to L_SPromDirty %2
+The instruction from individual 370 was mutated from R_DemDirty %1 to R_DemDirty %3
+Parent 1 chosen : 348
+Parent 2 chosen : 345
+The children created are 371 and 372
+The instruction from individual 372 was mutated from W_SPromClean %1 to W_SPromClean %0
+Parent 1 chosen : 312
+Parent 2 chosen : 350
+The children created are 373 and 374
+The instruction from individual 373 was mutated from L_SPromDirty %0 to L_SPromDirty %2
+Parent 1 chosen : 321
+Parent 2 chosen : 350
+The children created are 375 and 376
+Parent 1 chosen : 343
+Parent 2 chosen : 260
+The children created are 377 and 378
+The instruction from individual 377 was mutated from L_SPromClean %0 to L_SPromClean %1
+The instruction from individual 378 was mutated from L_SPromClean %0 to L_SPromClean %2
+Parent 1 chosen : 308
+Parent 2 chosen : 331
+The children created are 379 and 380
+Parent 1 chosen : 317
+Parent 2 chosen : 346
+The children created are 381 and 382
+Parent 1 chosen : 350
+Parent 2 chosen : 346
+The children created are 383 and 384
+The instruction from individual 384 was mutated from R_SPromClean %1 to R_SPromClean %1
+Parent 1 chosen : 321
+Parent 2 chosen : 260
+The children created are 385 and 386
+Parent 1 chosen : 308
+Parent 2 chosen : 319
+The children created are 387 and 388
+Parent 1 chosen : 335
+Parent 2 chosen : 348
+The children created are 389 and 390
+The instruction from individual 389 was mutated from L_SPromClean %0 to L_SPromClean %2
+Parent 1 chosen : 321
+Parent 2 chosen : 350
+The children created are 391 and 392
+The instruction from individual 391 was mutated from L_SPromClean %0 to L_SPromClean %0
+The instruction from individual 392 was mutated from L_DemDirty %4 to L_DemDirty %2
+The instruction from individual 392 was mutated from R_SPromDirty %1 to R_SPromDirty %1
+Parent 1 chosen : 331
+Parent 2 chosen : 312
+The children created are 393 and 394
+The instruction from individual 394 was mutated from W_Insert %2 to W_Insert %3
+Parent 1 chosen : 339
+Parent 2 chosen : 321
+The children created are 395 and 396
+The instruction from individual 395 was mutated from W_Insert %2 to W_Insert %0
+Parent 1 chosen : 317
+Parent 2 chosen : 319
+The children created are 397 and 398
+Parent 1 chosen : 321
+Parent 2 chosen : 309
+The children created are 399 and 400
+Parent 1 chosen : 396
+Parent 2 chosen : 376
+The children created are 401 and 402
+Parent 1 chosen : 371
+Parent 2 chosen : 383
+The children created are 403 and 404
+Parent 1 chosen : 356
+Parent 2 chosen : 391
+The children created are 405 and 406
+The instruction from individual 405 was mutated from W_DemClean %0 to W_DemClean %2
+Parent 1 chosen : 400
+Parent 2 chosen : 379
+The children created are 407 and 408
+Parent 1 chosen : 396
+Parent 2 chosen : 385
+The children created are 409 and 410
+The instruction from individual 410 was mutated from L_DemClean %4 to L_DemClean %0
+The instruction from individual 410 was mutated from L_Insert %1 to L_Insert %1
+Parent 1 chosen : 400
+Parent 2 chosen : 360
+The children created are 411 and 412
+The instruction from individual 412 was mutated from L_SPromClean %0 to L_SPromClean %2
+Parent 1 chosen : 391
+Parent 2 chosen : 386
+The children created are 413 and 414
+The instruction from individual 413 was mutated from W_Insert %2 to W_Insert %3
+Parent 1 chosen : 396
+Parent 2 chosen : 386
+The children created are 415 and 416
+Parent 1 chosen : 376
+Parent 2 chosen : 375
+The children created are 417 and 418
+Parent 1 chosen : 356
+Parent 2 chosen : 319
+The children created are 419 and 420
+The instruction from individual 420 was mutated from R_Insert %3 to R_Insert %1
+Parent 1 chosen : 399
+Parent 2 chosen : 356
+The children created are 421 and 422
+The instruction from individual 422 was mutated from P_DemClean %4 to P_DemClean %1
+Parent 1 chosen : 376
+Parent 2 chosen : 371
+The children created are 423 and 424
+The instruction from individual 423 was mutated from P_DemDirty %3 to P_DemDirty %0
+Parent 1 chosen : 385
+Parent 2 chosen : 387
+The children created are 425 and 426
+The instruction from individual 425 was mutated from P_DemDirty %3 to P_DemDirty %1
+The instruction from individual 426 was mutated from L_DemClean %4 to L_DemClean %1
+Parent 1 chosen : 361
+Parent 2 chosen : 384
+The children created are 427 and 428
+Parent 1 chosen : 383
+Parent 2 chosen : 398
+The children created are 429 and 430
+Parent 1 chosen : 360
+Parent 2 chosen : 319
+The children created are 431 and 432
+The instruction from individual 432 was mutated from L_DemDirty %4 to L_DemDirty %1
+The instruction from individual 432 was mutated from P_SPromDirty %0 to P_SPromDirty %2
+Parent 1 chosen : 385
+Parent 2 chosen : 376
+The children created are 433 and 434
+Parent 1 chosen : 398
+Parent 2 chosen : 379
+The children created are 435 and 436
+The instruction from individual 435 was mutated from R_SPromDirty %1 to R_SPromDirty %2
+The instruction from individual 436 was mutated from W_SPromDirty %1 to W_SPromDirty %2
+Parent 1 chosen : 396
+Parent 2 chosen : 383
+The children created are 437 and 438
+Parent 1 chosen : 381
+Parent 2 chosen : 356
+The children created are 439 and 440
+Parent 1 chosen : 371
+Parent 2 chosen : 380
+The children created are 441 and 442
+The instruction from individual 442 was mutated from L_SPromDirty %0 to L_SPromDirty %1
+Parent 1 chosen : 391
+Parent 2 chosen : 400
+The children created are 443 and 444
+Parent 1 chosen : 388
+Parent 2 chosen : 398
+The children created are 445 and 446
+Parent 1 chosen : 394
+Parent 2 chosen : 379
+The children created are 447 and 448
+The instruction from individual 448 was mutated from L_DemDirty %4 to L_DemDirty %4
+The instruction from individual 448 was mutated from W_SPromDirty %1 to W_SPromDirty %0
+Parent 1 chosen : 356
+Parent 2 chosen : 369
+The children created are 449 and 450
+The instruction from individual 450 was mutated from P_DemClean %4 to P_DemClean %2
+Parent 1 chosen : 419
+Parent 2 chosen : 438
+The children created are 451 and 452
+The instruction from individual 451 was mutated from R_SPromDirty %1 to R_SPromDirty %1
+The instruction from individual 452 was mutated from L_Insert %1 to L_Insert %2
+Parent 1 chosen : 423
+Parent 2 chosen : 429
+The children created are 453 and 454
+Parent 1 chosen : 356
+Parent 2 chosen : 423
+The children created are 455 and 456
+Parent 1 chosen : 419
+Parent 2 chosen : 421
+The children created are 457 and 458
+The instruction from individual 458 was mutated from L_DemClean %4 to L_DemClean %0
+Parent 1 chosen : 356
+Parent 2 chosen : 421
+The children created are 459 and 460
+The instruction from individual 460 was mutated from L_SPromClean %0 to L_SPromClean %0
+Parent 1 chosen : 439
+Parent 2 chosen : 415
+The children created are 461 and 462
+Parent 1 chosen : 424
+Parent 2 chosen : 450
+The children created are 463 and 464
+Parent 1 chosen : 450
+Parent 2 chosen : 407
+The children created are 465 and 466
+Parent 1 chosen : 439
+Parent 2 chosen : 429
+The children created are 467 and 468
+The instruction from individual 467 was mutated from R_Insert %0 to R_Insert %3
+Parent 1 chosen : 446
+Parent 2 chosen : 450
+The children created are 469 and 470
+Parent 1 chosen : 446
+Parent 2 chosen : 420
+The children created are 471 and 472
+The instruction from individual 472 was mutated from W_SPromClean %1 to W_SPromClean %0
+Parent 1 chosen : 444
+Parent 2 chosen : 414
+The children created are 473 and 474
+The instruction from individual 474 was mutated from L_DemDirty %4 to L_DemDirty %1
+Parent 1 chosen : 447
+Parent 2 chosen : 415
+The children created are 475 and 476
+The instruction from individual 475 was mutated from P_Insert %3 to P_Insert %0
+The instruction from individual 476 was mutated from R_DemDirty %1 to R_DemDirty %2
+The instruction from individual 476 was mutated from P_DemDirty %1 to P_DemDirty %3
+Parent 1 chosen : 450
+Parent 2 chosen : 429
+The children created are 477 and 478
+The instruction from individual 477 was mutated from L_SPromDirty %0 to L_SPromDirty %0
+The instruction from individual 477 was mutated from P_Insert %3 to P_Insert %2
+Parent 1 chosen : 423
+Parent 2 chosen : 415
+The children created are 479 and 480
+The instruction from individual 480 was mutated from L_DemClean %4 to L_DemClean %0
+Parent 1 chosen : 450
+Parent 2 chosen : 356
+The children created are 481 and 482
+Parent 1 chosen : 438
+Parent 2 chosen : 421
+The children created are 483 and 484
+The instruction from individual 484 was mutated from P_SPromClean %2 to P_SPromClean %2
+Parent 1 chosen : 439
+Parent 2 chosen : 433
+The children created are 485 and 486
+Parent 1 chosen : 420
+Parent 2 chosen : 406
+The children created are 487 and 488
+Parent 1 chosen : 406
+Parent 2 chosen : 446
+The children created are 489 and 490
+Parent 1 chosen : 450
+Parent 2 chosen : 446
+The children created are 491 and 492
+Parent 1 chosen : 420
+Parent 2 chosen : 439
+The children created are 493 and 494
+Parent 1 chosen : 444
+Parent 2 chosen : 426
+The children created are 495 and 496
+Parent 1 chosen : 414
+Parent 2 chosen : 439
+The children created are 497 and 498
+Parent 1 chosen : 423
+Parent 2 chosen : 426
+The children created are 499 and 500
+The instruction from individual 499 was mutated from R_DemDirty %1 to R_DemDirty %4
+The instruction from individual 499 was mutated from P_Insert %3 to P_Insert %0
+Parent 1 chosen : 457
+Parent 2 chosen : 450
+The children created are 501 and 502
+Parent 1 chosen : 468
+Parent 2 chosen : 460
+The children created are 503 and 504
+Parent 1 chosen : 463
+Parent 2 chosen : 453
+The children created are 505 and 506
+The instruction from individual 505 was mutated from P_DemClean %4 to P_DemClean %3
+The instruction from individual 506 was mutated from L_SPromClean %0 to L_SPromClean %1
+Parent 1 chosen : 457
+Parent 2 chosen : 450
+The children created are 507 and 508
+Parent 1 chosen : 450
+Parent 2 chosen : 482
+The children created are 509 and 510
+Parent 1 chosen : 457
+Parent 2 chosen : 493
+The children created are 511 and 512
+Parent 1 chosen : 462
+Parent 2 chosen : 450
+The children created are 513 and 514
+The instruction from individual 514 was mutated from P_DemDirty %3 to P_DemDirty %2
+Parent 1 chosen : 500
+Parent 2 chosen : 482
+The children created are 515 and 516
+The instruction from individual 515 was mutated from P_DemClean %4 to P_DemClean %1
+Parent 1 chosen : 455
+Parent 2 chosen : 466
+The children created are 517 and 518
+Parent 1 chosen : 482
+Parent 2 chosen : 459
+The children created are 519 and 520
+The instruction from individual 519 was mutated from R_Insert %3 to R_Insert %2
+Parent 1 chosen : 467
+Parent 2 chosen : 455
+The children created are 521 and 522
+Parent 1 chosen : 457
+Parent 2 chosen : 459
+The children created are 523 and 524
+The instruction from individual 523 was mutated from W_SPromDirty %1 to W_SPromDirty %1
+Parent 1 chosen : 492
+Parent 2 chosen : 482
+The children created are 525 and 526
+Parent 1 chosen : 455
+Parent 2 chosen : 450
+The children created are 527 and 528
+The instruction from individual 528 was mutated from L_SPromClean %0 to L_SPromClean %1
+Parent 1 chosen : 455
+Parent 2 chosen : 462
+The children created are 529 and 530
+The instruction from individual 529 was mutated from P_Insert %3 to P_Insert %1
+Parent 1 chosen : 450
+Parent 2 chosen : 467
+The children created are 531 and 532
+Parent 1 chosen : 450
+Parent 2 chosen : 468
+The children created are 533 and 534
+The instruction from individual 533 was mutated from W_DemClean %0 to W_DemClean %2
+Parent 1 chosen : 487
+Parent 2 chosen : 493
+The children created are 535 and 536
+The instruction from individual 535 was mutated from P_SPromDirty %0 to P_SPromDirty %2
+Parent 1 chosen : 500
+Parent 2 chosen : 487
+The children created are 537 and 538
+The instruction from individual 537 was mutated from R_DemDirty %1 to R_DemDirty %4
+The instruction from individual 537 was mutated from W_DemDirty %4 to W_DemDirty %0
+Parent 1 chosen : 462
+Parent 2 chosen : 497
+The children created are 539 and 540
+The instruction from individual 540 was mutated from W_Insert %0 to W_Insert %1
+Parent 1 chosen : 500
+Parent 2 chosen : 455
+The children created are 541 and 542
+The instruction from individual 542 was mutated from W_SPromClean %1 to W_SPromClean %2
+Parent 1 chosen : 489
+Parent 2 chosen : 488
+The children created are 543 and 544
+Parent 1 chosen : 468
+Parent 2 chosen : 455
+The children created are 545 and 546
+Parent 1 chosen : 482
+Parent 2 chosen : 455
+The children created are 547 and 548
+The instruction from individual 547 was mutated from W_Insert %2 to W_Insert %1
+Parent 1 chosen : 487
+Parent 2 chosen : 468
+The children created are 549 and 550
+The instruction from individual 550 was mutated from P_DemDirty %3 to P_DemDirty %0
+Parent 1 chosen : 505
+Parent 2 chosen : 515
+The children created are 551 and 552
+The instruction from individual 551 was mutated from L_DemDirty %4 to L_DemDirty %0
+The instruction from individual 551 was mutated from L_SPromClean %0 to L_SPromClean %2
+Parent 1 chosen : 525
+Parent 2 chosen : 521
+The children created are 553 and 554
+The instruction from individual 553 was mutated from L_SPromClean %0 to L_SPromClean %1
+Parent 1 chosen : 523
+Parent 2 chosen : 521
+The children created are 555 and 556
+The instruction from individual 555 was mutated from L_DemDirty %4 to L_DemDirty %3
+Parent 1 chosen : 549
+Parent 2 chosen : 516
+The children created are 557 and 558
+The instruction from individual 558 was mutated from W_SPromClean %1 to W_SPromClean %2
+Parent 1 chosen : 521
+Parent 2 chosen : 515
+The children created are 559 and 560
+Parent 1 chosen : 530
+Parent 2 chosen : 505
+The children created are 561 and 562
+Parent 1 chosen : 509
+Parent 2 chosen : 505
+The children created are 563 and 564
+Parent 1 chosen : 525
+Parent 2 chosen : 541
+The children created are 565 and 566
+The instruction from individual 566 was mutated from P_DemClean %2 to P_DemClean %4
+Parent 1 chosen : 509
+Parent 2 chosen : 530
+The children created are 567 and 568
+Parent 1 chosen : 509
+Parent 2 chosen : 546
+The children created are 569 and 570
+The instruction from individual 569 was mutated from W_Insert %0 to W_Insert %1
+The instruction from individual 570 was mutated from L_DemDirty %4 to L_DemDirty %0
+Parent 1 chosen : 537
+Parent 2 chosen : 530
+The children created are 571 and 572
+Parent 1 chosen : 521
+Parent 2 chosen : 509
+The children created are 573 and 574
+The instruction from individual 573 was mutated from R_DemDirty %1 to R_DemDirty %0
+Parent 1 chosen : 548
+Parent 2 chosen : 505
+The children created are 575 and 576
+Parent 1 chosen : 510
+Parent 2 chosen : 455
+The children created are 577 and 578
+Parent 1 chosen : 523
+Parent 2 chosen : 455
+The children created are 579 and 580
+Parent 1 chosen : 530
+Parent 2 chosen : 455
+The children created are 581 and 582
+The instruction from individual 581 was mutated from L_Insert %1 to L_Insert %2
+The instruction from individual 582 was mutated from L_SPromClean %0 to L_SPromClean %0
+Parent 1 chosen : 521
+Parent 2 chosen : 547
+The children created are 583 and 584
+The instruction from individual 583 was mutated from W_DemClean %0 to W_DemClean %1
+The instruction from individual 584 was mutated from L_Insert %1 to L_Insert %0
+The instruction from individual 584 was mutated from W_DemClean %0 to W_DemClean %2
+Parent 1 chosen : 537
+Parent 2 chosen : 505
+The children created are 585 and 586
+The instruction from individual 586 was mutated from P_SPromClean %2 to P_SPromClean %2
+Parent 1 chosen : 520
+Parent 2 chosen : 505
+The children created are 587 and 588
+Parent 1 chosen : 550
+Parent 2 chosen : 541
+The children created are 589 and 590
+The instruction from individual 589 was mutated from L_DemClean %4 to L_DemClean %2
+Parent 1 chosen : 455
+Parent 2 chosen : 521
+The children created are 591 and 592
+Parent 1 chosen : 538
+Parent 2 chosen : 509
+The children created are 593 and 594
+The instruction from individual 594 was mutated from R_DemDirty %1 to R_DemDirty %4
+Parent 1 chosen : 547
+Parent 2 chosen : 538
+The children created are 595 and 596
+The instruction from individual 596 was mutated from P_SPromDirty %0 to P_SPromDirty %1
+Parent 1 chosen : 547
+Parent 2 chosen : 546
+The children created are 597 and 598
+Parent 1 chosen : 455
+Parent 2 chosen : 522
+The children created are 599 and 600
+Parent 1 chosen : 588
+Parent 2 chosen : 547
+The children created are 601 and 602
+The instruction from individual 601 was mutated from L_SPromClean %0 to L_SPromClean %0
+The instruction from individual 601 was mutated from R_SPromDirty %1 to R_SPromDirty %1
+The instruction from individual 602 was mutated from L_SPromClean %0 to L_SPromClean %2
+Parent 1 chosen : 598
+Parent 2 chosen : 565
+The children created are 603 and 604
+The instruction from individual 604 was mutated from P_SPromDirty %0 to P_SPromDirty %2
+Parent 1 chosen : 565
+Parent 2 chosen : 598
+The children created are 605 and 606
+Parent 1 chosen : 575
+Parent 2 chosen : 565
+The children created are 607 and 608
+Parent 1 chosen : 591
+Parent 2 chosen : 567
+The children created are 609 and 610
+Parent 1 chosen : 587
+Parent 2 chosen : 578
+The children created are 611 and 612
+The instruction from individual 611 was mutated from L_DemDirty %4 to L_DemDirty %2
+The instruction from individual 612 was mutated from W_SPromDirty %1 to W_SPromDirty %1
+Parent 1 chosen : 547
+Parent 2 chosen : 582
+The children created are 613 and 614
+The instruction from individual 614 was mutated from L_SPromClean %0 to L_SPromClean %0
+Parent 1 chosen : 569
+Parent 2 chosen : 571
+The children created are 615 and 616
+The instruction from individual 615 was mutated from P_SPromClean %2 to P_SPromClean %2
+Parent 1 chosen : 547
+Parent 2 chosen : 578
+The children created are 617 and 618
+The instruction from individual 617 was mutated from L_DemClean %4 to L_DemClean %0
+The instruction from individual 618 was mutated from R_SPromDirty %1 to R_SPromDirty %2
+Parent 1 chosen : 571
+Parent 2 chosen : 597
+The children created are 619 and 620
+Parent 1 chosen : 547
+Parent 2 chosen : 571
+The children created are 621 and 622
+The instruction from individual 621 was mutated from W_SPromDirty %1 to W_SPromDirty %1
+Parent 1 chosen : 547
+Parent 2 chosen : 600
+The children created are 623 and 624
+Parent 1 chosen : 598
+Parent 2 chosen : 595
+The children created are 625 and 626
+Parent 1 chosen : 565
+Parent 2 chosen : 575
+The children created are 627 and 628
+The instruction from individual 627 was mutated from R_DemDirty %1 to R_DemDirty %0
+Parent 1 chosen : 575
+Parent 2 chosen : 561
+The children created are 629 and 630
+The instruction from individual 630 was mutated from R_Insert %3 to R_Insert %3
+The instruction from individual 630 was mutated from P_DemClean %3 to P_DemClean %1
+Parent 1 chosen : 600
+Parent 2 chosen : 547
+The children created are 631 and 632
+The instruction from individual 632 was mutated from P_SPromDirty %0 to P_SPromDirty %0
+Parent 1 chosen : 598
+Parent 2 chosen : 575
+The children created are 633 and 634
+The instruction from individual 634 was mutated from P_DemDirty %0 to P_DemDirty %0
+Parent 1 chosen : 587
+Parent 2 chosen : 567
+The children created are 635 and 636
+The instruction from individual 636 was mutated from W_SPromDirty %1 to W_SPromDirty %1
+Parent 1 chosen : 595
+Parent 2 chosen : 591
+The children created are 637 and 638
+The instruction from individual 637 was mutated from R_DemDirty %1 to R_DemDirty %4
+Parent 1 chosen : 567
+Parent 2 chosen : 592
+The children created are 639 and 640
+The instruction from individual 640 was mutated from L_DemDirty %4 to L_DemDirty %4
+The instruction from individual 640 was mutated from R_DemClean %4 to R_DemClean %3
+The instruction from individual 640 was mutated from P_SPromDirty %0 to P_SPromDirty %1
+Parent 1 chosen : 579
+Parent 2 chosen : 578
+The children created are 641 and 642
+Parent 1 chosen : 598
+Parent 2 chosen : 575
+The children created are 643 and 644
+The instruction from individual 644 was mutated from L_DemClean %4 to L_DemClean %0
+Parent 1 chosen : 556
+Parent 2 chosen : 568
+The children created are 645 and 646
+Parent 1 chosen : 565
+Parent 2 chosen : 575
+The children created are 647 and 648
+Parent 1 chosen : 598
+Parent 2 chosen : 596
+The children created are 649 and 650
+Parent 1 chosen : 626
+Parent 2 chosen : 635
+The children created are 651 and 652
+Parent 1 chosen : 608
+Parent 2 chosen : 622
+The children created are 653 and 654
+The instruction from individual 654 was mutated from R_DemDirty %4 to R_DemDirty %0
+Parent 1 chosen : 622
+Parent 2 chosen : 614
+The children created are 655 and 656
+The instruction from individual 655 was mutated from L_SPromClean %0 to L_SPromClean %0
+Parent 1 chosen : 608
+Parent 2 chosen : 631
+The children created are 657 and 658
+The instruction from individual 657 was mutated from L_Insert %1 to L_Insert %3
+The instruction from individual 658 was mutated from P_Insert %3 to P_Insert %2
+Parent 1 chosen : 616
+Parent 2 chosen : 647
+The children created are 659 and 660
+Parent 1 chosen : 612
+Parent 2 chosen : 634
+The children created are 661 and 662
+The instruction from individual 661 was mutated from R_SPromDirty %1 to R_SPromDirty %2
+Parent 1 chosen : 616
+Parent 2 chosen : 561
+The children created are 663 and 664
+Parent 1 chosen : 639
+Parent 2 chosen : 626
+The children created are 665 and 666
+The instruction from individual 666 was mutated from R_SPromDirty %1 to R_SPromDirty %0
+Parent 1 chosen : 629
+Parent 2 chosen : 623
+The children created are 667 and 668
+The instruction from individual 667 was mutated from P_SPromDirty %0 to P_SPromDirty %0
+Parent 1 chosen : 612
+Parent 2 chosen : 614
+The children created are 669 and 670
+Parent 1 chosen : 634
+Parent 2 chosen : 628
+The children created are 671 and 672
+Parent 1 chosen : 612
+Parent 2 chosen : 561
+The children created are 673 and 674
+The instruction from individual 673 was mutated from R_Insert %3 to R_Insert %3
+The instruction from individual 674 was mutated from W_DemDirty %4 to W_DemDirty %1
+Parent 1 chosen : 623
+Parent 2 chosen : 647
+The children created are 675 and 676
+The instruction from individual 675 was mutated from L_SPromClean %0 to L_SPromClean %2
+The instruction from individual 675 was mutated from W_Insert %2 to W_Insert %1
+Parent 1 chosen : 614
+Parent 2 chosen : 622
+The children created are 677 and 678
+The instruction from individual 678 was mutated from W_DemClean %0 to W_DemClean %2
+Parent 1 chosen : 624
+Parent 2 chosen : 647
+The children created are 679 and 680
+The instruction from individual 679 was mutated from W_SPromDirty %1 to W_SPromDirty %1
+Parent 1 chosen : 608
+Parent 2 chosen : 629
+The children created are 681 and 682
+The instruction from individual 681 was mutated from P_SPromClean %1 to P_SPromClean %1
+Parent 1 chosen : 608
+Parent 2 chosen : 614
+The children created are 683 and 684
+The instruction from individual 683 was mutated from P_DemDirty %0 to P_DemDirty %2
+The instruction from individual 684 was mutated from R_DemClean %4 to R_DemClean %1
+The instruction from individual 684 was mutated from P_DemClean %3 to P_DemClean %1
+The instruction from individual 684 was mutated from P_Insert %3 to P_Insert %1
+Parent 1 chosen : 642
+Parent 2 chosen : 618
+The children created are 685 and 686
+Parent 1 chosen : 614
+Parent 2 chosen : 647
+The children created are 687 and 688
+The instruction from individual 687 was mutated from P_Insert %3 to P_Insert %3
+The instruction from individual 687 was mutated from P_SPromDirty %0 to P_SPromDirty %0
+The instruction from individual 688 was mutated from R_SPromClean %1 to R_SPromClean %2
+Parent 1 chosen : 624
+Parent 2 chosen : 618
+The children created are 689 and 690
+Parent 1 chosen : 626
+Parent 2 chosen : 639
+The children created are 691 and 692
+The instruction from individual 692 was mutated from R_SPromClean %1 to R_SPromClean %1
+Parent 1 chosen : 616
+Parent 2 chosen : 631
+The children created are 693 and 694
+The instruction from individual 693 was mutated from R_DemClean %4 to R_DemClean %1
+Parent 1 chosen : 614
+Parent 2 chosen : 624
+The children created are 695 and 696
+The instruction from individual 696 was mutated from W_DemDirty %4 to W_DemDirty %1
+Parent 1 chosen : 624
+Parent 2 chosen : 616
+The children created are 697 and 698
+The instruction from individual 697 was mutated from L_DemDirty %4 to L_DemDirty %1
+The instruction from individual 697 was mutated from R_DemClean %4 to R_DemClean %2
+The instruction from individual 698 was mutated from W_SPromClean %1 to W_SPromClean %0
+Parent 1 chosen : 603
+Parent 2 chosen : 608
+The children created are 699 and 700
+The instruction from individual 700 was mutated from W_Insert %2 to W_Insert %2
+Parent 1 chosen : 679
+Parent 2 chosen : 680
+The children created are 701 and 702
+The instruction from individual 701 was mutated from P_DemClean %4 to P_DemClean %2
+Parent 1 chosen : 653
+Parent 2 chosen : 679
+The children created are 703 and 704
+Parent 1 chosen : 673
+Parent 2 chosen : 681
+The children created are 705 and 706
+The instruction from individual 705 was mutated from P_DemClean %3 to P_DemClean %3
+Parent 1 chosen : 679
+Parent 2 chosen : 687
+The children created are 707 and 708
+Parent 1 chosen : 659
+Parent 2 chosen : 561
+The children created are 709 and 710
+Parent 1 chosen : 699
+Parent 2 chosen : 652
+The children created are 711 and 712
+The instruction from individual 712 was mutated from P_DemDirty %0 to P_DemDirty %3
+Parent 1 chosen : 679
+Parent 2 chosen : 690
+The children created are 713 and 714
+The instruction from individual 713 was mutated from R_DemClean %4 to R_DemClean %3
+Parent 1 chosen : 692
+Parent 2 chosen : 679
+The children created are 715 and 716
+Parent 1 chosen : 692
+Parent 2 chosen : 672
+The children created are 717 and 718
+The instruction from individual 717 was mutated from P_DemClean %4 to P_DemClean %2
+Parent 1 chosen : 659
+Parent 2 chosen : 673
+The children created are 719 and 720
+The instruction from individual 719 was mutated from L_Insert %1 to L_Insert %1
+The instruction from individual 719 was mutated from R_DemClean %4 to R_DemClean %3
+Parent 1 chosen : 561
+Parent 2 chosen : 681
+The children created are 721 and 722
+The instruction from individual 721 was mutated from R_DemClean %4 to R_DemClean %1
+Parent 1 chosen : 673
+Parent 2 chosen : 690
+The children created are 723 and 724
+The instruction from individual 723 was mutated from L_Insert %1 to L_Insert %0
+The instruction from individual 723 was mutated from R_DemDirty %1 to R_DemDirty %1
+The instruction from individual 724 was mutated from W_SPromClean %1 to W_SPromClean %1
+Parent 1 chosen : 669
+Parent 2 chosen : 699
+The children created are 725 and 726
+Parent 1 chosen : 681
+Parent 2 chosen : 688
+The children created are 727 and 728
+The instruction from individual 727 was mutated from W_Insert %1 to W_Insert %3
+The instruction from individual 728 was mutated from R_SPromDirty %1 to R_SPromDirty %0
+Parent 1 chosen : 690
+Parent 2 chosen : 699
+The children created are 729 and 730
+The instruction from individual 729 was mutated from R_SPromDirty %1 to R_SPromDirty %2
+Parent 1 chosen : 653
+Parent 2 chosen : 664
+The children created are 731 and 732
+Parent 1 chosen : 672
+Parent 2 chosen : 692
+The children created are 733 and 734
+Parent 1 chosen : 690
+Parent 2 chosen : 679
+The children created are 735 and 736
+Parent 1 chosen : 653
+Parent 2 chosen : 699
+The children created are 737 and 738
+The instruction from individual 737 was mutated from P_SPromClean %1 to P_SPromClean %0
+Parent 1 chosen : 659
+Parent 2 chosen : 652
+The children created are 739 and 740
+The instruction from individual 739 was mutated from P_DemClean %3 to P_DemClean %4
+Parent 1 chosen : 677
+Parent 2 chosen : 687
+The children created are 741 and 742
+The instruction from individual 741 was mutated from L_SPromDirty %0 to L_SPromDirty %2
+Parent 1 chosen : 673
+Parent 2 chosen : 665
+The children created are 743 and 744
+Parent 1 chosen : 677
+Parent 2 chosen : 699
+The children created are 745 and 746
+The instruction from individual 745 was mutated from W_SPromDirty %1 to W_SPromDirty %2
+The instruction from individual 746 was mutated from R_DemDirty %1 to R_DemDirty %0
+Parent 1 chosen : 673
+Parent 2 chosen : 561
+The children created are 747 and 748
+The instruction from individual 748 was mutated from L_DemDirty %4 to L_DemDirty %4
+The instruction from individual 748 was mutated from L_SPromClean %0 to L_SPromClean %2
+Parent 1 chosen : 664
+Parent 2 chosen : 681
+The children created are 749 and 750
+The instruction from individual 749 was mutated from R_Insert %3 to R_Insert %2
+The instruction from individual 749 was mutated from P_Insert %3 to P_Insert %3
+The instruction from individual 750 was mutated from W_DemClean %0 to W_DemClean %1
+Parent 1 chosen : 733
+Parent 2 chosen : 724
+The children created are 751 and 752
+Parent 1 chosen : 717
+Parent 2 chosen : 738
+The children created are 753 and 754
+The instruction from individual 754 was mutated from W_DemClean %0 to W_DemClean %1
+The instruction from individual 754 was mutated from W_Insert %1 to W_Insert %1
+Parent 1 chosen : 736
+Parent 2 chosen : 705
+The children created are 755 and 756
+Parent 1 chosen : 701
+Parent 2 chosen : 743
+The children created are 757 and 758
+The instruction from individual 757 was mutated from L_DemDirty %4 to L_DemDirty %3
+Parent 1 chosen : 705
+Parent 2 chosen : 714
+The children created are 759 and 760
+Parent 1 chosen : 732
+Parent 2 chosen : 739
+The children created are 761 and 762
+The instruction from individual 761 was mutated from R_SPromClean %1 to R_SPromClean %1
+Parent 1 chosen : 711
+Parent 2 chosen : 726
+The children created are 763 and 764
+The instruction from individual 763 was mutated from L_DemDirty %4 to L_DemDirty %3
+The instruction from individual 763 was mutated from R_Insert %3 to R_Insert %3
+The instruction from individual 763 was mutated from W_SPromClean %1 to W_SPromClean %1
+Parent 1 chosen : 743
+Parent 2 chosen : 731
+The children created are 765 and 766
+Parent 1 chosen : 714
+Parent 2 chosen : 707
+The children created are 767 and 768
+The instruction from individual 767 was mutated from W_SPromDirty %1 to W_SPromDirty %1
+Parent 1 chosen : 703
+Parent 2 chosen : 714
+The children created are 769 and 770
+The instruction from individual 769 was mutated from R_DemDirty %1 to R_DemDirty %3
+Parent 1 chosen : 733
+Parent 2 chosen : 716
+The children created are 771 and 772
+The instruction from individual 772 was mutated from L_DemClean %4 to L_DemClean %4
+The instruction from individual 772 was mutated from P_SPromDirty %0 to P_SPromDirty %0
+Parent 1 chosen : 732
+Parent 2 chosen : 717
+The children created are 773 and 774
+The instruction from individual 773 was mutated from L_DemDirty %4 to L_DemDirty %3
+The instruction from individual 774 was mutated from L_DemClean %4 to L_DemClean %2
+Parent 1 chosen : 705
+Parent 2 chosen : 738
+The children created are 775 and 776
+The instruction from individual 775 was mutated from R_DemClean %4 to R_DemClean %1
+The instruction from individual 775 was mutated from R_Insert %3 to R_Insert %2
+Parent 1 chosen : 733
+Parent 2 chosen : 708
+The children created are 777 and 778
+The instruction from individual 777 was mutated from R_SPromClean %1 to R_SPromClean %2
+The instruction from individual 778 was mutated from L_DemClean %4 to L_DemClean %1
+Parent 1 chosen : 653
+Parent 2 chosen : 736
+The children created are 779 and 780
+The instruction from individual 780 was mutated from P_Insert %3 to P_Insert %2
+Parent 1 chosen : 743
+Parent 2 chosen : 718
+The children created are 781 and 782
+Parent 1 chosen : 726
+Parent 2 chosen : 717
+The children created are 783 and 784
+The instruction from individual 784 was mutated from W_Insert %1 to W_Insert %0
+Parent 1 chosen : 704
+Parent 2 chosen : 731
+The children created are 785 and 786
+Parent 1 chosen : 714
+Parent 2 chosen : 704
+The children created are 787 and 788
+The instruction from individual 788 was mutated from L_SPromDirty %0 to L_SPromDirty %2
+Parent 1 chosen : 704
+Parent 2 chosen : 720
+The children created are 789 and 790
+Parent 1 chosen : 709
+Parent 2 chosen : 653
+The children created are 791 and 792
+The instruction from individual 791 was mutated from W_DemDirty %4 to W_DemDirty %0
+The instruction from individual 792 was mutated from P_DemDirty %0 to P_DemDirty %2
+Parent 1 chosen : 711
+Parent 2 chosen : 701
+The children created are 793 and 794
+Parent 1 chosen : 717
+Parent 2 chosen : 743
+The children created are 795 and 796
+Parent 1 chosen : 722
+Parent 2 chosen : 735
+The children created are 797 and 798
+Parent 1 chosen : 732
+Parent 2 chosen : 733
+The children created are 799 and 800
+Parent 1 chosen : 762
+Parent 2 chosen : 796
+The children created are 801 and 802
+The instruction from individual 801 was mutated from L_DemClean %4 to L_DemClean %4
+Parent 1 chosen : 701
+Parent 2 chosen : 762
+The children created are 803 and 804
+The instruction from individual 804 was mutated from P_Insert %3 to P_Insert %1
+Parent 1 chosen : 758
+Parent 2 chosen : 783
+The children created are 805 and 806
+The instruction from individual 806 was mutated from P_DemClean %2 to P_DemClean %2
+Parent 1 chosen : 784
+Parent 2 chosen : 796
+The children created are 807 and 808
+The instruction from individual 807 was mutated from P_SPromDirty %0 to P_SPromDirty %2
+Parent 1 chosen : 764
+Parent 2 chosen : 785
+The children created are 809 and 810
+The instruction from individual 810 was mutated from L_DemClean %4 to L_DemClean %2
+Parent 1 chosen : 764
+Parent 2 chosen : 785
+The children created are 811 and 812
+Parent 1 chosen : 701
+Parent 2 chosen : 786
+The children created are 813 and 814
+Parent 1 chosen : 762
+Parent 2 chosen : 794
+The children created are 815 and 816
+Parent 1 chosen : 762
+Parent 2 chosen : 796
+The children created are 817 and 818
+The instruction from individual 817 was mutated from R_SPromClean %1 to R_SPromClean %0
+The instruction from individual 817 was mutated from W_SPromClean %1 to W_SPromClean %1
+Parent 1 chosen : 758
+Parent 2 chosen : 752
+The children created are 819 and 820
+The instruction from individual 820 was mutated from P_DemClean %3 to P_DemClean %0
+Parent 1 chosen : 764
+Parent 2 chosen : 796
+The children created are 821 and 822
+The instruction from individual 821 was mutated from L_DemClean %4 to L_DemClean %3
+The instruction from individual 822 was mutated from L_DemDirty %4 to L_DemDirty %2
+Parent 1 chosen : 765
+Parent 2 chosen : 791
+The children created are 823 and 824
+Parent 1 chosen : 799
+Parent 2 chosen : 794
+The children created are 825 and 826
+The instruction from individual 825 was mutated from R_SPromDirty %1 to R_SPromDirty %2
+The instruction from individual 825 was mutated from W_SPromClean %1 to W_SPromClean %1
+The instruction from individual 826 was mutated from R_SPromClean %1 to R_SPromClean %1
+Parent 1 chosen : 756
+Parent 2 chosen : 794
+The children created are 827 and 828
+Parent 1 chosen : 756
+Parent 2 chosen : 766
+The children created are 829 and 830
+Parent 1 chosen : 758
+Parent 2 chosen : 764
+The children created are 831 and 832
+The instruction from individual 832 was mutated from L_DemDirty %4 to L_DemDirty %2
+Parent 1 chosen : 785
+Parent 2 chosen : 791
+The children created are 833 and 834
+The instruction from individual 834 was mutated from P_SPromClean %1 to P_SPromClean %1
+Parent 1 chosen : 766
+Parent 2 chosen : 796
+The children created are 835 and 836
+Parent 1 chosen : 796
+Parent 2 chosen : 765
+The children created are 837 and 838
+The instruction from individual 838 was mutated from P_DemDirty %0 to P_DemDirty %4
+Parent 1 chosen : 785
+Parent 2 chosen : 794
+The children created are 839 and 840
+The instruction from individual 839 was mutated from R_DemDirty %1 to R_DemDirty %4
+Parent 1 chosen : 701
+Parent 2 chosen : 782
+The children created are 841 and 842
+Parent 1 chosen : 783
+Parent 2 chosen : 799
+The children created are 843 and 844
+Parent 1 chosen : 756
+Parent 2 chosen : 779
+The children created are 845 and 846
+The instruction from individual 845 was mutated from W_DemClean %0 to W_DemClean %4
+Parent 1 chosen : 790
+Parent 2 chosen : 758
+The children created are 847 and 848
+The instruction from individual 847 was mutated from R_SPromDirty %1 to R_SPromDirty %1
+Parent 1 chosen : 752
+Parent 2 chosen : 793
+The children created are 849 and 850
+Parent 1 chosen : 801
+Parent 2 chosen : 833
+The children created are 851 and 852
+Parent 1 chosen : 828
+Parent 2 chosen : 823
+The children created are 853 and 854
+The instruction from individual 853 was mutated from R_Insert %3 to R_Insert %2
+The instruction from individual 854 was mutated from R_DemDirty %1 to R_DemDirty %0
+Parent 1 chosen : 801
+Parent 2 chosen : 840
+The children created are 855 and 856
+The instruction from individual 855 was mutated from P_SPromDirty %0 to P_SPromDirty %1
+The instruction from individual 856 was mutated from P_SPromDirty %0 to P_SPromDirty %0
+Parent 1 chosen : 801
+Parent 2 chosen : 813
+The children created are 857 and 858
+The instruction from individual 858 was mutated from W_SPromDirty %1 to W_SPromDirty %1
+Parent 1 chosen : 847
+Parent 2 chosen : 791
+The children created are 859 and 860
+Parent 1 chosen : 840
+Parent 2 chosen : 835
+The children created are 861 and 862
+The instruction from individual 862 was mutated from P_Insert %3 to P_Insert %2
+The instruction from individual 862 was mutated from P_SPromDirty %0 to P_SPromDirty %2
+Parent 1 chosen : 813
+Parent 2 chosen : 835
+The children created are 863 and 864
+The instruction from individual 864 was mutated from W_SPromClean %1 to W_SPromClean %0
+Parent 1 chosen : 815
+Parent 2 chosen : 791
+The children created are 865 and 866
+The instruction from individual 865 was mutated from R_DemClean %4 to R_DemClean %3
+The instruction from individual 866 was mutated from P_DemClean %3 to P_DemClean %2
+Parent 1 chosen : 820
+Parent 2 chosen : 806
+The children created are 867 and 868
+The instruction from individual 867 was mutated from P_SPromClean %1 to P_SPromClean %0
+Parent 1 chosen : 823
+Parent 2 chosen : 813
+The children created are 869 and 870
+The instruction from individual 869 was mutated from W_DemClean %0 to W_DemClean %1
+Parent 1 chosen : 823
+Parent 2 chosen : 843
+The children created are 871 and 872
+The instruction from individual 872 was mutated from P_SPromDirty %0 to P_SPromDirty %2
+Parent 1 chosen : 844
+Parent 2 chosen : 791
+The children created are 873 and 874
+Parent 1 chosen : 791
+Parent 2 chosen : 835
+The children created are 875 and 876
+The instruction from individual 875 was mutated from W_SPromDirty %1 to W_SPromDirty %1
+Parent 1 chosen : 823
+Parent 2 chosen : 833
+The children created are 877 and 878
+Parent 1 chosen : 823
+Parent 2 chosen : 809
+The children created are 879 and 880
+Parent 1 chosen : 847
+Parent 2 chosen : 833
+The children created are 881 and 882
+Parent 1 chosen : 835
+Parent 2 chosen : 801
+The children created are 883 and 884
+The instruction from individual 883 was mutated from P_DemClean %2 to P_DemClean %0
+Parent 1 chosen : 803
+Parent 2 chosen : 819
+The children created are 885 and 886
+The instruction from individual 885 was mutated from R_DemDirty %1 to R_DemDirty %0
+Parent 1 chosen : 805
+Parent 2 chosen : 835
+The children created are 887 and 888
+Parent 1 chosen : 823
+Parent 2 chosen : 840
+The children created are 889 and 890
+The instruction from individual 889 was mutated from P_Insert %3 to P_Insert %0
+The instruction from individual 890 was mutated from L_Insert %1 to L_Insert %2
+Parent 1 chosen : 805
+Parent 2 chosen : 839
+The children created are 891 and 892
+The instruction from individual 891 was mutated from L_SPromClean %0 to L_SPromClean %2
+The instruction from individual 892 was mutated from W_Insert %1 to W_Insert %0
+Parent 1 chosen : 816
+Parent 2 chosen : 791
+The children created are 893 and 894
+The instruction from individual 894 was mutated from L_SPromClean %0 to L_SPromClean %2
+Parent 1 chosen : 840
+Parent 2 chosen : 817
+The children created are 895 and 896
+Parent 1 chosen : 816
+Parent 2 chosen : 828
+The children created are 897 and 898
+Parent 1 chosen : 819
+Parent 2 chosen : 847
+The children created are 899 and 900
+The instruction from individual 899 was mutated from R_SPromClean %1 to R_SPromClean %1
+The instruction from individual 899 was mutated from P_DemClean %2 to P_DemClean %4
+Parent 1 chosen : 881
+Parent 2 chosen : 888
+The children created are 901 and 902
+Parent 1 chosen : 893
+Parent 2 chosen : 858
+The children created are 903 and 904
+Parent 1 chosen : 857
+Parent 2 chosen : 851
+The children created are 905 and 906
+Parent 1 chosen : 873
+Parent 2 chosen : 870
+The children created are 907 and 908
+Parent 1 chosen : 858
+Parent 2 chosen : 873
+The children created are 909 and 910
+Parent 1 chosen : 791
+Parent 2 chosen : 855
+The children created are 911 and 912
+Parent 1 chosen : 873
+Parent 2 chosen : 877
+The children created are 913 and 914
+Parent 1 chosen : 897
+Parent 2 chosen : 870
+The children created are 915 and 916
+Parent 1 chosen : 851
+Parent 2 chosen : 880
+The children created are 917 and 918
+The instruction from individual 917 was mutated from R_Insert %3 to R_Insert %2
+The instruction from individual 917 was mutated from P_SPromClean %1 to P_SPromClean %2
+Parent 1 chosen : 881
+Parent 2 chosen : 895
+The children created are 919 and 920
+The instruction from individual 919 was mutated from R_DemClean %4 to R_DemClean %4
+The instruction from individual 920 was mutated from P_SPromDirty %0 to P_SPromDirty %1
+Parent 1 chosen : 857
+Parent 2 chosen : 791
+The children created are 921 and 922
+The instruction from individual 922 was mutated from W_SPromClean %1 to W_SPromClean %2
+Parent 1 chosen : 881
+Parent 2 chosen : 863
+The children created are 923 and 924
+The instruction from individual 923 was mutated from L_DemClean %4 to L_DemClean %4
+Parent 1 chosen : 859
+Parent 2 chosen : 880
+The children created are 925 and 926
+The instruction from individual 925 was mutated from P_Insert %3 to P_Insert %3
+Parent 1 chosen : 900
+Parent 2 chosen : 873
+The children created are 927 and 928
+The instruction from individual 928 was mutated from L_DemDirty %4 to L_DemDirty %3
+Parent 1 chosen : 880
+Parent 2 chosen : 859
+The children created are 929 and 930
+The instruction from individual 929 was mutated from W_DemClean %0 to W_DemClean %2
+Parent 1 chosen : 859
+Parent 2 chosen : 791
+The children created are 931 and 932
+The instruction from individual 931 was mutated from R_Insert %3 to R_Insert %3
+The instruction from individual 931 was mutated from P_Insert %3 to P_Insert %3
+Parent 1 chosen : 881
+Parent 2 chosen : 851
+The children created are 933 and 934
+The instruction from individual 934 was mutated from P_SPromDirty %0 to P_SPromDirty %1
+Parent 1 chosen : 861
+Parent 2 chosen : 888
+The children created are 935 and 936
+Parent 1 chosen : 791
+Parent 2 chosen : 875
+The children created are 937 and 938
+The instruction from individual 938 was mutated from P_DemClean %3 to P_DemClean %4
+Parent 1 chosen : 878
+Parent 2 chosen : 897
+The children created are 939 and 940
+The instruction from individual 939 was mutated from P_DemDirty %0 to P_DemDirty %4
+Parent 1 chosen : 791
+Parent 2 chosen : 859
+The children created are 941 and 942
+Parent 1 chosen : 876
+Parent 2 chosen : 881
+The children created are 943 and 944
+The instruction from individual 943 was mutated from W_DemDirty %0 to W_DemDirty %4
+The instruction from individual 944 was mutated from L_DemClean %4 to L_DemClean %0
+Parent 1 chosen : 868
+Parent 2 chosen : 875
+The children created are 945 and 946
+The instruction from individual 945 was mutated from L_DemDirty %4 to L_DemDirty %2
+The instruction from individual 945 was mutated from R_DemClean %4 to R_DemClean %3
+The instruction from individual 945 was mutated from P_Insert %3 to P_Insert %0
+The instruction from individual 946 was mutated from P_DemDirty %0 to P_DemDirty %1
+Parent 1 chosen : 856
+Parent 2 chosen : 873
+The children created are 947 and 948
+The instruction from individual 947 was mutated from R_SPromClean %1 to R_SPromClean %2
+Parent 1 chosen : 898
+Parent 2 chosen : 873
+The children created are 949 and 950
+Parent 1 chosen : 930
+Parent 2 chosen : 914
+The children created are 951 and 952
+The instruction from individual 952 was mutated from P_SPromClean %1 to P_SPromClean %2
+Parent 1 chosen : 909
+Parent 2 chosen : 791
+The children created are 953 and 954
+Parent 1 chosen : 902
+Parent 2 chosen : 931
+The children created are 955 and 956
+Parent 1 chosen : 907
+Parent 2 chosen : 791
+The children created are 957 and 958
+The instruction from individual 957 was mutated from P_DemClean %3 to P_DemClean %2
+Parent 1 chosen : 942
+Parent 2 chosen : 907
+The children created are 959 and 960
+Parent 1 chosen : 949
+Parent 2 chosen : 791
+The children created are 961 and 962
+The instruction from individual 962 was mutated from P_DemDirty %0 to P_DemDirty %4
+Parent 1 chosen : 949
+Parent 2 chosen : 791
+The children created are 963 and 964
+Parent 1 chosen : 908
+Parent 2 chosen : 902
+The children created are 965 and 966
+The instruction from individual 965 was mutated from P_DemClean %3 to P_DemClean %1
+Parent 1 chosen : 941
+Parent 2 chosen : 926
+The children created are 967 and 968
+The instruction from individual 968 was mutated from P_DemClean %3 to P_DemClean %3
+Parent 1 chosen : 924
+Parent 2 chosen : 912
+The children created are 969 and 970
+Parent 1 chosen : 950
+Parent 2 chosen : 942
+The children created are 971 and 972
+The instruction from individual 972 was mutated from L_DemClean %4 to L_DemClean %2
+Parent 1 chosen : 930
+Parent 2 chosen : 907
+The children created are 973 and 974
+Parent 1 chosen : 924
+Parent 2 chosen : 940
+The children created are 975 and 976
+Parent 1 chosen : 924
+Parent 2 chosen : 926
+The children created are 977 and 978
+The instruction from individual 977 was mutated from R_DemDirty %1 to R_DemDirty %1
+The instruction from individual 978 was mutated from L_DemDirty %4 to L_DemDirty %1
+The instruction from individual 978 was mutated from P_SPromClean %1 to P_SPromClean %0
+Parent 1 chosen : 942
+Parent 2 chosen : 930
+The children created are 979 and 980
+The instruction from individual 979 was mutated from L_DemClean %4 to L_DemClean %0
+Parent 1 chosen : 940
+Parent 2 chosen : 924
+The children created are 981 and 982
+Parent 1 chosen : 907
+Parent 2 chosen : 908
+The children created are 983 and 984
+Parent 1 chosen : 942
+Parent 2 chosen : 933
+The children created are 985 and 986
+The instruction from individual 985 was mutated from W_SPromDirty %1 to W_SPromDirty %1
+The instruction from individual 986 was mutated from P_DemDirty %0 to P_DemDirty %0
+Parent 1 chosen : 927
+Parent 2 chosen : 907
+The children created are 987 and 988
+Parent 1 chosen : 930
+Parent 2 chosen : 940
+The children created are 989 and 990
+The instruction from individual 990 was mutated from R_SPromDirty %1 to R_SPromDirty %0
+Parent 1 chosen : 907
+Parent 2 chosen : 912
+The children created are 991 and 992
+Parent 1 chosen : 949
+Parent 2 chosen : 941
+The children created are 993 and 994
+The instruction from individual 993 was mutated from R_DemDirty %1 to R_DemDirty %3
+Parent 1 chosen : 942
+Parent 2 chosen : 907
+The children created are 995 and 996
+The instruction from individual 995 was mutated from L_DemClean %4 to L_DemClean %2
+The instruction from individual 996 was mutated from W_Insert %1 to W_Insert %2
+Parent 1 chosen : 936
+Parent 2 chosen : 932
+The children created are 997 and 998
+The instruction from individual 998 was mutated from R_DemClean %4 to R_DemClean %0
+Parent 1 chosen : 926
+Parent 2 chosen : 942
+The children created are 999 and 1000
+Parent 1 chosen : 953
+Parent 2 chosen : 975
+The children created are 1001 and 1002
+The instruction from individual 1001 was mutated from L_DemClean %4 to L_DemClean %1
+The instruction from individual 1002 was mutated from L_SPromDirty %0 to L_SPromDirty %0
+Parent 1 chosen : 961
+Parent 2 chosen : 992
+The children created are 1003 and 1004
+Parent 1 chosen : 958
+Parent 2 chosen : 984
+The children created are 1005 and 1006
+Parent 1 chosen : 982
+Parent 2 chosen : 999
+The children created are 1007 and 1008
+Parent 1 chosen : 971
+Parent 2 chosen : 985
+The children created are 1009 and 1010
+Parent 1 chosen : 991
+Parent 2 chosen : 987
+The children created are 1011 and 1012
+The instruction from individual 1011 was mutated from W_DemClean %0 to W_DemClean %4
+Parent 1 chosen : 953
+Parent 2 chosen : 988
+The children created are 1013 and 1014
+The instruction from individual 1013 was mutated from P_Insert %3 to P_Insert %0
+Parent 1 chosen : 973
+Parent 2 chosen : 964
+The children created are 1015 and 1016
+Parent 1 chosen : 994
+Parent 2 chosen : 791
+The children created are 1017 and 1018
+The instruction from individual 1018 was mutated from P_DemDirty %0 to P_DemDirty %1
+The instruction from individual 1018 was mutated from W_Insert %1 to W_Insert %2
+Parent 1 chosen : 984
+Parent 2 chosen : 956
+The children created are 1019 and 1020
+The instruction from individual 1019 was mutated from R_DemClean %4 to R_DemClean %3
+The instruction from individual 1019 was mutated from P_DemDirty %0 to P_DemDirty %4
+The instruction from individual 1020 was mutated from P_DemClean %3 to P_DemClean %1
+Parent 1 chosen : 954
+Parent 2 chosen : 971
+The children created are 1021 and 1022
+The instruction from individual 1022 was mutated from L_DemClean %4 to L_DemClean %4
+Parent 1 chosen : 999
+Parent 2 chosen : 987
+The children created are 1023 and 1024
+Parent 1 chosen : 992
+Parent 2 chosen : 955
+The children created are 1025 and 1026
+Parent 1 chosen : 953
+Parent 2 chosen : 958
+The children created are 1027 and 1028
+The instruction from individual 1027 was mutated from W_SPromClean %1 to W_SPromClean %2
+Parent 1 chosen : 956
+Parent 2 chosen : 964
+The children created are 1029 and 1030
+The instruction from individual 1029 was mutated from W_SPromDirty %1 to W_SPromDirty %0
+Parent 1 chosen : 961
+Parent 2 chosen : 791
+The children created are 1031 and 1032
+The instruction from individual 1032 was mutated from P_SPromDirty %0 to P_SPromDirty %2
+Parent 1 chosen : 960
+Parent 2 chosen : 977
+The children created are 1033 and 1034
+The instruction from individual 1034 was mutated from W_DemDirty %0 to W_DemDirty %0
+Parent 1 chosen : 967
+Parent 2 chosen : 953
+The children created are 1035 and 1036
+Parent 1 chosen : 951
+Parent 2 chosen : 970
+The children created are 1037 and 1038
+Parent 1 chosen : 977
+Parent 2 chosen : 994
+The children created are 1039 and 1040
+Parent 1 chosen : 969
+Parent 2 chosen : 983
+The children created are 1041 and 1042
+Parent 1 chosen : 967
+Parent 2 chosen : 999
+The children created are 1043 and 1044
+Parent 1 chosen : 994
+Parent 2 chosen : 967
+The children created are 1045 and 1046
+The instruction from individual 1045 was mutated from R_DemDirty %1 to R_DemDirty %0
+Parent 1 chosen : 992
+Parent 2 chosen : 956
+The children created are 1047 and 1048
+Parent 1 chosen : 985
+Parent 2 chosen : 958
+The children created are 1049 and 1050
+The instruction from individual 1050 was mutated from L_SPromClean %0 to L_SPromClean %2
+Parent 1 chosen : 1026
+Parent 2 chosen : 1008
+The children created are 1051 and 1052
+The instruction from individual 1051 was mutated from P_SPromDirty %0 to P_SPromDirty %1
+Parent 1 chosen : 1026
+Parent 2 chosen : 1047
+The children created are 1053 and 1054
+Parent 1 chosen : 1009
+Parent 2 chosen : 1030
+The children created are 1055 and 1056
+Parent 1 chosen : 1007
+Parent 2 chosen : 1022
+The children created are 1057 and 1058
+The instruction from individual 1057 was mutated from P_SPromDirty %0 to P_SPromDirty %2
+The instruction from individual 1058 was mutated from L_Insert %1 to L_Insert %1
+Parent 1 chosen : 1037
+Parent 2 chosen : 1023
+The children created are 1059 and 1060
+Parent 1 chosen : 1005
+Parent 2 chosen : 1016
+The children created are 1061 and 1062
+The instruction from individual 1061 was mutated from P_DemClean %3 to P_DemClean %2
+Parent 1 chosen : 1023
+Parent 2 chosen : 1004
+The children created are 1063 and 1064
+The instruction from individual 1063 was mutated from L_DemDirty %4 to L_DemDirty %3
+Parent 1 chosen : 1049
+Parent 2 chosen : 1022
+The children created are 1065 and 1066
+Parent 1 chosen : 1035
+Parent 2 chosen : 1028
+The children created are 1067 and 1068
+The instruction from individual 1067 was mutated from L_SPromDirty %0 to L_SPromDirty %0
+Parent 1 chosen : 1036
+Parent 2 chosen : 1016
+The children created are 1069 and 1070
+The instruction from individual 1069 was mutated from L_SPromClean %0 to L_SPromClean %1
+Parent 1 chosen : 1030
+Parent 2 chosen : 1006
+The children created are 1071 and 1072
+Parent 1 chosen : 1007
+Parent 2 chosen : 1004
+The children created are 1073 and 1074
+Parent 1 chosen : 1005
+Parent 2 chosen : 1008
+The children created are 1075 and 1076
+The instruction from individual 1075 was mutated from P_Insert %3 to P_Insert %2
+Parent 1 chosen : 1037
+Parent 2 chosen : 1017
+The children created are 1077 and 1078
+Parent 1 chosen : 1044
+Parent 2 chosen : 1036
+The children created are 1079 and 1080
+The instruction from individual 1079 was mutated from R_SPromDirty %1 to R_SPromDirty %0
+Parent 1 chosen : 1044
+Parent 2 chosen : 1007
+The children created are 1081 and 1082
+The instruction from individual 1081 was mutated from P_SPromClean %1 to P_SPromClean %2
+The instruction from individual 1082 was mutated from L_DemClean %4 to L_DemClean %1
+The instruction from individual 1082 was mutated from P_SPromDirty %0 to P_SPromDirty %0
+Parent 1 chosen : 1007
+Parent 2 chosen : 1048
+The children created are 1083 and 1084
+The instruction from individual 1083 was mutated from L_Insert %1 to L_Insert %1
+Parent 1 chosen : 1022
+Parent 2 chosen : 1038
+The children created are 1085 and 1086
+Parent 1 chosen : 1034
+Parent 2 chosen : 1022
+The children created are 1087 and 1088
+Parent 1 chosen : 1028
+Parent 2 chosen : 1005
+The children created are 1089 and 1090
+Parent 1 chosen : 1006
+Parent 2 chosen : 1008
+The children created are 1091 and 1092
+The instruction from individual 1091 was mutated from P_Insert %3 to P_Insert %3
+Parent 1 chosen : 1009
+Parent 2 chosen : 1026
+The children created are 1093 and 1094
+Parent 1 chosen : 1043
+Parent 2 chosen : 1021
+The children created are 1095 and 1096
+Parent 1 chosen : 1023
+Parent 2 chosen : 1042
+The children created are 1097 and 1098
+The instruction from individual 1097 was mutated from R_SPromClean %1 to R_SPromClean %1
+Parent 1 chosen : 1026
+Parent 2 chosen : 1012
+The children created are 1099 and 1100
+Parent 1 chosen : 1095
+Parent 2 chosen : 1091
+The children created are 1101 and 1102
+The instruction from individual 1102 was mutated from W_DemDirty %0 to W_DemDirty %1
+Parent 1 chosen : 1091
+Parent 2 chosen : 1084
+The children created are 1103 and 1104
+The instruction from individual 1104 was mutated from L_Insert %1 to L_Insert %1
+Parent 1 chosen : 1073
+Parent 2 chosen : 1067
+The children created are 1105 and 1106
+The instruction from individual 1105 was mutated from L_SPromDirty %0 to L_SPromDirty %0
+Parent 1 chosen : 1068
+Parent 2 chosen : 1067
+The children created are 1107 and 1108
+Parent 1 chosen : 791
+Parent 2 chosen : 1098
+The children created are 1109 and 1110
+Parent 1 chosen : 1062
+Parent 2 chosen : 1086
+The children created are 1111 and 1112
+The instruction from individual 1111 was mutated from L_Insert %1 to L_Insert %2
+Parent 1 chosen : 1066
+Parent 2 chosen : 1097
+The children created are 1113 and 1114
+The instruction from individual 1113 was mutated from W_Insert %1 to W_Insert %3
+The instruction from individual 1114 was mutated from W_SPromClean %1 to W_SPromClean %0
+Parent 1 chosen : 1080
+Parent 2 chosen : 1076
+The children created are 1115 and 1116
+The instruction from individual 1115 was mutated from R_SPromDirty %1 to R_SPromDirty %1
+Parent 1 chosen : 1077
+Parent 2 chosen : 1090
+The children created are 1117 and 1118
+Parent 1 chosen : 1084
+Parent 2 chosen : 1091
+The children created are 1119 and 1120
+Parent 1 chosen : 1062
+Parent 2 chosen : 1060
+The children created are 1121 and 1122
+The instruction from individual 1121 was mutated from P_DemDirty %0 to P_DemDirty %4
+The instruction from individual 1122 was mutated from R_SPromClean %1 to R_SPromClean %1
+The instruction from individual 1122 was mutated from W_SPromClean %1 to W_SPromClean %1
+Parent 1 chosen : 1090
+Parent 2 chosen : 1093
+The children created are 1123 and 1124
+The instruction from individual 1123 was mutated from P_DemDirty %0 to P_DemDirty %0
+Parent 1 chosen : 1096
+Parent 2 chosen : 1078
+The children created are 1125 and 1126
+Parent 1 chosen : 1092
+Parent 2 chosen : 1066
+The children created are 1127 and 1128
+Parent 1 chosen : 1061
+Parent 2 chosen : 1088
+The children created are 1129 and 1130
+The instruction from individual 1129 was mutated from R_DemClean %4 to R_DemClean %3
+Parent 1 chosen : 1059
+Parent 2 chosen : 1078
+The children created are 1131 and 1132
+The instruction from individual 1131 was mutated from P_SPromDirty %0 to P_SPromDirty %0
+The instruction from individual 1131 was mutated from W_SPromDirty %1 to W_SPromDirty %0
+Parent 1 chosen : 1073
+Parent 2 chosen : 1083
+The children created are 1133 and 1134
+The instruction from individual 1134 was mutated from P_DemDirty %0 to P_DemDirty %3
+Parent 1 chosen : 1090
+Parent 2 chosen : 1087
+The children created are 1135 and 1136
+Parent 1 chosen : 1056
+Parent 2 chosen : 1071
+The children created are 1137 and 1138
+Parent 1 chosen : 1095
+Parent 2 chosen : 1072
+The children created are 1139 and 1140
+Parent 1 chosen : 1077
+Parent 2 chosen : 1096
+The children created are 1141 and 1142
+The instruction from individual 1141 was mutated from R_Insert %3 to R_Insert %3
+Parent 1 chosen : 1060
+Parent 2 chosen : 1077
+The children created are 1143 and 1144
+The instruction from individual 1144 was mutated from W_SPromClean %1 to W_SPromClean %0
+Parent 1 chosen : 1067
+Parent 2 chosen : 1066
+The children created are 1145 and 1146
+Parent 1 chosen : 1070
+Parent 2 chosen : 1084
+The children created are 1147 and 1148
+Parent 1 chosen : 1092
+Parent 2 chosen : 1062
+The children created are 1149 and 1150
+Parent 1 chosen : 1109
+Parent 2 chosen : 1132
+The children created are 1151 and 1152
+The instruction from individual 1152 was mutated from R_Insert %3 to R_Insert %0
+The instruction from individual 1152 was mutated from P_SPromDirty %0 to P_SPromDirty %2
+Parent 1 chosen : 1120
+Parent 2 chosen : 1136
+The children created are 1153 and 1154
+Parent 1 chosen : 1138
+Parent 2 chosen : 1101
+The children created are 1155 and 1156
+The instruction from individual 1156 was mutated from P_DemClean %3 to P_DemClean %1
+Parent 1 chosen : 1149
+Parent 2 chosen : 791
+The children created are 1157 and 1158
+Parent 1 chosen : 1138
+Parent 2 chosen : 1139
+The children created are 1159 and 1160
+The instruction from individual 1160 was mutated from P_DemClean %3 to P_DemClean %3
+Parent 1 chosen : 1115
+Parent 2 chosen : 1125
+The children created are 1161 and 1162
+Parent 1 chosen : 1115
+Parent 2 chosen : 1122
+The children created are 1163 and 1164
+The instruction from individual 1163 was mutated from L_SPromClean %0 to L_SPromClean %0
+The instruction from individual 1164 was mutated from W_Insert %1 to W_Insert %3
+Parent 1 chosen : 1142
+Parent 2 chosen : 1120
+The children created are 1165 and 1166
+The instruction from individual 1165 was mutated from L_SPromClean %0 to L_SPromClean %1
+The instruction from individual 1165 was mutated from R_DemClean %4 to R_DemClean %0
+Parent 1 chosen : 1133
+Parent 2 chosen : 1116
+The children created are 1167 and 1168
+Parent 1 chosen : 1149
+Parent 2 chosen : 1126
+The children created are 1169 and 1170
+Parent 1 chosen : 1139
+Parent 2 chosen : 1148
+The children created are 1171 and 1172
+Parent 1 chosen : 1108
+Parent 2 chosen : 1119
+The children created are 1173 and 1174
+Parent 1 chosen : 1102
+Parent 2 chosen : 1120
+The children created are 1175 and 1176
+The instruction from individual 1176 was mutated from R_DemDirty %1 to R_DemDirty %2
+Parent 1 chosen : 1150
+Parent 2 chosen : 1106
+The children created are 1177 and 1178
+The instruction from individual 1178 was mutated from P_Insert %3 to P_Insert %0
+Parent 1 chosen : 1128
+Parent 2 chosen : 1102
+The children created are 1179 and 1180
+Parent 1 chosen : 1102
+Parent 2 chosen : 1138
+The children created are 1181 and 1182
+Parent 1 chosen : 1104
+Parent 2 chosen : 1135
+The children created are 1183 and 1184
+The instruction from individual 1183 was mutated from W_DemDirty %0 to W_DemDirty %2
+Parent 1 chosen : 1133
+Parent 2 chosen : 1139
+The children created are 1185 and 1186
+Parent 1 chosen : 1149
+Parent 2 chosen : 1148
+The children created are 1187 and 1188
+Parent 1 chosen : 1118
+Parent 2 chosen : 1141
+The children created are 1189 and 1190
+Parent 1 chosen : 1141
+Parent 2 chosen : 1133
+The children created are 1191 and 1192
+Parent 1 chosen : 1108
+Parent 2 chosen : 1127
+The children created are 1193 and 1194
+Parent 1 chosen : 1123
+Parent 2 chosen : 1146
+The children created are 1195 and 1196
+The instruction from individual 1195 was mutated from L_Insert %1 to L_Insert %3
+The instruction from individual 1195 was mutated from P_SPromClean %1 to P_SPromClean %2
+The instruction from individual 1195 was mutated from W_SPromDirty %1 to W_SPromDirty %2
+Parent 1 chosen : 1136
+Parent 2 chosen : 1116
+The children created are 1197 and 1198
+The instruction from individual 1197 was mutated from W_SPromDirty %1 to W_SPromDirty %0
+Parent 1 chosen : 1118
+Parent 2 chosen : 1128
+The children created are 1199 and 1200
+The instruction from individual 1200 was mutated from P_SPromDirty %0 to P_SPromDirty %1
+The instruction from individual 1200 was mutated from W_DemClean %0 to W_DemClean %0
+Parent 1 chosen : 1169
+Parent 2 chosen : 1163
+The children created are 1201 and 1202
+The instruction from individual 1202 was mutated from W_SPromClean %1 to W_SPromClean %1
+Parent 1 chosen : 1185
+Parent 2 chosen : 1169
+The children created are 1203 and 1204
+The instruction from individual 1204 was mutated from R_SPromClean %1 to R_SPromClean %2
+Parent 1 chosen : 1169
+Parent 2 chosen : 1186
+The children created are 1205 and 1206
+Parent 1 chosen : 1188
+Parent 2 chosen : 1177
+The children created are 1207 and 1208
+The instruction from individual 1207 was mutated from P_DemClean %2 to P_DemClean %2
+Parent 1 chosen : 1155
+Parent 2 chosen : 1166
+The children created are 1209 and 1210
+The instruction from individual 1209 was mutated from P_DemDirty %0 to P_DemDirty %1
+Parent 1 chosen : 1184
+Parent 2 chosen : 1187
+The children created are 1211 and 1212
+Parent 1 chosen : 1177
+Parent 2 chosen : 1163
+The children created are 1213 and 1214
+The instruction from individual 1214 was mutated from R_DemDirty %1 to R_DemDirty %2
+The instruction from individual 1214 was mutated from R_SPromDirty %1 to R_SPromDirty %2
+Parent 1 chosen : 1168
+Parent 2 chosen : 1153
+The children created are 1215 and 1216
+Parent 1 chosen : 1184
+Parent 2 chosen : 1181
+The children created are 1217 and 1218
+The instruction from individual 1218 was mutated from L_Insert %1 to L_Insert %1
+Parent 1 chosen : 1170
+Parent 2 chosen : 1168
+The children created are 1219 and 1220
+The instruction from individual 1220 was mutated from P_SPromClean %1 to P_SPromClean %2
+The instruction from individual 1220 was mutated from W_Insert %1 to W_Insert %2
+Parent 1 chosen : 1190
+Parent 2 chosen : 1186
+The children created are 1221 and 1222
+Parent 1 chosen : 1181
+Parent 2 chosen : 1172
+The children created are 1223 and 1224
+Parent 1 chosen : 1170
+Parent 2 chosen : 1199
+The children created are 1225 and 1226
+Parent 1 chosen : 1199
+Parent 2 chosen : 1153
+The children created are 1227 and 1228
+Parent 1 chosen : 1173
+Parent 2 chosen : 1181
+The children created are 1229 and 1230
+Parent 1 chosen : 1167
+Parent 2 chosen : 1185
+The children created are 1231 and 1232
+Parent 1 chosen : 1194
+Parent 2 chosen : 791
+The children created are 1233 and 1234
+The instruction from individual 1234 was mutated from P_SPromClean %1 to P_SPromClean %2
+Parent 1 chosen : 1180
+Parent 2 chosen : 1175
+The children created are 1235 and 1236
+Parent 1 chosen : 1193
+Parent 2 chosen : 1177
+The children created are 1237 and 1238
+The instruction from individual 1238 was mutated from L_Insert %1 to L_Insert %0
+Parent 1 chosen : 1194
+Parent 2 chosen : 1159
+The children created are 1239 and 1240
+Parent 1 chosen : 1154
+Parent 2 chosen : 1151
+The children created are 1241 and 1242
+Parent 1 chosen : 1185
+Parent 2 chosen : 1157
+The children created are 1243 and 1244
+Parent 1 chosen : 1189
+Parent 2 chosen : 1198
+The children created are 1245 and 1246
+The instruction from individual 1245 was mutated from P_SPromDirty %0 to P_SPromDirty %2
+Parent 1 chosen : 1157
+Parent 2 chosen : 1166
+The children created are 1247 and 1248
+Parent 1 chosen : 1172
+Parent 2 chosen : 1170
+The children created are 1249 and 1250
+The instruction from individual 1249 was mutated from R_Insert %3 to R_Insert %2
+Parent 1 chosen : 1219
+Parent 2 chosen : 1242
+The children created are 1251 and 1252
+The instruction from individual 1252 was mutated from R_SPromDirty %1 to R_SPromDirty %2
+Parent 1 chosen : 1201
+Parent 2 chosen : 1222
+The children created are 1253 and 1254
+The instruction from individual 1253 was mutated from P_Insert %3 to P_Insert %3
+The instruction from individual 1253 was mutated from P_SPromClean %1 to P_SPromClean %0
+The instruction from individual 1253 was mutated from W_SPromDirty %1 to W_SPromDirty %0
+The instruction from individual 1254 was mutated from P_Insert %3 to P_Insert %2
+Parent 1 chosen : 1212
+Parent 2 chosen : 791
+The children created are 1255 and 1256
+The instruction from individual 1255 was mutated from P_SPromClean %1 to P_SPromClean %1
+The instruction from individual 1256 was mutated from W_SPromClean %1 to W_SPromClean %1
+Parent 1 chosen : 1204
+Parent 2 chosen : 1219
+The children created are 1257 and 1258
+Parent 1 chosen : 1219
+Parent 2 chosen : 1211
+The children created are 1259 and 1260
+Parent 1 chosen : 1250
+Parent 2 chosen : 1246
+The children created are 1261 and 1262
+The instruction from individual 1262 was mutated from W_SPromDirty %1 to W_SPromDirty %2
+Parent 1 chosen : 1229
+Parent 2 chosen : 1223
+The children created are 1263 and 1264
+The instruction from individual 1263 was mutated from R_DemDirty %1 to R_DemDirty %1
+The instruction from individual 1264 was mutated from R_Insert %3 to R_Insert %1
+Parent 1 chosen : 1202
+Parent 2 chosen : 1217
+The children created are 1265 and 1266
+The instruction from individual 1265 was mutated from P_SPromClean %1 to P_SPromClean %2
+Parent 1 chosen : 1227
+Parent 2 chosen : 1233
+The children created are 1267 and 1268
+The instruction from individual 1268 was mutated from W_DemDirty %0 to W_DemDirty %3
+The instruction from individual 1268 was mutated from W_SPromDirty %1 to W_SPromDirty %1
+Parent 1 chosen : 1247
+Parent 2 chosen : 1211
+The children created are 1269 and 1270
+The instruction from individual 1269 was mutated from R_DemDirty %1 to R_DemDirty %1
+The instruction from individual 1270 was mutated from R_DemClean %4 to R_DemClean %4
+Parent 1 chosen : 1217
+Parent 2 chosen : 1205
+The children created are 1271 and 1272
+The instruction from individual 1272 was mutated from L_SPromDirty %0 to L_SPromDirty %1
+Parent 1 chosen : 1211
+Parent 2 chosen : 1233
+The children created are 1273 and 1274
+The instruction from individual 1273 was mutated from P_SPromDirty %0 to P_SPromDirty %1
+The instruction from individual 1274 was mutated from L_SPromDirty %0 to L_SPromDirty %2
+Parent 1 chosen : 1243
+Parent 2 chosen : 1248
+The children created are 1275 and 1276
+The instruction from individual 1275 was mutated from P_SPromDirty %0 to P_SPromDirty %1
+The instruction from individual 1276 was mutated from W_DemDirty %0 to W_DemDirty %3
+Parent 1 chosen : 1236
+Parent 2 chosen : 1228
+The children created are 1277 and 1278
+Parent 1 chosen : 1241
+Parent 2 chosen : 1247
+The children created are 1279 and 1280
+Parent 1 chosen : 791
+Parent 2 chosen : 1244
+The children created are 1281 and 1282
+The instruction from individual 1281 was mutated from W_SPromClean %1 to W_SPromClean %0
+Parent 1 chosen : 791
+Parent 2 chosen : 1203
+The children created are 1283 and 1284
+The instruction from individual 1283 was mutated from L_DemClean %4 to L_DemClean %1
+The instruction from individual 1283 was mutated from L_SPromDirty %0 to L_SPromDirty %0
+Parent 1 chosen : 1201
+Parent 2 chosen : 1244
+The children created are 1285 and 1286
+Parent 1 chosen : 1216
+Parent 2 chosen : 1235
+The children created are 1287 and 1288
+Parent 1 chosen : 1204
+Parent 2 chosen : 1216
+The children created are 1289 and 1290
+Parent 1 chosen : 791
+Parent 2 chosen : 1231
+The children created are 1291 and 1292
+Parent 1 chosen : 1227
+Parent 2 chosen : 1237
+The children created are 1293 and 1294
+The instruction from individual 1293 was mutated from P_SPromDirty %0 to P_SPromDirty %1
+The instruction from individual 1294 was mutated from R_SPromClean %1 to R_SPromClean %1
+Parent 1 chosen : 1235
+Parent 2 chosen : 1213
+The children created are 1295 and 1296
+Parent 1 chosen : 1243
+Parent 2 chosen : 1247
+The children created are 1297 and 1298
+Parent 1 chosen : 1237
+Parent 2 chosen : 1247
+The children created are 1299 and 1300
+The instruction from individual 1300 was mutated from R_Insert %3 to R_Insert %3
+Parent 1 chosen : 1266
+Parent 2 chosen : 1297
+The children created are 1301 and 1302
+Parent 1 chosen : 1290
+Parent 2 chosen : 1258
+The children created are 1303 and 1304
+Parent 1 chosen : 791
+Parent 2 chosen : 1263
+The children created are 1305 and 1306
+Parent 1 chosen : 1258
+Parent 2 chosen : 1288
+The children created are 1307 and 1308
+The instruction from individual 1307 was mutated from R_SPromClean %1 to R_SPromClean %1
+The instruction from individual 1308 was mutated from P_SPromClean %1 to P_SPromClean %1
+The instruction from individual 1308 was mutated from W_DemClean %0 to W_DemClean %4
+Parent 1 chosen : 791
+Parent 2 chosen : 1280
+The children created are 1309 and 1310
+Parent 1 chosen : 1288
+Parent 2 chosen : 1300
+The children created are 1311 and 1312
+The instruction from individual 1311 was mutated from L_DemClean %4 to L_DemClean %3
+Parent 1 chosen : 1256
+Parent 2 chosen : 1269
+The children created are 1313 and 1314
+The instruction from individual 1314 was mutated from L_SPromDirty %0 to L_SPromDirty %2
+The instruction from individual 1314 was mutated from P_SPromClean %1 to P_SPromClean %0
+Parent 1 chosen : 1261
+Parent 2 chosen : 1287
+The children created are 1315 and 1316
+The instruction from individual 1316 was mutated from P_SPromDirty %0 to P_SPromDirty %2
+Parent 1 chosen : 1290
+Parent 2 chosen : 1258
+The children created are 1317 and 1318
+The instruction from individual 1317 was mutated from R_Insert %3 to R_Insert %0
+The instruction from individual 1317 was mutated from W_Insert %1 to W_Insert %0
+Parent 1 chosen : 1257
+Parent 2 chosen : 1300
+The children created are 1319 and 1320
+Parent 1 chosen : 1300
+Parent 2 chosen : 1251
+The children created are 1321 and 1322
+Parent 1 chosen : 1263
+Parent 2 chosen : 1284
+The children created are 1323 and 1324
+The instruction from individual 1323 was mutated from W_DemClean %0 to W_DemClean %3
+Parent 1 chosen : 1287
+Parent 2 chosen : 1298
+The children created are 1325 and 1326
+The instruction from individual 1326 was mutated from R_DemDirty %1 to R_DemDirty %4
+Parent 1 chosen : 1279
+Parent 2 chosen : 1271
+The children created are 1327 and 1328
+The instruction from individual 1328 was mutated from P_Insert %3 to P_Insert %2
+Parent 1 chosen : 1284
+Parent 2 chosen : 1263
+The children created are 1329 and 1330
+The instruction from individual 1329 was mutated from W_DemDirty %0 to W_DemDirty %4
+Parent 1 chosen : 1260
+Parent 2 chosen : 1258
+The children created are 1331 and 1332
+Parent 1 chosen : 1257
+Parent 2 chosen : 1267
+The children created are 1333 and 1334
+Parent 1 chosen : 1258
+Parent 2 chosen : 1278
+The children created are 1335 and 1336
+The instruction from individual 1335 was mutated from R_Insert %3 to R_Insert %2
+Parent 1 chosen : 1285
+Parent 2 chosen : 1300
+The children created are 1337 and 1338
+Parent 1 chosen : 1282
+Parent 2 chosen : 1269
+The children created are 1339 and 1340
+Parent 1 chosen : 1286
+Parent 2 chosen : 1255
+The children created are 1341 and 1342
+Parent 1 chosen : 1300
+Parent 2 chosen : 1288
+The children created are 1343 and 1344
+The instruction from individual 1343 was mutated from L_SPromDirty %0 to L_SPromDirty %0
+Parent 1 chosen : 1279
+Parent 2 chosen : 1292
+The children created are 1345 and 1346
+The instruction from individual 1346 was mutated from W_DemDirty %0 to W_DemDirty %1
+Parent 1 chosen : 1295
+Parent 2 chosen : 791
+The children created are 1347 and 1348
+Parent 1 chosen : 1289
+Parent 2 chosen : 1267
+The children created are 1349 and 1350
+The instruction from individual 1349 was mutated from L_DemClean %4 to L_DemClean %3
+Parent 1 chosen : 1340
+Parent 2 chosen : 1326
+The children created are 1351 and 1352
+Parent 1 chosen : 1318
+Parent 2 chosen : 1339
+The children created are 1353 and 1354
+The instruction from individual 1353 was mutated from W_DemClean %0 to W_DemClean %4
+Parent 1 chosen : 1350
+Parent 2 chosen : 1315
+The children created are 1355 and 1356
+The instruction from individual 1355 was mutated from L_DemClean %4 to L_DemClean %0
+Parent 1 chosen : 1341
+Parent 2 chosen : 1332
+The children created are 1357 and 1358
+Parent 1 chosen : 1336
+Parent 2 chosen : 1338
+The children created are 1359 and 1360
+The instruction from individual 1360 was mutated from W_DemDirty %0 to W_DemDirty %2
+The instruction from individual 1360 was mutated from W_SPromClean %1 to W_SPromClean %2
+Parent 1 chosen : 1304
+Parent 2 chosen : 1342
+The children created are 1361 and 1362
+Parent 1 chosen : 1344
+Parent 2 chosen : 1319
+The children created are 1363 and 1364
+The instruction from individual 1364 was mutated from R_Insert %3 to R_Insert %0
+Parent 1 chosen : 1303
+Parent 2 chosen : 1304
+The children created are 1365 and 1366
+The instruction from individual 1365 was mutated from L_DemClean %4 to L_DemClean %0
+The instruction from individual 1366 was mutated from W_Insert %1 to W_Insert %2
+Parent 1 chosen : 1337
+Parent 2 chosen : 1348
+The children created are 1367 and 1368
+The instruction from individual 1368 was mutated from P_Insert %3 to P_Insert %3
+Parent 1 chosen : 1304
+Parent 2 chosen : 1307
+The children created are 1369 and 1370
+The instruction from individual 1369 was mutated from P_SPromClean %1 to P_SPromClean %2
+The instruction from individual 1370 was mutated from R_DemDirty %1 to R_DemDirty %4
+Parent 1 chosen : 1325
+Parent 2 chosen : 1302
+The children created are 1371 and 1372
+The instruction from individual 1371 was mutated from R_SPromDirty %1 to R_SPromDirty %1
+The instruction from individual 1371 was mutated from W_DemDirty %0 to W_DemDirty %2
+The instruction from individual 1372 was mutated from W_SPromClean %1 to W_SPromClean %2
+Parent 1 chosen : 1326
+Parent 2 chosen : 1333
+The children created are 1373 and 1374
+Parent 1 chosen : 1312
+Parent 2 chosen : 1324
+The children created are 1375 and 1376
+Parent 1 chosen : 1338
+Parent 2 chosen : 1325
+The children created are 1377 and 1378
+The instruction from individual 1378 was mutated from P_SPromDirty %0 to P_SPromDirty %1
+Parent 1 chosen : 1304
+Parent 2 chosen : 1342
+The children created are 1379 and 1380
+The instruction from individual 1379 was mutated from R_DemDirty %1 to R_DemDirty %0
+Parent 1 chosen : 1348
+Parent 2 chosen : 1339
+The children created are 1381 and 1382
+The instruction from individual 1381 was mutated from P_SPromClean %1 to P_SPromClean %0
+The instruction from individual 1381 was mutated from W_DemClean %0 to W_DemClean %0
+The instruction from individual 1382 was mutated from P_Insert %3 to P_Insert %0
+Parent 1 chosen : 1337
+Parent 2 chosen : 1348
+The children created are 1383 and 1384
+The instruction from individual 1383 was mutated from W_SPromDirty %1 to W_SPromDirty %0
+The instruction from individual 1384 was mutated from R_SPromDirty %1 to R_SPromDirty %2
+Parent 1 chosen : 1303
+Parent 2 chosen : 1339
+The children created are 1385 and 1386
+Parent 1 chosen : 1315
+Parent 2 chosen : 1345
+The children created are 1387 and 1388
+The instruction from individual 1387 was mutated from P_Insert %3 to P_Insert %1
+Parent 1 chosen : 1312
+Parent 2 chosen : 1307
+The children created are 1389 and 1390
+The instruction from individual 1389 was mutated from W_Insert %1 to W_Insert %1
+Parent 1 chosen : 1324
+Parent 2 chosen : 1342
+The children created are 1391 and 1392
+Parent 1 chosen : 1340
+Parent 2 chosen : 1305
+The children created are 1393 and 1394
+Parent 1 chosen : 1331
+Parent 2 chosen : 1326
+The children created are 1395 and 1396
+Parent 1 chosen : 1324
+Parent 2 chosen : 1337
+The children created are 1397 and 1398
+The instruction from individual 1397 was mutated from R_SPromClean %1 to R_SPromClean %1
+The instruction from individual 1397 was mutated from W_DemDirty %0 to W_DemDirty %4
+Parent 1 chosen : 1345
+Parent 2 chosen : 1339
+The children created are 1399 and 1400
+The instruction from individual 1400 was mutated from W_DemClean %0 to W_DemClean %0
+Parent 1 chosen : 1398
+Parent 2 chosen : 1356
+The children created are 1401 and 1402
+The instruction from individual 1402 was mutated from R_DemClean %4 to R_DemClean %0
+The instruction from individual 1402 was mutated from R_DemDirty %1 to R_DemDirty %2
+Parent 1 chosen : 1386
+Parent 2 chosen : 1393
+The children created are 1403 and 1404
+Parent 1 chosen : 1352
+Parent 2 chosen : 1393
+The children created are 1405 and 1406
+The instruction from individual 1405 was mutated from P_SPromDirty %0 to P_SPromDirty %2
+Parent 1 chosen : 1368
+Parent 2 chosen : 1373
+The children created are 1407 and 1408
+The instruction from individual 1407 was mutated from R_DemDirty %1 to R_DemDirty %3
+The instruction from individual 1407 was mutated from R_SPromDirty %1 to R_SPromDirty %2
+The instruction from individual 1408 was mutated from R_SPromDirty %1 to R_SPromDirty %1
+Parent 1 chosen : 1396
+Parent 2 chosen : 1386
+The children created are 1409 and 1410
+The instruction from individual 1409 was mutated from P_DemDirty %0 to P_DemDirty %3
+Parent 1 chosen : 1367
+Parent 2 chosen : 1356
+The children created are 1411 and 1412
+The instruction from individual 1412 was mutated from W_SPromDirty %1 to W_SPromDirty %2
+Parent 1 chosen : 1394
+Parent 2 chosen : 791
+The children created are 1413 and 1414
+The instruction from individual 1414 was mutated from L_SPromDirty %0 to L_SPromDirty %2
+Parent 1 chosen : 791
+Parent 2 chosen : 1352
+The children created are 1415 and 1416
+The instruction from individual 1416 was mutated from W_DemClean %0 to W_DemClean %4
+Parent 1 chosen : 1363
+Parent 2 chosen : 1390
+The children created are 1417 and 1418
+Parent 1 chosen : 1373
+Parent 2 chosen : 1392
+The children created are 1419 and 1420
+Parent 1 chosen : 1362
+Parent 2 chosen : 1359
+The children created are 1421 and 1422
+Parent 1 chosen : 1358
+Parent 2 chosen : 1398
+The children created are 1423 and 1424
+The instruction from individual 1423 was mutated from P_DemDirty %0 to P_DemDirty %0
+Parent 1 chosen : 1354
+Parent 2 chosen : 1374
+The children created are 1425 and 1426
+The instruction from individual 1425 was mutated from R_DemDirty %1 to R_DemDirty %3
+Parent 1 chosen : 1361
+Parent 2 chosen : 1380
+The children created are 1427 and 1428
+The instruction from individual 1427 was mutated from L_Insert %1 to L_Insert %1
+The instruction from individual 1427 was mutated from W_DemDirty %0 to W_DemDirty %1
+Parent 1 chosen : 1361
+Parent 2 chosen : 1363
+The children created are 1429 and 1430
+Parent 1 chosen : 1376
+Parent 2 chosen : 1373
+The children created are 1431 and 1432
+The instruction from individual 1431 was mutated from P_Insert %3 to P_Insert %1
+Parent 1 chosen : 1362
+Parent 2 chosen : 1373
+The children created are 1433 and 1434
+The instruction from individual 1434 was mutated from W_DemClean %0 to W_DemClean %0
+Parent 1 chosen : 1394
+Parent 2 chosen : 1362
+The children created are 1435 and 1436
+The instruction from individual 1436 was mutated from R_Insert %3 to R_Insert %1
+Parent 1 chosen : 1377
+Parent 2 chosen : 1391
+The children created are 1437 and 1438
+The instruction from individual 1437 was mutated from L_DemDirty %4 to L_DemDirty %4
+Parent 1 chosen : 1375
+Parent 2 chosen : 1380
+The children created are 1439 and 1440
+Parent 1 chosen : 1398
+Parent 2 chosen : 1388
+The children created are 1441 and 1442
+Parent 1 chosen : 1373
+Parent 2 chosen : 1385
+The children created are 1443 and 1444
+Parent 1 chosen : 1388
+Parent 2 chosen : 1362
+The children created are 1445 and 1446
+Parent 1 chosen : 1376
+Parent 2 chosen : 1377
+The children created are 1447 and 1448
+The instruction from individual 1447 was mutated from L_SPromDirty %0 to L_SPromDirty %2
+Parent 1 chosen : 791
+Parent 2 chosen : 1368
+The children created are 1449 and 1450
+Parent 1 chosen : 1428
+Parent 2 chosen : 1435
+The children created are 1451 and 1452
+The instruction from individual 1452 was mutated from P_SPromClean %1 to P_SPromClean %1
+Parent 1 chosen : 1428
+Parent 2 chosen : 1437
+The children created are 1453 and 1454
+Parent 1 chosen : 1428
+Parent 2 chosen : 1401
+The children created are 1455 and 1456
+Parent 1 chosen : 1417
+Parent 2 chosen : 1404
+The children created are 1457 and 1458
+Parent 1 chosen : 1419
+Parent 2 chosen : 1418
+The children created are 1459 and 1460
+The instruction from individual 1459 was mutated from R_Insert %3 to R_Insert %1
+The instruction from individual 1460 was mutated from R_DemClean %4 to R_DemClean %2
+The instruction from individual 1460 was mutated from R_SPromClean %1 to R_SPromClean %1
+Parent 1 chosen : 1423
+Parent 2 chosen : 1426
+The children created are 1461 and 1462
+The instruction from individual 1462 was mutated from L_DemClean %4 to L_DemClean %2
+Parent 1 chosen : 1418
+Parent 2 chosen : 1427
+The children created are 1463 and 1464
+The instruction from individual 1463 was mutated from L_SPromDirty %0 to L_SPromDirty %0
+Parent 1 chosen : 1440
+Parent 2 chosen : 1408
+The children created are 1465 and 1466
+The instruction from individual 1465 was mutated from L_DemClean %4 to L_DemClean %1
+The instruction from individual 1466 was mutated from L_SPromClean %0 to L_SPromClean %2
+Parent 1 chosen : 1401
+Parent 2 chosen : 1437
+The children created are 1467 and 1468
+The instruction from individual 1467 was mutated from W_SPromDirty %1 to W_SPromDirty %0
+Parent 1 chosen : 1449
+Parent 2 chosen : 1443
+The children created are 1469 and 1470
+Parent 1 chosen : 1437
+Parent 2 chosen : 791
+The children created are 1471 and 1472
+Parent 1 chosen : 1417
+Parent 2 chosen : 1421
+The children created are 1473 and 1474
+The instruction from individual 1473 was mutated from L_DemClean %4 to L_DemClean %4
+The instruction from individual 1474 was mutated from P_DemDirty %0 to P_DemDirty %2
+Parent 1 chosen : 1423
+Parent 2 chosen : 1415
+The children created are 1475 and 1476
+The instruction from individual 1476 was mutated from P_SPromClean %1 to P_SPromClean %2
+Parent 1 chosen : 1404
+Parent 2 chosen : 1435
+The children created are 1477 and 1478
+Parent 1 chosen : 1430
+Parent 2 chosen : 1424
+The children created are 1479 and 1480
+The instruction from individual 1479 was mutated from L_SPromClean %0 to L_SPromClean %1
+The instruction from individual 1480 was mutated from W_DemDirty %0 to W_DemDirty %0
+Parent 1 chosen : 1411
+Parent 2 chosen : 1424
+The children created are 1481 and 1482
+The instruction from individual 1482 was mutated from L_DemClean %4 to L_DemClean %4
+Parent 1 chosen : 1401
+Parent 2 chosen : 1449
+The children created are 1483 and 1484
+Parent 1 chosen : 1426
+Parent 2 chosen : 1427
+The children created are 1485 and 1486
+The instruction from individual 1486 was mutated from L_SPromDirty %0 to L_SPromDirty %0
+The instruction from individual 1486 was mutated from W_SPromClean %1 to W_SPromClean %1
+Parent 1 chosen : 1448
+Parent 2 chosen : 1415
+The children created are 1487 and 1488
+The instruction from individual 1488 was mutated from P_SPromDirty %0 to P_SPromDirty %1
+Parent 1 chosen : 1428
+Parent 2 chosen : 1434
+The children created are 1489 and 1490
+Parent 1 chosen : 1419
+Parent 2 chosen : 1420
+The children created are 1491 and 1492
+Parent 1 chosen : 1449
+Parent 2 chosen : 1403
+The children created are 1493 and 1494
+Parent 1 chosen : 1424
+Parent 2 chosen : 1442
+The children created are 1495 and 1496
+The instruction from individual 1495 was mutated from P_DemClean %3 to P_DemClean %1
+Parent 1 chosen : 1446
+Parent 2 chosen : 1424
+The children created are 1497 and 1498
+The instruction from individual 1497 was mutated from R_DemClean %4 to R_DemClean %3
+The instruction from individual 1497 was mutated from R_Insert %3 to R_Insert %3
+Parent 1 chosen : 1401
+Parent 2 chosen : 1445
+The children created are 1499 and 1500
+The instruction from individual 1500 was mutated from R_DemClean %4 to R_DemClean %4
+Parent 1 chosen : 1494
+Parent 2 chosen : 1500
+The children created are 1501 and 1502
+Parent 1 chosen : 1491
+Parent 2 chosen : 1471
+The children created are 1503 and 1504
+The instruction from individual 1504 was mutated from L_Insert %1 to L_Insert %0
+Parent 1 chosen : 1481
+Parent 2 chosen : 1473
+The children created are 1505 and 1506
+The instruction from individual 1506 was mutated from W_DemClean %0 to W_DemClean %3
+Parent 1 chosen : 1464
+Parent 2 chosen : 791
+The children created are 1507 and 1508
+The instruction from individual 1507 was mutated from L_DemDirty %4 to L_DemDirty %1
+Parent 1 chosen : 1456
+Parent 2 chosen : 1483
+The children created are 1509 and 1510
+The instruction from individual 1509 was mutated from R_Insert %3 to R_Insert %1
+The instruction from individual 1510 was mutated from W_Insert %1 to W_Insert %3
+Parent 1 chosen : 1464
+Parent 2 chosen : 1491
+The children created are 1511 and 1512
+Parent 1 chosen : 1457
+Parent 2 chosen : 1499
+The children created are 1513 and 1514
+The instruction from individual 1514 was mutated from R_DemClean %4 to R_DemClean %0
+Parent 1 chosen : 1458
+Parent 2 chosen : 1471
+The children created are 1515 and 1516
+Parent 1 chosen : 1499
+Parent 2 chosen : 1469
+The children created are 1517 and 1518
+The instruction from individual 1517 was mutated from L_SPromClean %0 to L_SPromClean %2
+The instruction from individual 1518 was mutated from W_SPromDirty %1 to W_SPromDirty %2
+Parent 1 chosen : 1452
+Parent 2 chosen : 1484
+The children created are 1519 and 1520
+Parent 1 chosen : 791
+Parent 2 chosen : 1451
+The children created are 1521 and 1522
+The instruction from individual 1521 was mutated from P_Insert %3 to P_Insert %2
+Parent 1 chosen : 1489
+Parent 2 chosen : 1464
+The children created are 1523 and 1524
+Parent 1 chosen : 1470
+Parent 2 chosen : 1453
+The children created are 1525 and 1526
+The instruction from individual 1525 was mutated from L_DemClean %4 to L_DemClean %4
+Parent 1 chosen : 1496
+Parent 2 chosen : 1451
+The children created are 1527 and 1528
+Parent 1 chosen : 1493
+Parent 2 chosen : 1472
+The children created are 1529 and 1530
+The instruction from individual 1529 was mutated from R_DemClean %4 to R_DemClean %1
+Parent 1 chosen : 1477
+Parent 2 chosen : 1470
+The children created are 1531 and 1532
+Parent 1 chosen : 1468
+Parent 2 chosen : 1457
+The children created are 1533 and 1534
+Parent 1 chosen : 1493
+Parent 2 chosen : 1470
+The children created are 1535 and 1536
+Parent 1 chosen : 1486
+Parent 2 chosen : 1471
+The children created are 1537 and 1538
+Parent 1 chosen : 1464
+Parent 2 chosen : 1451
+The children created are 1539 and 1540
+The instruction from individual 1539 was mutated from P_DemDirty %0 to P_DemDirty %2
+Parent 1 chosen : 1458
+Parent 2 chosen : 1494
+The children created are 1541 and 1542
+The instruction from individual 1541 was mutated from L_SPromDirty %0 to L_SPromDirty %1
+Parent 1 chosen : 1492
+Parent 2 chosen : 1471
+The children created are 1543 and 1544
+The instruction from individual 1543 was mutated from R_Insert %3 to R_Insert %0
+The instruction from individual 1544 was mutated from R_Insert %3 to R_Insert %1
+Parent 1 chosen : 1499
+Parent 2 chosen : 1486
+The children created are 1545 and 1546
+The instruction from individual 1545 was mutated from W_SPromClean %1 to W_SPromClean %1
+Parent 1 chosen : 1451
+Parent 2 chosen : 1455
+The children created are 1547 and 1548
+The instruction from individual 1547 was mutated from W_Insert %1 to W_Insert %1
+Parent 1 chosen : 1490
+Parent 2 chosen : 1471
+The children created are 1549 and 1550
+Parent 1 chosen : 1531
+Parent 2 chosen : 1529
+The children created are 1551 and 1552
+Parent 1 chosen : 1538
+Parent 2 chosen : 1508
+The children created are 1553 and 1554
+The instruction from individual 1553 was mutated from R_DemClean %4 to R_DemClean %2
+Parent 1 chosen : 1528
+Parent 2 chosen : 1540
+The children created are 1555 and 1556
+Parent 1 chosen : 1545
+Parent 2 chosen : 1503
+The children created are 1557 and 1558
+The instruction from individual 1557 was mutated from R_DemDirty %1 to R_DemDirty %1
+The instruction from individual 1558 was mutated from P_DemDirty %0 to P_DemDirty %4
+Parent 1 chosen : 1527
+Parent 2 chosen : 1526
+The children created are 1559 and 1560
+Parent 1 chosen : 1505
+Parent 2 chosen : 1513
+The children created are 1561 and 1562
+Parent 1 chosen : 1501
+Parent 2 chosen : 1529
+The children created are 1563 and 1564
+The instruction from individual 1564 was mutated from R_SPromDirty %1 to R_SPromDirty %2
+Parent 1 chosen : 1507
+Parent 2 chosen : 1538
+The children created are 1565 and 1566
+The instruction from individual 1566 was mutated from P_DemDirty %0 to P_DemDirty %2
+Parent 1 chosen : 791
+Parent 2 chosen : 1550
+The children created are 1567 and 1568
+Parent 1 chosen : 1536
+Parent 2 chosen : 1542
+The children created are 1569 and 1570
+The instruction from individual 1569 was mutated from R_SPromClean %1 to R_SPromClean %2
+Parent 1 chosen : 1535
+Parent 2 chosen : 1511
+The children created are 1571 and 1572
+The instruction from individual 1572 was mutated from R_SPromClean %1 to R_SPromClean %2
+The instruction from individual 1572 was mutated from W_DemDirty %0 to W_DemDirty %3
+The instruction from individual 1572 was mutated from W_Insert %1 to W_Insert %1
+Parent 1 chosen : 1526
+Parent 2 chosen : 1515
+The children created are 1573 and 1574
+Parent 1 chosen : 1502
+Parent 2 chosen : 1523
+The children created are 1575 and 1576
+Parent 1 chosen : 1505
+Parent 2 chosen : 1520
+The children created are 1577 and 1578
+The instruction from individual 1577 was mutated from L_Insert %1 to L_Insert %1
+Parent 1 chosen : 1546
+Parent 2 chosen : 1522
+The children created are 1579 and 1580
+The instruction from individual 1579 was mutated from R_DemDirty %1 to R_DemDirty %1
+The instruction from individual 1579 was mutated from W_Insert %1 to W_Insert %0
+The instruction from individual 1579 was mutated from W_SPromDirty %1 to W_SPromDirty %0
+Parent 1 chosen : 1515
+Parent 2 chosen : 1549
+The children created are 1581 and 1582
+The instruction from individual 1581 was mutated from P_SPromDirty %0 to P_SPromDirty %1
+The instruction from individual 1582 was mutated from W_DemClean %0 to W_DemClean %3
+Parent 1 chosen : 1525
+Parent 2 chosen : 1526
+The children created are 1583 and 1584
+Parent 1 chosen : 1530
+Parent 2 chosen : 1527
+The children created are 1585 and 1586
+Parent 1 chosen : 1524
+Parent 2 chosen : 1546
+The children created are 1587 and 1588
+The instruction from individual 1587 was mutated from L_DemClean %4 to L_DemClean %0
+Parent 1 chosen : 1534
+Parent 2 chosen : 1527
+The children created are 1589 and 1590
+Parent 1 chosen : 1540
+Parent 2 chosen : 1516
+The children created are 1591 and 1592
+The instruction from individual 1591 was mutated from L_SPromDirty %0 to L_SPromDirty %1
+The instruction from individual 1592 was mutated from P_SPromDirty %0 to P_SPromDirty %2
+Parent 1 chosen : 1512
+Parent 2 chosen : 1532
+The children created are 1593 and 1594
+Parent 1 chosen : 1529
+Parent 2 chosen : 1534
+The children created are 1595 and 1596
+Parent 1 chosen : 1549
+Parent 2 chosen : 1515
+The children created are 1597 and 1598
+The instruction from individual 1597 was mutated from L_DemClean %4 to L_DemClean %1
+The instruction from individual 1597 was mutated from R_DemClean %4 to R_DemClean %3
+Parent 1 chosen : 1502
+Parent 2 chosen : 1516
+The children created are 1599 and 1600
+The instruction from individual 1599 was mutated from R_DemDirty %1 to R_DemDirty %3
+Parent 1 chosen : 1557
+Parent 2 chosen : 1594
+The children created are 1601 and 1602
+Parent 1 chosen : 1573
+Parent 2 chosen : 1565
+The children created are 1603 and 1604
+Parent 1 chosen : 1574
+Parent 2 chosen : 1585
+The children created are 1605 and 1606
+Parent 1 chosen : 1562
+Parent 2 chosen : 1559
+The children created are 1607 and 1608
+Parent 1 chosen : 1590
+Parent 2 chosen : 1551
+The children created are 1609 and 1610
+The instruction from individual 1609 was mutated from L_SPromDirty %0 to L_SPromDirty %0
+The instruction from individual 1610 was mutated from L_DemDirty %4 to L_DemDirty %1
+Parent 1 chosen : 1573
+Parent 2 chosen : 1596
+The children created are 1611 and 1612
+The instruction from individual 1611 was mutated from R_DemClean %4 to R_DemClean %4
+The instruction from individual 1611 was mutated from W_Insert %1 to W_Insert %2
+Parent 1 chosen : 1577
+Parent 2 chosen : 1560
+The children created are 1613 and 1614
+The instruction from individual 1613 was mutated from L_SPromClean %0 to L_SPromClean %1
+The instruction from individual 1614 was mutated from R_SPromDirty %1 to R_SPromDirty %1
+Parent 1 chosen : 1580
+Parent 2 chosen : 1574
+The children created are 1615 and 1616
+Parent 1 chosen : 1576
+Parent 2 chosen : 1554
+The children created are 1617 and 1618
+The instruction from individual 1618 was mutated from R_DemDirty %1 to R_DemDirty %2
+Parent 1 chosen : 1600
+Parent 2 chosen : 1590
+The children created are 1619 and 1620
+The instruction from individual 1620 was mutated from R_Insert %3 to R_Insert %2
+Parent 1 chosen : 1588
+Parent 2 chosen : 1578
+The children created are 1621 and 1622
+The instruction from individual 1621 was mutated from P_Insert %3 to P_Insert %0
+The instruction from individual 1621 was mutated from W_Insert %1 to W_Insert %0
+Parent 1 chosen : 1576
+Parent 2 chosen : 1573
+The children created are 1623 and 1624
+Parent 1 chosen : 1598
+Parent 2 chosen : 1590
+The children created are 1625 and 1626
+Parent 1 chosen : 1589
+Parent 2 chosen : 1568
+The children created are 1627 and 1628
+The instruction from individual 1627 was mutated from R_SPromClean %1 to R_SPromClean %2
+Parent 1 chosen : 1598
+Parent 2 chosen : 1586
+The children created are 1629 and 1630
+The instruction from individual 1629 was mutated from L_SPromClean %0 to L_SPromClean %1
+The instruction from individual 1630 was mutated from L_DemClean %4 to L_DemClean %1
+The instruction from individual 1630 was mutated from P_SPromClean %1 to P_SPromClean %1
+Parent 1 chosen : 1590
+Parent 2 chosen : 1554
+The children created are 1631 and 1632
+Parent 1 chosen : 1555
+Parent 2 chosen : 1598
+The children created are 1633 and 1634
+Parent 1 chosen : 1586
+Parent 2 chosen : 1584
+The children created are 1635 and 1636
+Parent 1 chosen : 1551
+Parent 2 chosen : 1568
+The children created are 1637 and 1638
+Parent 1 chosen : 1568
+Parent 2 chosen : 1586
+The children created are 1639 and 1640
+Parent 1 chosen : 1577
+Parent 2 chosen : 1551
+The children created are 1641 and 1642
+The instruction from individual 1641 was mutated from R_DemDirty %1 to R_DemDirty %1
+Parent 1 chosen : 1593
+Parent 2 chosen : 1561
+The children created are 1643 and 1644
+Parent 1 chosen : 1586
+Parent 2 chosen : 1590
+The children created are 1645 and 1646
+Parent 1 chosen : 1580
+Parent 2 chosen : 1573
+The children created are 1647 and 1648
+Parent 1 chosen : 1577
+Parent 2 chosen : 1555
+The children created are 1649 and 1650
+Parent 1 chosen : 1645
+Parent 2 chosen : 1604
+The children created are 1651 and 1652
+The instruction from individual 1652 was mutated from L_SPromClean %0 to L_SPromClean %0
+The instruction from individual 1652 was mutated from P_SPromDirty %0 to P_SPromDirty %1
+Parent 1 chosen : 1636
+Parent 2 chosen : 1633
+The children created are 1653 and 1654
+Parent 1 chosen : 791
+Parent 2 chosen : 1647
+The children created are 1655 and 1656
+Parent 1 chosen : 1644
+Parent 2 chosen : 1610
+The children created are 1657 and 1658
+Parent 1 chosen : 1623
+Parent 2 chosen : 1609
+The children created are 1659 and 1660
+Parent 1 chosen : 1639
+Parent 2 chosen : 1647
+The children created are 1661 and 1662
+The instruction from individual 1661 was mutated from R_DemDirty %1 to R_DemDirty %2
+The instruction from individual 1662 was mutated from P_Insert %3 to P_Insert %1
+Parent 1 chosen : 791
+Parent 2 chosen : 1615
+The children created are 1663 and 1664
+The instruction from individual 1663 was mutated from L_SPromClean %0 to L_SPromClean %1
+Parent 1 chosen : 1634
+Parent 2 chosen : 1628
+The children created are 1665 and 1666
+The instruction from individual 1665 was mutated from R_SPromClean %1 to R_SPromClean %2
+Parent 1 chosen : 1632
+Parent 2 chosen : 1641
+The children created are 1667 and 1668
+The instruction from individual 1667 was mutated from L_SPromDirty %0 to L_SPromDirty %1
+Parent 1 chosen : 1610
+Parent 2 chosen : 1644
+The children created are 1669 and 1670
+Parent 1 chosen : 1612
+Parent 2 chosen : 1650
+The children created are 1671 and 1672
+The instruction from individual 1671 was mutated from P_SPromClean %1 to P_SPromClean %0
+The instruction from individual 1672 was mutated from W_Insert %1 to W_Insert %3
+Parent 1 chosen : 1604
+Parent 2 chosen : 1631
+The children created are 1673 and 1674
+The instruction from individual 1673 was mutated from P_DemClean %2 to P_DemClean %3
+Parent 1 chosen : 1601
+Parent 2 chosen : 1627
+The children created are 1675 and 1676
+Parent 1 chosen : 1646
+Parent 2 chosen : 1648
+The children created are 1677 and 1678
+The instruction from individual 1678 was mutated from W_SPromDirty %1 to W_SPromDirty %1
+Parent 1 chosen : 1636
+Parent 2 chosen : 1610
+The children created are 1679 and 1680
+Parent 1 chosen : 1617
+Parent 2 chosen : 1604
+The children created are 1681 and 1682
+Parent 1 chosen : 1610
+Parent 2 chosen : 1608
+The children created are 1683 and 1684
+Parent 1 chosen : 1616
+Parent 2 chosen : 1641
+The children created are 1685 and 1686
+The instruction from individual 1686 was mutated from P_DemDirty %0 to P_DemDirty %1
+Parent 1 chosen : 1608
+Parent 2 chosen : 1638
+The children created are 1687 and 1688
+Parent 1 chosen : 1640
+Parent 2 chosen : 1639
+The children created are 1689 and 1690
+The instruction from individual 1690 was mutated from L_Insert %1 to L_Insert %3
+Parent 1 chosen : 1645
+Parent 2 chosen : 1627
+The children created are 1691 and 1692
+The instruction from individual 1692 was mutated from W_SPromClean %1 to W_SPromClean %1
+Parent 1 chosen : 1610
+Parent 2 chosen : 1633
+The children created are 1693 and 1694
+Parent 1 chosen : 1644
+Parent 2 chosen : 1601
+The children created are 1695 and 1696
+The instruction from individual 1695 was mutated from R_DemClean %4 to R_DemClean %3
+Parent 1 chosen : 1645
+Parent 2 chosen : 1626
+The children created are 1697 and 1698
+Parent 1 chosen : 1609
+Parent 2 chosen : 1643
+The children created are 1699 and 1700
+The instruction from individual 1699 was mutated from W_SPromDirty %1 to W_SPromDirty %1
+Parent 1 chosen : 1680
+Parent 2 chosen : 1698
+The children created are 1701 and 1702
+The instruction from individual 1701 was mutated from R_DemClean %4 to R_DemClean %0
+Parent 1 chosen : 1673
+Parent 2 chosen : 1655
+The children created are 1703 and 1704
+The instruction from individual 1703 was mutated from P_DemClean %3 to P_DemClean %2
+Parent 1 chosen : 1693
+Parent 2 chosen : 1680
+The children created are 1705 and 1706
+Parent 1 chosen : 1659
+Parent 2 chosen : 1683
+The children created are 1707 and 1708
+Parent 1 chosen : 1683
+Parent 2 chosen : 1674
+The children created are 1709 and 1710
+The instruction from individual 1710 was mutated from L_DemClean %4 to L_DemClean %4
+The instruction from individual 1710 was mutated from R_SPromDirty %1 to R_SPromDirty %2
+Parent 1 chosen : 1658
+Parent 2 chosen : 1688
+The children created are 1711 and 1712
+The instruction from individual 1711 was mutated from L_DemClean %4 to L_DemClean %3
+Parent 1 chosen : 1680
+Parent 2 chosen : 1655
+The children created are 1713 and 1714
+Parent 1 chosen : 1680
+Parent 2 chosen : 1698
+The children created are 1715 and 1716
+The instruction from individual 1715 was mutated from P_Insert %3 to P_Insert %1
+Parent 1 chosen : 1666
+Parent 2 chosen : 1680
+The children created are 1717 and 1718
+The instruction from individual 1717 was mutated from L_Insert %1 to L_Insert %0
+The instruction from individual 1718 was mutated from W_Insert %1 to W_Insert %0
+Parent 1 chosen : 1658
+Parent 2 chosen : 1680
+The children created are 1719 and 1720
+Parent 1 chosen : 1678
+Parent 2 chosen : 1680
+The children created are 1721 and 1722
+Parent 1 chosen : 1693
+Parent 2 chosen : 1678
+The children created are 1723 and 1724
+The instruction from individual 1723 was mutated from R_DemDirty %1 to R_DemDirty %4
+Parent 1 chosen : 1683
+Parent 2 chosen : 1678
+The children created are 1725 and 1726
+Parent 1 chosen : 1679
+Parent 2 chosen : 1668
+The children created are 1727 and 1728
+The instruction from individual 1728 was mutated from R_SPromDirty %1 to R_SPromDirty %2
+The instruction from individual 1728 was mutated from P_DemClean %3 to P_DemClean %4
+Parent 1 chosen : 1679
+Parent 2 chosen : 1693
+The children created are 1729 and 1730
+The instruction from individual 1729 was mutated from W_SPromClean %1 to W_SPromClean %1
+The instruction from individual 1730 was mutated from W_DemDirty %0 to W_DemDirty %1
+Parent 1 chosen : 1680
+Parent 2 chosen : 1693
+The children created are 1731 and 1732
+Parent 1 chosen : 1658
+Parent 2 chosen : 1692
+The children created are 1733 and 1734
+Parent 1 chosen : 1680
+Parent 2 chosen : 1668
+The children created are 1735 and 1736
+Parent 1 chosen : 1689
+Parent 2 chosen : 1680
+The children created are 1737 and 1738
+Parent 1 chosen : 1654
+Parent 2 chosen : 1666
+The children created are 1739 and 1740
+Parent 1 chosen : 1657
+Parent 2 chosen : 1696
+The children created are 1741 and 1742
+Parent 1 chosen : 1693
+Parent 2 chosen : 1683
+The children created are 1743 and 1744
+The instruction from individual 1743 was mutated from P_Insert %3 to P_Insert %3
+The instruction from individual 1744 was mutated from W_DemDirty %0 to W_DemDirty %4
+Parent 1 chosen : 1657
+Parent 2 chosen : 1656
+The children created are 1745 and 1746
+Parent 1 chosen : 1683
+Parent 2 chosen : 1682
+The children created are 1747 and 1748
+The instruction from individual 1747 was mutated from R_SPromDirty %1 to R_SPromDirty %0
+Parent 1 chosen : 1659
+Parent 2 chosen : 1673
+The children created are 1749 and 1750
+Parent 1 chosen : 1734
+Parent 2 chosen : 1735
+The children created are 1751 and 1752
+Parent 1 chosen : 1738
+Parent 2 chosen : 1719
+The children created are 1753 and 1754
+Parent 1 chosen : 1610
+Parent 2 chosen : 1722
+The children created are 1755 and 1756
+The instruction from individual 1755 was mutated from L_Insert %1 to L_Insert %2
+Parent 1 chosen : 1732
+Parent 2 chosen : 1734
+The children created are 1757 and 1758
+The instruction from individual 1757 was mutated from R_SPromClean %1 to R_SPromClean %0
+Parent 1 chosen : 1712
+Parent 2 chosen : 1735
+The children created are 1759 and 1760
+The instruction from individual 1759 was mutated from L_Insert %1 to L_Insert %1
+Parent 1 chosen : 1706
+Parent 2 chosen : 1750
+The children created are 1761 and 1762
+Parent 1 chosen : 1719
+Parent 2 chosen : 1707
+The children created are 1763 and 1764
+Parent 1 chosen : 1610
+Parent 2 chosen : 1725
+The children created are 1765 and 1766
+Parent 1 chosen : 1720
+Parent 2 chosen : 1714
+The children created are 1767 and 1768
+The instruction from individual 1768 was mutated from P_SPromClean %1 to P_SPromClean %0
+Parent 1 chosen : 1749
+Parent 2 chosen : 1705
+The children created are 1769 and 1770
+Parent 1 chosen : 1719
+Parent 2 chosen : 1735
+The children created are 1771 and 1772
+The instruction from individual 1772 was mutated from L_Insert %1 to L_Insert %3
+The instruction from individual 1772 was mutated from L_SPromDirty %0 to L_SPromDirty %1
+The instruction from individual 1772 was mutated from P_DemDirty %0 to P_DemDirty %1
+Parent 1 chosen : 1706
+Parent 2 chosen : 1743
+The children created are 1773 and 1774
+Parent 1 chosen : 1720
+Parent 2 chosen : 1719
+The children created are 1775 and 1776
+Parent 1 chosen : 1714
+Parent 2 chosen : 1722
+The children created are 1777 and 1778
+Parent 1 chosen : 1713
+Parent 2 chosen : 1741
+The children created are 1779 and 1780
+Parent 1 chosen : 1732
+Parent 2 chosen : 1725
+The children created are 1781 and 1782
+Parent 1 chosen : 1610
+Parent 2 chosen : 1725
+The children created are 1783 and 1784
+The instruction from individual 1783 was mutated from W_SPromClean %1 to W_SPromClean %1
+The instruction from individual 1784 was mutated from W_SPromClean %1 to W_SPromClean %2
+Parent 1 chosen : 1713
+Parent 2 chosen : 1745
+The children created are 1785 and 1786
+The instruction from individual 1785 was mutated from L_DemClean %4 to L_DemClean %4
+Parent 1 chosen : 1741
+Parent 2 chosen : 1712
+The children created are 1787 and 1788
+Parent 1 chosen : 1731
+Parent 2 chosen : 1734
+The children created are 1789 and 1790
+The instruction from individual 1790 was mutated from R_Insert %3 to R_Insert %0
+Parent 1 chosen : 1706
+Parent 2 chosen : 1729
+The children created are 1791 and 1792
+Parent 1 chosen : 1705
+Parent 2 chosen : 1734
+The children created are 1793 and 1794
+Parent 1 chosen : 1706
+Parent 2 chosen : 1719
+The children created are 1795 and 1796
+The instruction from individual 1795 was mutated from W_Insert %1 to W_Insert %2
+Parent 1 chosen : 1709
+Parent 2 chosen : 1705
+The children created are 1797 and 1798
+The instruction from individual 1798 was mutated from R_SPromDirty %1 to R_SPromDirty %2
+Parent 1 chosen : 1712
+Parent 2 chosen : 1729
+The children created are 1799 and 1800
+Parent 1 chosen : 1793
+Parent 2 chosen : 1752
+The children created are 1801 and 1802
+The instruction from individual 1801 was mutated from P_SPromClean %1 to P_SPromClean %2
+Parent 1 chosen : 1785
+Parent 2 chosen : 1766
+The children created are 1803 and 1804
+Parent 1 chosen : 1782
+Parent 2 chosen : 1766
+The children created are 1805 and 1806
+The instruction from individual 1805 was mutated from L_DemClean %4 to L_DemClean %4
+The instruction from individual 1805 was mutated from L_DemDirty %1 to L_DemDirty %0
+Parent 1 chosen : 1775
+Parent 2 chosen : 1751
+The children created are 1807 and 1808
+The instruction from individual 1808 was mutated from P_DemClean %2 to P_DemClean %4
+Parent 1 chosen : 1791
+Parent 2 chosen : 1793
+The children created are 1809 and 1810
+Parent 1 chosen : 1796
+Parent 2 chosen : 1775
+The children created are 1811 and 1812
+Parent 1 chosen : 1766
+Parent 2 chosen : 1793
+The children created are 1813 and 1814
+The instruction from individual 1814 was mutated from W_SPromDirty %1 to W_SPromDirty %0
+Parent 1 chosen : 1759
+Parent 2 chosen : 1774
+The children created are 1815 and 1816
+Parent 1 chosen : 1764
+Parent 2 chosen : 1766
+The children created are 1817 and 1818
+Parent 1 chosen : 1788
+Parent 2 chosen : 1765
+The children created are 1819 and 1820
+Parent 1 chosen : 1785
+Parent 2 chosen : 1774
+The children created are 1821 and 1822
+The instruction from individual 1821 was mutated from R_Insert %3 to R_Insert %3
+The instruction from individual 1821 was mutated from P_SPromClean %1 to P_SPromClean %0
+Parent 1 chosen : 1776
+Parent 2 chosen : 1773
+The children created are 1823 and 1824
+Parent 1 chosen : 1775
+Parent 2 chosen : 1791
+The children created are 1825 and 1826
+Parent 1 chosen : 1774
+Parent 2 chosen : 1791
+The children created are 1827 and 1828
+The instruction from individual 1827 was mutated from P_SPromDirty %0 to P_SPromDirty %1
+Parent 1 chosen : 1610
+Parent 2 chosen : 1758
+The children created are 1829 and 1830
+Parent 1 chosen : 1752
+Parent 2 chosen : 1781
+The children created are 1831 and 1832
+The instruction from individual 1831 was mutated from P_DemDirty %0 to P_DemDirty %3
+Parent 1 chosen : 1775
+Parent 2 chosen : 1788
+The children created are 1833 and 1834
+Parent 1 chosen : 1758
+Parent 2 chosen : 1788
+The children created are 1835 and 1836
+Parent 1 chosen : 1794
+Parent 2 chosen : 1758
+The children created are 1837 and 1838
+Parent 1 chosen : 1751
+Parent 2 chosen : 1794
+The children created are 1839 and 1840
+The instruction from individual 1840 was mutated from P_SPromDirty %0 to P_SPromDirty %0
+Parent 1 chosen : 1785
+Parent 2 chosen : 1771
+The children created are 1841 and 1842
+Parent 1 chosen : 1752
+Parent 2 chosen : 1759
+The children created are 1843 and 1844
+The instruction from individual 1843 was mutated from P_DemClean %2 to P_DemClean %3
+Parent 1 chosen : 1782
+Parent 2 chosen : 1781
+The children created are 1845 and 1846
+The instruction from individual 1846 was mutated from L_DemDirty %1 to L_DemDirty %3
+Parent 1 chosen : 1765
+Parent 2 chosen : 1776
+The children created are 1847 and 1848
+The instruction from individual 1848 was mutated from R_Insert %3 to R_Insert %2
+Parent 1 chosen : 1766
+Parent 2 chosen : 1788
+The children created are 1849 and 1850
+The instruction from individual 1849 was mutated from L_SPromDirty %0 to L_SPromDirty %0
+Parent 1 chosen : 1847
+Parent 2 chosen : 1824
+The children created are 1851 and 1852
+Parent 1 chosen : 1802
+Parent 2 chosen : 1847
+The children created are 1853 and 1854
+The instruction from individual 1854 was mutated from W_DemClean %0 to W_DemClean %1
+Parent 1 chosen : 1850
+Parent 2 chosen : 1825
+The children created are 1855 and 1856
+The instruction from individual 1855 was mutated from R_DemClean %4 to R_DemClean %3
+Parent 1 chosen : 1803
+Parent 2 chosen : 1810
+The children created are 1857 and 1858
+The instruction from individual 1857 was mutated from L_SPromDirty %0 to L_SPromDirty %1
+Parent 1 chosen : 1838
+Parent 2 chosen : 1803
+The children created are 1859 and 1860
+Parent 1 chosen : 1813
+Parent 2 chosen : 1810
+The children created are 1861 and 1862
+Parent 1 chosen : 1811
+Parent 2 chosen : 1839
+The children created are 1863 and 1864
+Parent 1 chosen : 1842
+Parent 2 chosen : 1836
+The children created are 1865 and 1866
+Parent 1 chosen : 1816
+Parent 2 chosen : 1818
+The children created are 1867 and 1868
+The instruction from individual 1867 was mutated from P_DemDirty %0 to P_DemDirty %4
+Parent 1 chosen : 1815
+Parent 2 chosen : 1803
+The children created are 1869 and 1870
+The instruction from individual 1870 was mutated from R_DemDirty %1 to R_DemDirty %4
+Parent 1 chosen : 1810
+Parent 2 chosen : 1844
+The children created are 1871 and 1872
+The instruction from individual 1872 was mutated from L_DemDirty %1 to L_DemDirty %0
+The instruction from individual 1872 was mutated from W_DemDirty %0 to W_DemDirty %4
+Parent 1 chosen : 1812
+Parent 2 chosen : 1809
+The children created are 1873 and 1874
+The instruction from individual 1873 was mutated from R_DemClean %4 to R_DemClean %0
+The instruction from individual 1873 was mutated from W_SPromDirty %1 to W_SPromDirty %2
+Parent 1 chosen : 1816
+Parent 2 chosen : 1838
+The children created are 1875 and 1876
+The instruction from individual 1876 was mutated from W_SPromDirty %1 to W_SPromDirty %0
+Parent 1 chosen : 1816
+Parent 2 chosen : 1825
+The children created are 1877 and 1878
+The instruction from individual 1877 was mutated from P_SPromClean %1 to P_SPromClean %0
+Parent 1 chosen : 1809
+Parent 2 chosen : 1811
+The children created are 1879 and 1880
+Parent 1 chosen : 1828
+Parent 2 chosen : 1839
+The children created are 1881 and 1882
+The instruction from individual 1881 was mutated from P_SPromDirty %0 to P_SPromDirty %1
+The instruction from individual 1881 was mutated from W_Insert %1 to W_Insert %3
+Parent 1 chosen : 1818
+Parent 2 chosen : 1832
+The children created are 1883 and 1884
+The instruction from individual 1883 was mutated from L_DemClean %4 to L_DemClean %4
+Parent 1 chosen : 1842
+Parent 2 chosen : 1824
+The children created are 1885 and 1886
+Parent 1 chosen : 1804
+Parent 2 chosen : 1809
+The children created are 1887 and 1888
+The instruction from individual 1888 was mutated from L_SPromClean %0 to L_SPromClean %2
+Parent 1 chosen : 1828
+Parent 2 chosen : 1836
+The children created are 1889 and 1890
+Parent 1 chosen : 1610
+Parent 2 chosen : 1818
+The children created are 1891 and 1892
+Parent 1 chosen : 1802
+Parent 2 chosen : 1844
+The children created are 1893 and 1894
+The instruction from individual 1894 was mutated from R_SPromClean %1 to R_SPromClean %2
+Parent 1 chosen : 1828
+Parent 2 chosen : 1819
+The children created are 1895 and 1896
+Parent 1 chosen : 1833
+Parent 2 chosen : 1835
+The children created are 1897 and 1898
+Parent 1 chosen : 1834
+Parent 2 chosen : 1809
+The children created are 1899 and 1900
+Parent 1 chosen : 1865
+Parent 2 chosen : 1880
+The children created are 1901 and 1902
+The instruction from individual 1902 was mutated from R_DemClean %4 to R_DemClean %2
+Parent 1 chosen : 1860
+Parent 2 chosen : 1899
+The children created are 1903 and 1904
+Parent 1 chosen : 1880
+Parent 2 chosen : 1884
+The children created are 1905 and 1906
+The instruction from individual 1905 was mutated from L_SPromDirty %0 to L_SPromDirty %0
+Parent 1 chosen : 1890
+Parent 2 chosen : 1897
+The children created are 1907 and 1908
+The instruction from individual 1908 was mutated from P_SPromClean %1 to P_SPromClean %2
+Parent 1 chosen : 1891
+Parent 2 chosen : 1889
+The children created are 1909 and 1910
+The instruction from individual 1910 was mutated from P_SPromClean %1 to P_SPromClean %1
+Parent 1 chosen : 1897
+Parent 2 chosen : 1900
+The children created are 1911 and 1912
+The instruction from individual 1912 was mutated from W_DemClean %0 to W_DemClean %2
+Parent 1 chosen : 1898
+Parent 2 chosen : 1858
+The children created are 1913 and 1914
+Parent 1 chosen : 1852
+Parent 2 chosen : 1851
+The children created are 1915 and 1916
+The instruction from individual 1916 was mutated from R_SPromClean %1 to R_SPromClean %2
+Parent 1 chosen : 1610
+Parent 2 chosen : 1900
+The children created are 1917 and 1918
+Parent 1 chosen : 1864
+Parent 2 chosen : 1887
+The children created are 1919 and 1920
+The instruction from individual 1919 was mutated from R_Insert %3 to R_Insert %3
+The instruction from individual 1920 was mutated from R_DemDirty %1 to R_DemDirty %3
+Parent 1 chosen : 1610
+Parent 2 chosen : 1858
+The children created are 1921 and 1922
+Parent 1 chosen : 1869
+Parent 2 chosen : 1874
+The children created are 1923 and 1924
+Parent 1 chosen : 1868
+Parent 2 chosen : 1871
+The children created are 1925 and 1926
+Parent 1 chosen : 1898
+Parent 2 chosen : 1862
+The children created are 1927 and 1928
+Parent 1 chosen : 1878
+Parent 2 chosen : 1859
+The children created are 1929 and 1930
+Parent 1 chosen : 1898
+Parent 2 chosen : 1610
+The children created are 1931 and 1932
+The instruction from individual 1932 was mutated from R_DemDirty %1 to R_DemDirty %0
+Parent 1 chosen : 1610
+Parent 2 chosen : 1897
+The children created are 1933 and 1934
+Parent 1 chosen : 1899
+Parent 2 chosen : 1858
+The children created are 1935 and 1936
+The instruction from individual 1935 was mutated from P_DemDirty %0 to P_DemDirty %3
+The instruction from individual 1935 was mutated from W_DemClean %0 to W_DemClean %4
+Parent 1 chosen : 1897
+Parent 2 chosen : 1875
+The children created are 1937 and 1938
+Parent 1 chosen : 1858
+Parent 2 chosen : 1853
+The children created are 1939 and 1940
+Parent 1 chosen : 1889
+Parent 2 chosen : 1880
+The children created are 1941 and 1942
+The instruction from individual 1941 was mutated from R_SPromClean %1 to R_SPromClean %0
+The instruction from individual 1942 was mutated from R_DemDirty %1 to R_DemDirty %0
+Parent 1 chosen : 1878
+Parent 2 chosen : 1856
+The children created are 1943 and 1944
+Parent 1 chosen : 1898
+Parent 2 chosen : 1869
+The children created are 1945 and 1946
+Parent 1 chosen : 1853
+Parent 2 chosen : 1886
+The children created are 1947 and 1948
+Parent 1 chosen : 1870
+Parent 2 chosen : 1891
+The children created are 1949 and 1950
+The instruction from individual 1950 was mutated from R_DemClean %4 to R_DemClean %1
+Parent 1 chosen : 1944
+Parent 2 chosen : 1907
+The children created are 1951 and 1952
+Parent 1 chosen : 1928
+Parent 2 chosen : 1925
+The children created are 1953 and 1954
+Parent 1 chosen : 1926
+Parent 2 chosen : 1936
+The children created are 1955 and 1956
+Parent 1 chosen : 1907
+Parent 2 chosen : 1928
+The children created are 1957 and 1958
+Parent 1 chosen : 1929
+Parent 2 chosen : 1947
+The children created are 1959 and 1960
+Parent 1 chosen : 1936
+Parent 2 chosen : 1924
+The children created are 1961 and 1962
+The instruction from individual 1962 was mutated from R_DemClean %4 to R_DemClean %0
+The instruction from individual 1962 was mutated from R_DemDirty %1 to R_DemDirty %0
+Parent 1 chosen : 1907
+Parent 2 chosen : 1923
+The children created are 1963 and 1964
+The instruction from individual 1964 was mutated from L_SPromDirty %0 to L_SPromDirty %0
+Parent 1 chosen : 1933
+Parent 2 chosen : 1923
+The children created are 1965 and 1966
+Parent 1 chosen : 1930
+Parent 2 chosen : 1919
+The children created are 1967 and 1968
+The instruction from individual 1968 was mutated from R_DemClean %4 to R_DemClean %2
+Parent 1 chosen : 1939
+Parent 2 chosen : 1905
+The children created are 1969 and 1970
+Parent 1 chosen : 1938
+Parent 2 chosen : 1904
+The children created are 1971 and 1972
+The instruction from individual 1972 was mutated from L_DemDirty %1 to L_DemDirty %1
+Parent 1 chosen : 1904
+Parent 2 chosen : 1610
+The children created are 1973 and 1974
+The instruction from individual 1973 was mutated from P_Insert %3 to P_Insert %1
+Parent 1 chosen : 1928
+Parent 2 chosen : 1948
+The children created are 1975 and 1976
+The instruction from individual 1975 was mutated from P_DemDirty %0 to P_DemDirty %4
+The instruction from individual 1975 was mutated from W_Insert %1 to W_Insert %1
+Parent 1 chosen : 1929
+Parent 2 chosen : 1939
+The children created are 1977 and 1978
+The instruction from individual 1977 was mutated from R_DemClean %4 to R_DemClean %1
+The instruction from individual 1977 was mutated from W_DemClean %0 to W_DemClean %3
+Parent 1 chosen : 1937
+Parent 2 chosen : 1910
+The children created are 1979 and 1980
+The instruction from individual 1979 was mutated from R_SPromDirty %1 to R_SPromDirty %2
+Parent 1 chosen : 1946
+Parent 2 chosen : 1929
+The children created are 1981 and 1982
+The instruction from individual 1982 was mutated from R_DemDirty %1 to R_DemDirty %0
+Parent 1 chosen : 1934
+Parent 2 chosen : 1937
+The children created are 1983 and 1984
+Parent 1 chosen : 1610
+Parent 2 chosen : 1907
+The children created are 1985 and 1986
+The instruction from individual 1985 was mutated from W_DemDirty %0 to W_DemDirty %4
+The instruction from individual 1986 was mutated from W_SPromDirty %1 to W_SPromDirty %1
+Parent 1 chosen : 1933
+Parent 2 chosen : 1905
+The children created are 1987 and 1988
+The instruction from individual 1987 was mutated from L_SPromClean %0 to L_SPromClean %1
+Parent 1 chosen : 1947
+Parent 2 chosen : 1911
+The children created are 1989 and 1990
+Parent 1 chosen : 1944
+Parent 2 chosen : 1939
+The children created are 1991 and 1992
+The instruction from individual 1991 was mutated from R_DemClean %4 to R_DemClean %3
+Parent 1 chosen : 1919
+Parent 2 chosen : 1938
+The children created are 1993 and 1994
+Parent 1 chosen : 1938
+Parent 2 chosen : 1945
+The children created are 1995 and 1996
+Parent 1 chosen : 1914
+Parent 2 chosen : 1946
+The children created are 1997 and 1998
+The instruction from individual 1997 was mutated from L_DemDirty %1 to L_DemDirty %4
+The instruction from individual 1998 was mutated from R_SPromClean %1 to R_SPromClean %2
+The instruction from individual 1998 was mutated from W_SPromDirty %1 to W_SPromDirty %1
+Parent 1 chosen : 1910
+Parent 2 chosen : 1923
+The children created are 1999 and 2000
+Parent 1 chosen : 1992
+Parent 2 chosen : 2000
+The children created are 2001 and 2002
+Parent 1 chosen : 1978
+Parent 2 chosen : 1990
+The children created are 2003 and 2004
+The instruction from individual 2003 was mutated from L_SPromClean %0 to L_SPromClean %2
+The instruction from individual 2004 was mutated from L_DemDirty %1 to L_DemDirty %1
+Parent 1 chosen : 1610
+Parent 2 chosen : 1963
+The children created are 2005 and 2006
+The instruction from individual 2005 was mutated from R_DemDirty %1 to R_DemDirty %4
+The instruction from individual 2006 was mutated from R_SPromDirty %1 to R_SPromDirty %2
+Parent 1 chosen : 1999
+Parent 2 chosen : 1967
+The children created are 2007 and 2008
+The instruction from individual 2008 was mutated from W_SPromDirty %1 to W_SPromDirty %1
+Parent 1 chosen : 1956
+Parent 2 chosen : 1610
+The children created are 2009 and 2010
+Parent 1 chosen : 1967
+Parent 2 chosen : 1970
+The children created are 2011 and 2012
+Parent 1 chosen : 1971
+Parent 2 chosen : 1952
+The children created are 2013 and 2014
+Parent 1 chosen : 1955
+Parent 2 chosen : 1989
+The children created are 2015 and 2016
+Parent 1 chosen : 1954
+Parent 2 chosen : 1983
+The children created are 2017 and 2018
+Parent 1 chosen : 1981
+Parent 2 chosen : 1970
+The children created are 2019 and 2020
+Parent 1 chosen : 1984
+Parent 2 chosen : 1993
+The children created are 2021 and 2022
+The instruction from individual 2021 was mutated from R_SPromClean %1 to R_SPromClean %1
+The instruction from individual 2021 was mutated from W_Insert %1 to W_Insert %0
+The instruction from individual 2022 was mutated from W_Insert %1 to W_Insert %0
+Parent 1 chosen : 1983
+Parent 2 chosen : 1954
+The children created are 2023 and 2024
+Parent 1 chosen : 1965
+Parent 2 chosen : 2000
+The children created are 2025 and 2026
+The instruction from individual 2026 was mutated from W_DemDirty %0 to W_DemDirty %1
+Parent 1 chosen : 1972
+Parent 2 chosen : 1954
+The children created are 2027 and 2028
+Parent 1 chosen : 1994
+Parent 2 chosen : 1986
+The children created are 2029 and 2030
+The instruction from individual 2029 was mutated from L_DemClean %4 to L_DemClean %1
+Parent 1 chosen : 1955
+Parent 2 chosen : 1960
+The children created are 2031 and 2032
+Parent 1 chosen : 1967
+Parent 2 chosen : 1971
+The children created are 2033 and 2034
+The instruction from individual 2033 was mutated from R_DemDirty %1 to R_DemDirty %1
+Parent 1 chosen : 1970
+Parent 2 chosen : 1965
+The children created are 2035 and 2036
+Parent 1 chosen : 1974
+Parent 2 chosen : 1960
+The children created are 2037 and 2038
+The instruction from individual 2038 was mutated from W_DemClean %0 to W_DemClean %1
+Parent 1 chosen : 1990
+Parent 2 chosen : 1974
+The children created are 2039 and 2040
+The instruction from individual 2040 was mutated from L_SPromClean %0 to L_SPromClean %2
+Parent 1 chosen : 1992
+Parent 2 chosen : 1967
+The children created are 2041 and 2042
+The instruction from individual 2041 was mutated from P_SPromDirty %0 to P_SPromDirty %1
+The instruction from individual 2042 was mutated from L_DemDirty %1 to L_DemDirty %1
+Parent 1 chosen : 1971
+Parent 2 chosen : 1951
+The children created are 2043 and 2044
+The instruction from individual 2044 was mutated from P_SPromClean %1 to P_SPromClean %0
+Parent 1 chosen : 1963
+Parent 2 chosen : 1956
+The children created are 2045 and 2046
+The instruction from individual 2046 was mutated from L_DemDirty %1 to L_DemDirty %2
+Parent 1 chosen : 1954
+Parent 2 chosen : 1953
+The children created are 2047 and 2048
+Parent 1 chosen : 1980
+Parent 2 chosen : 1999
+The children created are 2049 and 2050
+The instruction from individual 2050 was mutated from L_DemDirty %1 to L_DemDirty %2
+Parent 1 chosen : 2018
+Parent 2 chosen : 2016
+The children created are 2051 and 2052
+Parent 1 chosen : 2031
+Parent 2 chosen : 2016
+The children created are 2053 and 2054
+Parent 1 chosen : 2029
+Parent 2 chosen : 2036
+The children created are 2055 and 2056
+Parent 1 chosen : 2047
+Parent 2 chosen : 2005
+The children created are 2057 and 2058
+Parent 1 chosen : 2002
+Parent 2 chosen : 2008
+The children created are 2059 and 2060
+The instruction from individual 2060 was mutated from L_SPromClean %0 to L_SPromClean %1
+Parent 1 chosen : 2013
+Parent 2 chosen : 2036
+The children created are 2061 and 2062
+The instruction from individual 2061 was mutated from W_DemDirty %0 to W_DemDirty %0
+Parent 1 chosen : 2009
+Parent 2 chosen : 2045
+The children created are 2063 and 2064
+The instruction from individual 2064 was mutated from P_SPromDirty %0 to P_SPromDirty %1
+Parent 1 chosen : 2014
+Parent 2 chosen : 2009
+The children created are 2065 and 2066
+The instruction from individual 2065 was mutated from R_SPromDirty %1 to R_SPromDirty %2
+Parent 1 chosen : 2034
+Parent 2 chosen : 2045
+The children created are 2067 and 2068
+Parent 1 chosen : 2015
+Parent 2 chosen : 2023
+The children created are 2069 and 2070
+Parent 1 chosen : 2029
+Parent 2 chosen : 2049
+The children created are 2071 and 2072
+Parent 1 chosen : 2007
+Parent 2 chosen : 2013
+The children created are 2073 and 2074
+The instruction from individual 2073 was mutated from P_DemClean %2 to P_DemClean %2
+The instruction from individual 2073 was mutated from W_DemDirty %0 to W_DemDirty %1
+The instruction from individual 2074 was mutated from W_SPromDirty %1 to W_SPromDirty %1
+Parent 1 chosen : 2024
+Parent 2 chosen : 2033
+The children created are 2075 and 2076
+Parent 1 chosen : 2005
+Parent 2 chosen : 2010
+The children created are 2077 and 2078
+Parent 1 chosen : 2007
+Parent 2 chosen : 2017
+The children created are 2079 and 2080
+The instruction from individual 2079 was mutated from P_DemDirty %0 to P_DemDirty %1
+Parent 1 chosen : 2027
+Parent 2 chosen : 2002
+The children created are 2081 and 2082
+The instruction from individual 2082 was mutated from L_SPromDirty %0 to L_SPromDirty %0
+Parent 1 chosen : 2045
+Parent 2 chosen : 2048
+The children created are 2083 and 2084
+Parent 1 chosen : 2031
+Parent 2 chosen : 2048
+The children created are 2085 and 2086
+The instruction from individual 2086 was mutated from P_SPromDirty %0 to P_SPromDirty %0
+Parent 1 chosen : 2013
+Parent 2 chosen : 2048
+The children created are 2087 and 2088
+The instruction from individual 2087 was mutated from W_DemClean %0 to W_DemClean %0
+Parent 1 chosen : 2048
+Parent 2 chosen : 2008
+The children created are 2089 and 2090
+The instruction from individual 2089 was mutated from L_Insert %1 to L_Insert %3
+The instruction from individual 2090 was mutated from L_SPromDirty %0 to L_SPromDirty %2
+Parent 1 chosen : 2024
+Parent 2 chosen : 2011
+The children created are 2091 and 2092
+Parent 1 chosen : 2016
+Parent 2 chosen : 2031
+The children created are 2093 and 2094
+Parent 1 chosen : 2005
+Parent 2 chosen : 2048
+The children created are 2095 and 2096
+The instruction from individual 2095 was mutated from L_DemClean %4 to L_DemClean %3
+The instruction from individual 2096 was mutated from L_Insert %1 to L_Insert %2
+The instruction from individual 2096 was mutated from R_DemClean %4 to R_DemClean %2
+Parent 1 chosen : 2010
+Parent 2 chosen : 2047
+The children created are 2097 and 2098
+The instruction from individual 2098 was mutated from L_Insert %1 to L_Insert %0
+Parent 1 chosen : 2007
+Parent 2 chosen : 2029
+The children created are 2099 and 2100
+Parent 1 chosen : 2054
+Parent 2 chosen : 2097
+The children created are 2101 and 2102
+Parent 1 chosen : 2085
+Parent 2 chosen : 2094
+The children created are 2103 and 2104
+The instruction from individual 2103 was mutated from W_SPromDirty %1 to W_SPromDirty %2
+Parent 1 chosen : 2061
+Parent 2 chosen : 2066
+The children created are 2105 and 2106
+Parent 1 chosen : 2077
+Parent 2 chosen : 2100
+The children created are 2107 and 2108
+Parent 1 chosen : 2083
+Parent 2 chosen : 2066
+The children created are 2109 and 2110
+The instruction from individual 2109 was mutated from R_SPromClean %1 to R_SPromClean %1
+Parent 1 chosen : 2085
+Parent 2 chosen : 2066
+The children created are 2111 and 2112
+Parent 1 chosen : 2087
+Parent 2 chosen : 2078
+The children created are 2113 and 2114
+Parent 1 chosen : 2059
+Parent 2 chosen : 2071
+The children created are 2115 and 2116
+Parent 1 chosen : 2056
+Parent 2 chosen : 2083
+The children created are 2117 and 2118
+The instruction from individual 2117 was mutated from R_DemDirty %1 to R_DemDirty %2
+The instruction from individual 2117 was mutated from R_Insert %3 to R_Insert %1
+Parent 1 chosen : 2080
+Parent 2 chosen : 2056
+The children created are 2119 and 2120
+The instruction from individual 2120 was mutated from L_SPromDirty %0 to L_SPromDirty %0
+Parent 1 chosen : 2057
+Parent 2 chosen : 2087
+The children created are 2121 and 2122
+Parent 1 chosen : 2100
+Parent 2 chosen : 2087
+The children created are 2123 and 2124
+The instruction from individual 2124 was mutated from R_Insert %3 to R_Insert %3
+Parent 1 chosen : 2067
+Parent 2 chosen : 2055
+The children created are 2125 and 2126
+Parent 1 chosen : 2078
+Parent 2 chosen : 2054
+The children created are 2127 and 2128
+The instruction from individual 2127 was mutated from L_DemDirty %1 to L_DemDirty %0
+The instruction from individual 2127 was mutated from L_SPromDirty %0 to L_SPromDirty %2
+Parent 1 chosen : 2068
+Parent 2 chosen : 2056
+The children created are 2129 and 2130
+The instruction from individual 2129 was mutated from W_DemDirty %0 to W_DemDirty %3
+Parent 1 chosen : 2086
+Parent 2 chosen : 1610
+The children created are 2131 and 2132
+Parent 1 chosen : 2068
+Parent 2 chosen : 2077
+The children created are 2133 and 2134
+Parent 1 chosen : 2051
+Parent 2 chosen : 2061
+The children created are 2135 and 2136
+Parent 1 chosen : 2051
+Parent 2 chosen : 2093
+The children created are 2137 and 2138
+Parent 1 chosen : 2083
+Parent 2 chosen : 2067
+The children created are 2139 and 2140
+Parent 1 chosen : 2075
+Parent 2 chosen : 2057
+The children created are 2141 and 2142
+The instruction from individual 2141 was mutated from R_Insert %3 to R_Insert %2
+The instruction from individual 2142 was mutated from R_Insert %3 to R_Insert %1
+The instruction from individual 2142 was mutated from W_Insert %1 to W_Insert %3
+Parent 1 chosen : 2087
+Parent 2 chosen : 2080
+The children created are 2143 and 2144
+Parent 1 chosen : 2068
+Parent 2 chosen : 2057
+The children created are 2145 and 2146
+The instruction from individual 2145 was mutated from L_SPromDirty %0 to L_SPromDirty %0
+The instruction from individual 2145 was mutated from R_DemClean %4 to R_DemClean %4
+Parent 1 chosen : 2053
+Parent 2 chosen : 2087
+The children created are 2147 and 2148
+The instruction from individual 2148 was mutated from L_SPromClean %0 to L_SPromClean %2
+Parent 1 chosen : 2058
+Parent 2 chosen : 2066
+The children created are 2149 and 2150
+The instruction from individual 2149 was mutated from P_DemClean %2 to P_DemClean %3
+The instruction from individual 2150 was mutated from W_SPromDirty %1 to W_SPromDirty %0
+Parent 1 chosen : 2102
+Parent 2 chosen : 2111
+The children created are 2151 and 2152
+Parent 1 chosen : 2107
+Parent 2 chosen : 2132
+The children created are 2153 and 2154
+The instruction from individual 2153 was mutated from W_Insert %1 to W_Insert %3
+Parent 1 chosen : 2132
+Parent 2 chosen : 2137
+The children created are 2155 and 2156
+Parent 1 chosen : 2116
+Parent 2 chosen : 2104
+The children created are 2157 and 2158
+Parent 1 chosen : 2108
+Parent 2 chosen : 2119
+The children created are 2159 and 2160
+Parent 1 chosen : 2108
+Parent 2 chosen : 2145
+The children created are 2161 and 2162
+The instruction from individual 2161 was mutated from L_Insert %1 to L_Insert %2
+The instruction from individual 2161 was mutated from W_DemClean %0 to W_DemClean %1
+Parent 1 chosen : 2145
+Parent 2 chosen : 2131
+The children created are 2163 and 2164
+Parent 1 chosen : 2139
+Parent 2 chosen : 2115
+The children created are 2165 and 2166
+The instruction from individual 2165 was mutated from P_SPromDirty %0 to P_SPromDirty %2
+Parent 1 chosen : 2105
+Parent 2 chosen : 2134
+The children created are 2167 and 2168
+The instruction from individual 2167 was mutated from W_SPromDirty %1 to W_SPromDirty %1
+The instruction from individual 2168 was mutated from W_Insert %1 to W_Insert %0
+Parent 1 chosen : 2123
+Parent 2 chosen : 2115
+The children created are 2169 and 2170
+The instruction from individual 2170 was mutated from W_SPromClean %1 to W_SPromClean %1
+Parent 1 chosen : 2146
+Parent 2 chosen : 2113
+The children created are 2171 and 2172
+Parent 1 chosen : 2109
+Parent 2 chosen : 2131
+The children created are 2173 and 2174
+Parent 1 chosen : 2138
+Parent 2 chosen : 2136
+The children created are 2175 and 2176
+The instruction from individual 2175 was mutated from L_SPromDirty %0 to L_SPromDirty %0
+The instruction from individual 2176 was mutated from P_SPromDirty %0 to P_SPromDirty %0
+The instruction from individual 2176 was mutated from W_DemClean %0 to W_DemClean %0
+Parent 1 chosen : 2137
+Parent 2 chosen : 2107
+The children created are 2177 and 2178
+The instruction from individual 2178 was mutated from R_SPromDirty %1 to R_SPromDirty %1
+Parent 1 chosen : 2134
+Parent 2 chosen : 2123
+The children created are 2179 and 2180
+The instruction from individual 2179 was mutated from R_DemDirty %1 to R_DemDirty %0
+The instruction from individual 2179 was mutated from R_Insert %3 to R_Insert %1
+The instruction from individual 2180 was mutated from L_DemClean %1 to L_DemClean %2
+The instruction from individual 2180 was mutated from P_SPromDirty %0 to P_SPromDirty %0
+The instruction from individual 2180 was mutated from W_Insert %1 to W_Insert %2
+Parent 1 chosen : 2145
+Parent 2 chosen : 2139
+The children created are 2181 and 2182
+Parent 1 chosen : 2122
+Parent 2 chosen : 2125
+The children created are 2183 and 2184
+The instruction from individual 2183 was mutated from R_DemDirty %1 to R_DemDirty %2
+The instruction from individual 2183 was mutated from P_SPromClean %1 to P_SPromClean %1
+The instruction from individual 2184 was mutated from R_SPromClean %1 to R_SPromClean %0
+Parent 1 chosen : 2145
+Parent 2 chosen : 2106
+The children created are 2185 and 2186
+The instruction from individual 2186 was mutated from R_DemDirty %1 to R_DemDirty %2
+Parent 1 chosen : 2147
+Parent 2 chosen : 2102
+The children created are 2187 and 2188
+The instruction from individual 2187 was mutated from R_Insert %3 to R_Insert %1
+Parent 1 chosen : 2134
+Parent 2 chosen : 2147
+The children created are 2189 and 2190
+Parent 1 chosen : 2134
+Parent 2 chosen : 2128
+The children created are 2191 and 2192
+The instruction from individual 2191 was mutated from L_SPromClean %0 to L_SPromClean %1
+Parent 1 chosen : 2115
+Parent 2 chosen : 2137
+The children created are 2193 and 2194
+Parent 1 chosen : 2123
+Parent 2 chosen : 2109
+The children created are 2195 and 2196
+Parent 1 chosen : 2114
+Parent 2 chosen : 2145
+The children created are 2197 and 2198
+Parent 1 chosen : 2123
+Parent 2 chosen : 2135
+The children created are 2199 and 2200
+The instruction from individual 2199 was mutated from R_DemDirty %1 to R_DemDirty %3
+Parent 1 chosen : 2172
+Parent 2 chosen : 2197
+The children created are 2201 and 2202
+The instruction from individual 2201 was mutated from R_DemClean %4 to R_DemClean %1
+The instruction from individual 2202 was mutated from R_Insert %3 to R_Insert %3
+Parent 1 chosen : 2154
+Parent 2 chosen : 2192
+The children created are 2203 and 2204
+Parent 1 chosen : 2196
+Parent 2 chosen : 2151
+The children created are 2205 and 2206
+Parent 1 chosen : 2152
+Parent 2 chosen : 2163
+The children created are 2207 and 2208
+The instruction from individual 2208 was mutated from W_DemClean %0 to W_DemClean %3
+Parent 1 chosen : 2192
+Parent 2 chosen : 2166
+The children created are 2209 and 2210
+The instruction from individual 2209 was mutated from W_SPromDirty %1 to W_SPromDirty %2
+The instruction from individual 2210 was mutated from R_SPromClean %1 to R_SPromClean %2
+Parent 1 chosen : 2157
+Parent 2 chosen : 2174
+The children created are 2211 and 2212
+Parent 1 chosen : 2195
+Parent 2 chosen : 2167
+The children created are 2213 and 2214
+Parent 1 chosen : 2196
+Parent 2 chosen : 2173
+The children created are 2215 and 2216
+Parent 1 chosen : 1610
+Parent 2 chosen : 2200
+The children created are 2217 and 2218
+The instruction from individual 2217 was mutated from W_Insert %1 to W_Insert %2
+Parent 1 chosen : 2174
+Parent 2 chosen : 2162
+The children created are 2219 and 2220
+Parent 1 chosen : 2174
+Parent 2 chosen : 1610
+The children created are 2221 and 2222
+The instruction from individual 2222 was mutated from W_SPromDirty %1 to W_SPromDirty %1
+Parent 1 chosen : 2157
+Parent 2 chosen : 2197
+The children created are 2223 and 2224
+The instruction from individual 2223 was mutated from P_Insert %3 to P_Insert %0
+The instruction from individual 2223 was mutated from W_DemDirty %0 to W_DemDirty %2
+Parent 1 chosen : 2159
+Parent 2 chosen : 2178
+The children created are 2225 and 2226
+Parent 1 chosen : 2151
+Parent 2 chosen : 2190
+The children created are 2227 and 2228
+Parent 1 chosen : 2152
+Parent 2 chosen : 2188
+The children created are 2229 and 2230
+Parent 1 chosen : 2157
+Parent 2 chosen : 2166
+The children created are 2231 and 2232
+The instruction from individual 2231 was mutated from R_DemClean %4 to R_DemClean %0
+The instruction from individual 2232 was mutated from L_SPromDirty %0 to L_SPromDirty %1
+Parent 1 chosen : 2194
+Parent 2 chosen : 2196
+The children created are 2233 and 2234
+Parent 1 chosen : 2174
+Parent 2 chosen : 2185
+The children created are 2235 and 2236
+The instruction from individual 2236 was mutated from R_DemClean %4 to R_DemClean %0
+The instruction from individual 2236 was mutated from P_DemClean %2 to P_DemClean %4
+Parent 1 chosen : 2162
+Parent 2 chosen : 1610
+The children created are 2237 and 2238
+Parent 1 chosen : 2198
+Parent 2 chosen : 2154
+The children created are 2239 and 2240
+The instruction from individual 2239 was mutated from P_SPromClean %1 to P_SPromClean %1
+The instruction from individual 2240 was mutated from W_DemClean %0 to W_DemClean %2
+Parent 1 chosen : 2154
+Parent 2 chosen : 2166
+The children created are 2241 and 2242
+Parent 1 chosen : 2194
+Parent 2 chosen : 2196
+The children created are 2243 and 2244
+The instruction from individual 2243 was mutated from P_DemClean %2 to P_DemClean %3
+Parent 1 chosen : 2164
+Parent 2 chosen : 2157
+The children created are 2245 and 2246
+Parent 1 chosen : 2200
+Parent 2 chosen : 2173
+The children created are 2247 and 2248
+Parent 1 chosen : 2194
+Parent 2 chosen : 2160
+The children created are 2249 and 2250
+The instruction from individual 2249 was mutated from P_SPromDirty %0 to P_SPromDirty %0
+Parent 1 chosen : 2246
+Parent 2 chosen : 2241
+The children created are 2251 and 2252
+Parent 1 chosen : 1610
+Parent 2 chosen : 2221
+The children created are 2253 and 2254
+The instruction from individual 2253 was mutated from P_SPromDirty %0 to P_SPromDirty %1
+Parent 1 chosen : 2249
+Parent 2 chosen : 2239
+The children created are 2255 and 2256
+Parent 1 chosen : 2229
+Parent 2 chosen : 2222
+The children created are 2257 and 2258
+The instruction from individual 2258 was mutated from P_Insert %3 to P_Insert %0
+Parent 1 chosen : 2220
+Parent 2 chosen : 2207
+The children created are 2259 and 2260
+Parent 1 chosen : 2203
+Parent 2 chosen : 2248
+The children created are 2261 and 2262
+Parent 1 chosen : 2222
+Parent 2 chosen : 2205
+The children created are 2263 and 2264
+The instruction from individual 2263 was mutated from P_DemClean %2 to P_DemClean %2
+The instruction from individual 2263 was mutated from P_DemDirty %0 to P_DemDirty %3
+The instruction from individual 2264 was mutated from P_SPromClean %1 to P_SPromClean %2
+Parent 1 chosen : 2215
+Parent 2 chosen : 2245
+The children created are 2265 and 2266
+Parent 1 chosen : 2215
+Parent 2 chosen : 2227
+The children created are 2267 and 2268
+Parent 1 chosen : 2246
+Parent 2 chosen : 2241
+The children created are 2269 and 2270
+Parent 1 chosen : 2212
+Parent 2 chosen : 2221
+The children created are 2271 and 2272
+The instruction from individual 2271 was mutated from R_SPromDirty %1 to R_SPromDirty %0
+Parent 1 chosen : 2204
+Parent 2 chosen : 2211
+The children created are 2273 and 2274
+The instruction from individual 2273 was mutated from L_SPromDirty %0 to L_SPromDirty %1
+Parent 1 chosen : 2238
+Parent 2 chosen : 2216
+The children created are 2275 and 2276
+The instruction from individual 2275 was mutated from R_Insert %3 to R_Insert %2
+The instruction from individual 2275 was mutated from P_DemClean %2 to P_DemClean %2
+The instruction from individual 2276 was mutated from P_DemClean %2 to P_DemClean %0
+Parent 1 chosen : 2212
+Parent 2 chosen : 2237
+The children created are 2277 and 2278
+The instruction from individual 2278 was mutated from R_SPromDirty %1 to R_SPromDirty %0
+Parent 1 chosen : 2241
+Parent 2 chosen : 2216
+The children created are 2279 and 2280
+The instruction from individual 2279 was mutated from P_SPromDirty %0 to P_SPromDirty %0
+The instruction from individual 2280 was mutated from R_SPromDirty %1 to R_SPromDirty %0
+Parent 1 chosen : 2228
+Parent 2 chosen : 2230
+The children created are 2281 and 2282
+The instruction from individual 2281 was mutated from W_DemDirty %0 to W_DemDirty %2
+The instruction from individual 2281 was mutated from W_SPromDirty %1 to W_SPromDirty %1
+Parent 1 chosen : 2246
+Parent 2 chosen : 2220
+The children created are 2283 and 2284
+The instruction from individual 2284 was mutated from R_DemDirty %1 to R_DemDirty %4
+Parent 1 chosen : 2211
+Parent 2 chosen : 2248
+The children created are 2285 and 2286
+Parent 1 chosen : 2224
+Parent 2 chosen : 2249
+The children created are 2287 and 2288
+Parent 1 chosen : 2214
+Parent 2 chosen : 2213
+The children created are 2289 and 2290
+The instruction from individual 2289 was mutated from W_DemDirty %0 to W_DemDirty %4
+Parent 1 chosen : 2250
+Parent 2 chosen : 2212
+The children created are 2291 and 2292
+Parent 1 chosen : 2204
+Parent 2 chosen : 2203
+The children created are 2293 and 2294
+The instruction from individual 2293 was mutated from R_Insert %3 to R_Insert %3
+Parent 1 chosen : 2221
+Parent 2 chosen : 2202
+The children created are 2295 and 2296
+The instruction from individual 2296 was mutated from W_DemDirty %0 to W_DemDirty %2
+Parent 1 chosen : 2224
+Parent 2 chosen : 2248
+The children created are 2297 and 2298
+The instruction from individual 2298 was mutated from R_DemClean %4 to R_DemClean %2
+Parent 1 chosen : 2242
+Parent 2 chosen : 2212
+The children created are 2299 and 2300
+The instruction from individual 2300 was mutated from W_SPromDirty %1 to W_SPromDirty %0
+Parent 1 chosen : 2265
+Parent 2 chosen : 2266
+The children created are 2301 and 2302
+The instruction from individual 2302 was mutated from L_Insert %1 to L_Insert %1
+Parent 1 chosen : 2295
+Parent 2 chosen : 2256
+The children created are 2303 and 2304
+The instruction from individual 2303 was mutated from W_SPromDirty %1 to W_SPromDirty %0
+Parent 1 chosen : 2288
+Parent 2 chosen : 2279
+The children created are 2305 and 2306
+The instruction from individual 2305 was mutated from W_SPromDirty %1 to W_SPromDirty %0
+The instruction from individual 2306 was mutated from R_DemClean %4 to R_DemClean %2
+Parent 1 chosen : 2267
+Parent 2 chosen : 2290
+The children created are 2307 and 2308
+The instruction from individual 2308 was mutated from L_DemDirty %1 to L_DemDirty %2
+Parent 1 chosen : 2259
+Parent 2 chosen : 2276
+The children created are 2309 and 2310
+The instruction from individual 2310 was mutated from P_DemClean %0 to P_DemClean %0
+Parent 1 chosen : 2268
+Parent 2 chosen : 2283
+The children created are 2311 and 2312
+The instruction from individual 2311 was mutated from L_DemClean %4 to L_DemClean %3
+The instruction from individual 2312 was mutated from P_SPromDirty %0 to P_SPromDirty %2
+The instruction from individual 2312 was mutated from W_SPromClean %1 to W_SPromClean %0
+Parent 1 chosen : 2282
+Parent 2 chosen : 2257
+The children created are 2313 and 2314
+The instruction from individual 2313 was mutated from W_DemClean %0 to W_DemClean %2
+Parent 1 chosen : 2290
+Parent 2 chosen : 2287
+The children created are 2315 and 2316
+Parent 1 chosen : 2295
+Parent 2 chosen : 2274
+The children created are 2317 and 2318
+The instruction from individual 2318 was mutated from W_Insert %1 to W_Insert %1
+Parent 1 chosen : 2293
+Parent 2 chosen : 1610
+The children created are 2319 and 2320
+Parent 1 chosen : 2272
+Parent 2 chosen : 2286
+The children created are 2321 and 2322
+Parent 1 chosen : 2266
+Parent 2 chosen : 2265
+The children created are 2323 and 2324
+Parent 1 chosen : 2269
+Parent 2 chosen : 2283
+The children created are 2325 and 2326
+The instruction from individual 2325 was mutated from R_Insert %3 to R_Insert %1
+The instruction from individual 2326 was mutated from R_Insert %3 to R_Insert %0
+Parent 1 chosen : 2251
+Parent 2 chosen : 2282
+The children created are 2327 and 2328
+The instruction from individual 2327 was mutated from P_SPromDirty %0 to P_SPromDirty %2
+Parent 1 chosen : 2269
+Parent 2 chosen : 2255
+The children created are 2329 and 2330
+Parent 1 chosen : 2290
+Parent 2 chosen : 2252
+The children created are 2331 and 2332
+The instruction from individual 2331 was mutated from R_DemClean %4 to R_DemClean %3
+Parent 1 chosen : 2260
+Parent 2 chosen : 2276
+The children created are 2333 and 2334
+The instruction from individual 2334 was mutated from P_Insert %3 to P_Insert %0
+Parent 1 chosen : 2285
+Parent 2 chosen : 2288
+The children created are 2335 and 2336
+Parent 1 chosen : 2259
+Parent 2 chosen : 2261
+The children created are 2337 and 2338
+The instruction from individual 2338 was mutated from P_DemDirty %0 to P_DemDirty %2
+Parent 1 chosen : 2269
+Parent 2 chosen : 2256
+The children created are 2339 and 2340
+The instruction from individual 2340 was mutated from L_DemDirty %1 to L_DemDirty %0
+Parent 1 chosen : 2287
+Parent 2 chosen : 2299
+The children created are 2341 and 2342
+The instruction from individual 2341 was mutated from R_DemClean %4 to R_DemClean %4
+The instruction from individual 2342 was mutated from W_SPromDirty %1 to W_SPromDirty %1
+Parent 1 chosen : 2252
+Parent 2 chosen : 2261
+The children created are 2343 and 2344
+Parent 1 chosen : 2267
+Parent 2 chosen : 2255
+The children created are 2345 and 2346
+Parent 1 chosen : 2267
+Parent 2 chosen : 2287
+The children created are 2347 and 2348
+Parent 1 chosen : 2295
+Parent 2 chosen : 2261
+The children created are 2349 and 2350
+The instruction from individual 2349 was mutated from W_DemClean %0 to W_DemClean %3
+The instruction from individual 2349 was mutated from W_SPromClean %1 to W_SPromClean %2
+Parent 1 chosen : 2344
+Parent 2 chosen : 2335
+The children created are 2351 and 2352
+Parent 1 chosen : 2304
+Parent 2 chosen : 2330
+The children created are 2353 and 2354
+The instruction from individual 2354 was mutated from R_SPromDirty %1 to R_SPromDirty %2
+Parent 1 chosen : 2301
+Parent 2 chosen : 2321
+The children created are 2355 and 2356
+The instruction from individual 2355 was mutated from W_Insert %1 to W_Insert %1
+The instruction from individual 2356 was mutated from P_DemClean %2 to P_DemClean %0
+Parent 1 chosen : 2343
+Parent 2 chosen : 2332
+The children created are 2357 and 2358
+The instruction from individual 2358 was mutated from W_SPromClean %1 to W_SPromClean %1
+Parent 1 chosen : 2307
+Parent 2 chosen : 2344
+The children created are 2359 and 2360
+Parent 1 chosen : 2347
+Parent 2 chosen : 2322
+The children created are 2361 and 2362
+The instruction from individual 2362 was mutated from L_DemDirty %1 to L_DemDirty %2
+Parent 1 chosen : 1610
+Parent 2 chosen : 2322
+The children created are 2363 and 2364
+The instruction from individual 2364 was mutated from L_DemClean %4 to L_DemClean %3
+Parent 1 chosen : 2304
+Parent 2 chosen : 2314
+The children created are 2365 and 2366
+The instruction from individual 2365 was mutated from L_SPromClean %0 to L_SPromClean %2
+The instruction from individual 2365 was mutated from R_DemClean %4 to R_DemClean %0
+The instruction from individual 2366 was mutated from R_DemDirty %1 to R_DemDirty %4
+Parent 1 chosen : 2320
+Parent 2 chosen : 2307
+The children created are 2367 and 2368
+Parent 1 chosen : 2348
+Parent 2 chosen : 2328
+The children created are 2369 and 2370
+Parent 1 chosen : 2345
+Parent 2 chosen : 2343
+The children created are 2371 and 2372
+The instruction from individual 2371 was mutated from L_SPromDirty %0 to L_SPromDirty %2
+Parent 1 chosen : 2307
+Parent 2 chosen : 2348
+The children created are 2373 and 2374
+The instruction from individual 2373 was mutated from W_SPromClean %1 to W_SPromClean %0
+The instruction from individual 2374 was mutated from P_SPromClean %1 to P_SPromClean %1
+Parent 1 chosen : 2342
+Parent 2 chosen : 2317
+The children created are 2375 and 2376
+Parent 1 chosen : 2307
+Parent 2 chosen : 2304
+The children created are 2377 and 2378
+The instruction from individual 2377 was mutated from W_SPromClean %1 to W_SPromClean %0
+Parent 1 chosen : 2330
+Parent 2 chosen : 2347
+The children created are 2379 and 2380
+The instruction from individual 2380 was mutated from L_DemDirty %1 to L_DemDirty %0
+Parent 1 chosen : 2320
+Parent 2 chosen : 2330
+The children created are 2381 and 2382
+The instruction from individual 2381 was mutated from L_SPromClean %0 to L_SPromClean %1
+The instruction from individual 2382 was mutated from P_SPromDirty %0 to P_SPromDirty %0
+The instruction from individual 2382 was mutated from W_DemClean %0 to W_DemClean %2
+Parent 1 chosen : 2318
+Parent 2 chosen : 2341
+The children created are 2383 and 2384
+Parent 1 chosen : 1610
+Parent 2 chosen : 2309
+The children created are 2385 and 2386
+The instruction from individual 2385 was mutated from R_Insert %3 to R_Insert %3
+The instruction from individual 2386 was mutated from L_Insert %1 to L_Insert %3
+Parent 1 chosen : 2330
+Parent 2 chosen : 2319
+The children created are 2387 and 2388
+Parent 1 chosen : 2345
+Parent 2 chosen : 2324
+The children created are 2389 and 2390
+The instruction from individual 2389 was mutated from R_Insert %3 to R_Insert %1
+Parent 1 chosen : 2329
+Parent 2 chosen : 2321
+The children created are 2391 and 2392
+Parent 1 chosen : 2347
+Parent 2 chosen : 2319
+The children created are 2393 and 2394
+Parent 1 chosen : 2318
+Parent 2 chosen : 2302
+The children created are 2395 and 2396
+Parent 1 chosen : 2304
+Parent 2 chosen : 2315
+The children created are 2397 and 2398
+The instruction from individual 2398 was mutated from L_SPromDirty %0 to L_SPromDirty %0
+Parent 1 chosen : 2348
+Parent 2 chosen : 2321
+The children created are 2399 and 2400
+The instruction from individual 2399 was mutated from W_Insert %1 to W_Insert %1
+Parent 1 chosen : 2352
+Parent 2 chosen : 2363
+The children created are 2401 and 2402
+The instruction from individual 2402 was mutated from P_SPromDirty %0 to P_SPromDirty %2
+Parent 1 chosen : 2356
+Parent 2 chosen : 2399
+The children created are 2403 and 2404
+Parent 1 chosen : 2399
+Parent 2 chosen : 2390
+The children created are 2405 and 2406
+Parent 1 chosen : 2385
+Parent 2 chosen : 2384
+The children created are 2407 and 2408
+The instruction from individual 2407 was mutated from W_Insert %1 to W_Insert %2
+The instruction from individual 2408 was mutated from L_SPromDirty %0 to L_SPromDirty %1
+Parent 1 chosen : 2356
+Parent 2 chosen : 2359
+The children created are 2409 and 2410
+Parent 1 chosen : 2383
+Parent 2 chosen : 2379
+The children created are 2411 and 2412
+Parent 1 chosen : 2372
+Parent 2 chosen : 2369
+The children created are 2413 and 2414
+The instruction from individual 2413 was mutated from L_SPromDirty %0 to L_SPromDirty %0
+The instruction from individual 2413 was mutated from W_DemDirty %0 to W_DemDirty %1
+Parent 1 chosen : 2388
+Parent 2 chosen : 2383
+The children created are 2415 and 2416
+Parent 1 chosen : 1610
+Parent 2 chosen : 2351
+The children created are 2417 and 2418
+Parent 1 chosen : 2366
+Parent 2 chosen : 2360
+The children created are 2419 and 2420
+Parent 1 chosen : 2390
+Parent 2 chosen : 2370
+The children created are 2421 and 2422
+The instruction from individual 2421 was mutated from R_DemDirty %1 to R_DemDirty %3
+The instruction from individual 2421 was mutated from P_DemDirty %0 to P_DemDirty %0
+The instruction from individual 2421 was mutated from W_SPromDirty %1 to W_SPromDirty %1
+The instruction from individual 2422 was mutated from L_Insert %1 to L_Insert %3
+Parent 1 chosen : 2376
+Parent 2 chosen : 1610
+The children created are 2423 and 2424
+Parent 1 chosen : 2359
+Parent 2 chosen : 2370
+The children created are 2425 and 2426
+Parent 1 chosen : 2398
+Parent 2 chosen : 2351
+The children created are 2427 and 2428
+The instruction from individual 2428 was mutated from L_DemDirty %1 to L_DemDirty %0
+Parent 1 chosen : 2363
+Parent 2 chosen : 2392
+The children created are 2429 and 2430
+Parent 1 chosen : 1610
+Parent 2 chosen : 2383
+The children created are 2431 and 2432
+Parent 1 chosen : 2379
+Parent 2 chosen : 2360
+The children created are 2433 and 2434
+Parent 1 chosen : 2359
+Parent 2 chosen : 2379
+The children created are 2435 and 2436
+The instruction from individual 2435 was mutated from L_DemDirty %1 to L_DemDirty %4
+The instruction from individual 2435 was mutated from L_SPromDirty %0 to L_SPromDirty %0
+The instruction from individual 2435 was mutated from R_DemDirty %1 to R_DemDirty %4
+Parent 1 chosen : 2391
+Parent 2 chosen : 2363
+The children created are 2437 and 2438
+Parent 1 chosen : 2363
+Parent 2 chosen : 2391
+The children created are 2439 and 2440
+The instruction from individual 2439 was mutated from W_DemDirty %0 to W_DemDirty %1
+The instruction from individual 2440 was mutated from R_Insert %3 to R_Insert %0
+Parent 1 chosen : 2359
+Parent 2 chosen : 2374
+The children created are 2441 and 2442
+The instruction from individual 2441 was mutated from P_DemClean %2 to P_DemClean %0
+The instruction from individual 2442 was mutated from R_Insert %3 to R_Insert %2
+Parent 1 chosen : 2384
+Parent 2 chosen : 2351
+The children created are 2443 and 2444
+The instruction from individual 2443 was mutated from L_DemDirty %1 to L_DemDirty %4
+Parent 1 chosen : 2372
+Parent 2 chosen : 2358
+The children created are 2445 and 2446
+The instruction from individual 2445 was mutated from L_DemClean %4 to L_DemClean %4
+Parent 1 chosen : 2359
+Parent 2 chosen : 2358
+The children created are 2447 and 2448
+Parent 1 chosen : 2360
+Parent 2 chosen : 2379
+The children created are 2449 and 2450
+The instruction from individual 2450 was mutated from R_DemDirty %1 to R_DemDirty %0
+The instruction from individual 2450 was mutated from W_DemClean %0 to W_DemClean %1
+Parent 1 chosen : 2411
+Parent 2 chosen : 2412
+The children created are 2451 and 2452
+The instruction from individual 2451 was mutated from P_DemClean %2 to P_DemClean %3
+Parent 1 chosen : 2416
+Parent 2 chosen : 2430
+The children created are 2453 and 2454
+The instruction from individual 2454 was mutated from R_DemDirty %1 to R_DemDirty %0
+Parent 1 chosen : 2445
+Parent 2 chosen : 2415
+The children created are 2455 and 2456
+Parent 1 chosen : 1610
+Parent 2 chosen : 2415
+The children created are 2457 and 2458
+The instruction from individual 2458 was mutated from R_SPromClean %1 to R_SPromClean %2
+Parent 1 chosen : 2444
+Parent 2 chosen : 2429
+The children created are 2459 and 2460
+The instruction from individual 2459 was mutated from W_SPromClean %1 to W_SPromClean %0
+Parent 1 chosen : 2416
+Parent 2 chosen : 1610
+The children created are 2461 and 2462
+The instruction from individual 2461 was mutated from P_DemDirty %0 to P_DemDirty %1
+Parent 1 chosen : 2434
+Parent 2 chosen : 2449
+The children created are 2463 and 2464
+The instruction from individual 2463 was mutated from L_DemDirty %1 to L_DemDirty %0
+Parent 1 chosen : 2446
+Parent 2 chosen : 2434
+The children created are 2465 and 2466
+Parent 1 chosen : 2445
+Parent 2 chosen : 2403
+The children created are 2467 and 2468
+The instruction from individual 2468 was mutated from R_DemClean %4 to R_DemClean %4
+Parent 1 chosen : 2423
+Parent 2 chosen : 2401
+The children created are 2469 and 2470
+Parent 1 chosen : 2417
+Parent 2 chosen : 1610
+The children created are 2471 and 2472
+Parent 1 chosen : 2411
+Parent 2 chosen : 2423
+The children created are 2473 and 2474
+Parent 1 chosen : 2411
+Parent 2 chosen : 2416
+The children created are 2475 and 2476
+Parent 1 chosen : 2441
+Parent 2 chosen : 2417
+The children created are 2477 and 2478
+The instruction from individual 2478 was mutated from R_SPromDirty %1 to R_SPromDirty %0
+The instruction from individual 2478 was mutated from P_SPromDirty %0 to P_SPromDirty %0
+The instruction from individual 2478 was mutated from W_Insert %1 to W_Insert %0
+Parent 1 chosen : 2420
+Parent 2 chosen : 2414
+The children created are 2479 and 2480
+The instruction from individual 2479 was mutated from L_SPromClean %0 to L_SPromClean %0
+The instruction from individual 2479 was mutated from R_SPromClean %1 to R_SPromClean %0
+Parent 1 chosen : 2433
+Parent 2 chosen : 2447
+The children created are 2481 and 2482
+The instruction from individual 2481 was mutated from R_SPromClean %1 to R_SPromClean %2
+Parent 1 chosen : 2438
+Parent 2 chosen : 2441
+The children created are 2483 and 2484
+The instruction from individual 2483 was mutated from L_SPromDirty %0 to L_SPromDirty %1
+Parent 1 chosen : 2445
+Parent 2 chosen : 2444
+The children created are 2485 and 2486
+The instruction from individual 2485 was mutated from W_SPromDirty %1 to W_SPromDirty %2
+Parent 1 chosen : 2424
+Parent 2 chosen : 2444
+The children created are 2487 and 2488
+Parent 1 chosen : 2403
+Parent 2 chosen : 2411
+The children created are 2489 and 2490
+Parent 1 chosen : 1610
+Parent 2 chosen : 2445
+The children created are 2491 and 2492
+The instruction from individual 2491 was mutated from R_SPromClean %1 to R_SPromClean %1
+Parent 1 chosen : 2409
+Parent 2 chosen : 2414
+The children created are 2493 and 2494
+The instruction from individual 2493 was mutated from P_SPromDirty %0 to P_SPromDirty %0
+Parent 1 chosen : 2446
+Parent 2 chosen : 2431
+The children created are 2495 and 2496
+The instruction from individual 2495 was mutated from L_DemClean %4 to L_DemClean %3
+The instruction from individual 2496 was mutated from W_SPromDirty %1 to W_SPromDirty %0
+Parent 1 chosen : 2405
+Parent 2 chosen : 2429
+The children created are 2497 and 2498
+The instruction from individual 2497 was mutated from L_DemDirty %1 to L_DemDirty %4
+Parent 1 chosen : 2423
+Parent 2 chosen : 2417
+The children created are 2499 and 2500
+The instruction from individual 2499 was mutated from R_DemClean %4 to R_DemClean %3
+The instruction from individual 2500 was mutated from P_SPromClean %1 to P_SPromClean %1
+Fittest individual is:
+ 	L_DemClean %4
+	L_DemDirty %1
+	L_Insert %1
+	L_SPromClean %0
+	L_SPromDirty %0
+	R_DemClean %4
+	R_DemDirty %1
+	R_Insert %3
+	R_SPromClean %1
+	R_SPromDirty %1
+	P_DemClean %2
+	P_DemDirty %0
+	P_Insert %3
+	P_SPromClean %1
+	P_SPromDirty %0
+	W_DemClean %0
+	W_DemDirty %0
+	W_Insert %1
+	W_SPromClean %1
+	W_SPromDirty %1
+with measurement equal to ['1.00690']

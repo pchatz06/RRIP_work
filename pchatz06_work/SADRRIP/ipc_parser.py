@@ -51,7 +51,7 @@ folder = folder_list[0]
 for benchmark in Benchmarks:
 
     full_filename = "Results/" + folder + "/" + benchmark + ".out"
-#    print(full_filename)
+    # print(full_filename)
     # Check if file exists
     if not os.path.isfile(full_filename):
         continue
@@ -65,7 +65,7 @@ for benchmark in Benchmarks:
                 lru_time = float(lru_baseline[benchmark])
                 speedup = float(ipc_value/lru_time)
                 ipc_values.append(speedup)  # add speedup value to list
-#                print(ipc_value)
+                # print(ipc_value)
 #                print("BOSS")
                 break
 

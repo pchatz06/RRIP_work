@@ -74,26 +74,26 @@ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR TH
 
 .L2:
       
-	L_DemClean %3
-	L_DemDirty %3
-	L_Insert %3
-	L_SPromClean %2
-	L_SPromDirty %1
-	R_DemClean %4
-	R_DemDirty %1
-	R_Insert %0
-	R_SPromClean %1
+	L_DemClean %4
+	L_DemDirty %4
+	L_Insert %1
+	L_SPromClean %0
+	L_SPromDirty %0
+	R_DemClean %1
+	R_DemDirty %2
+	R_Insert %1
+	R_SPromClean %0
 	R_SPromDirty %1
 	P_DemClean %0
-	P_DemDirty %3
-	P_Insert %2
-	P_SPromClean %2
+	P_DemDirty %1
+	P_Insert %3
+	P_SPromClean %1
 	P_SPromDirty %1
-	W_DemClean %3
+	W_DemClean %0
 	W_DemDirty %3
 	W_Insert %1
 	W_SPromClean %1
-	W_SPromDirty %2
+	W_SPromDirty %1
 
 
 
