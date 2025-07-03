@@ -44,10 +44,11 @@ for f in files:
     columns.append(f.split('.')[0]);
     best=pop.getFittest();
     theBest.append(best);
+    print(best.getFitness())
     sum=0.0;
     count=0;
     for indiv in pop.individuals:
-        print(indiv.getFitness())
+        #print(indiv.getFitness())
         sum+=float(indiv.getFitness());
         count+=1;
         for ins in indiv.sequence:
