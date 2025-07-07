@@ -19,7 +19,7 @@ from Operand import Operand
 import re;
 
 
-path = "/home/pchatz06/RRIP_work/pchatz06_work/Results/25-07-02-17-06/" 
+path = "/home/pchatz06/RRIP_work/pchatz06_work/GCC_SEARCH/Results/25-07-02-17-06/" 
 files=[]
 for root, dirs, filenames in os.walk(path): #takes as input the dir with the saved state
     for f in filenames:
@@ -35,7 +35,9 @@ theBest=[];
 print("best and average of each generation");
 print("generation best average");
 insHash={};
-
+unique_individuals = set()
+counter_gen = 1
+inst = [[] for _ in range(20)]
 for f in files:
     input=open(path+f,"rb");
     pop=pickle.load(input);
@@ -43,29 +45,27 @@ for f in files:
     input.close();
     columns.append(f.split('.')[0]);
     best=pop.getFittest();
+    #print(best)
     theBest.append(best);
-    print(best.getFitness())
+    #print(best.getFitness())
     sum=0.0;
     count=0;
-    for indiv in pop.individuals:
-        #print(indiv.getFitness())
-        sum+=float(indiv.getFitness());
-        count+=1;
-        for ins in indiv.sequence:
-            
-                if(ins.name in insHash.keys()):
-                    insHash[ins.name]+=1;
-                else:
-                    insHash[ins.name]=1;
-    sorted(insHash,key=lambda key: insHash[key]);
-    #print(insHash);
-    allKeys+=list(insHash.keys()).__str__()+"\n";
-    allValues+=insHash.values().__str__()+"\n";
-    average=sum/count;
-    for key in list(insHash.keys()): #clear the hash for the next population
-        insHash[key]=0;
     
+    for indiv in pop.individuals:
+        print(counter_gen, indiv.getFitness())
+        unique_individuals.add(str(indiv))
+        count_ins = 0
+        for ins in indiv.sequence:
+            # print(ins.operands[0])
+            inst[count_ins].append(str(ins.operands[0]))
+            count_ins = count_ins + 1
+
+    # print("Unique individuals:", len(unique_individuals)) 
+    counter_gen = counter_gen + 1   
     # print(str(columns[-1])+" "+str(round(float(best.getFitness()),6))+" "+str(round(float(average),6))  );
 #print (allKeys);
+for i in range(20):
+    print(inst[i])
+
 print("end of generation best average");
 

@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "__init__.py", line 20, in <module>
+    algorithm = Algorithm(sys.argv[1], rand)
+  File "/home/mzako001/Thesis_All_Selected/GeST/src/Algorithm.py", line 52, in __init__
+    self.general_initialization(configurationFile, rand)
+  File "/home/mzako001/Thesis_All_Selected/GeST/src/Algorithm.py", line 62, in general_initialization
+    self.setupDirs(configurationFile)
+  File "/home/mzako001/Thesis_All_Selected/GeST/src/Algorithm.py", line 148, in setupDirs
+    shutil.copytree("/home/mzako001/Thesis_All_Selected/GeST/src", self.savedStateDir + "src")
+  File "/usr/lib64/python3.6/shutil.py", line 321, in copytree
+    os.makedirs(dst)
+  File "/usr/lib64/python3.6/os.py", line 220, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: '/home/mzako001/Thesis/Results/25-04-18-12-01/src'

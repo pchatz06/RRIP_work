@@ -1,0 +1,403 @@
+
+*** ChampSim Multicore Out-of-Order Simulator ***
+
+Warmup Instructions: 100000000
+Simulation Instructions: 500000000
+Number of CPUs: 1
+LLC sets: 2048
+LLC ways: 16
+Clean RRIP Policies: 2203230122032301 Dirty RRIP Policies: 1203031112030311 PSEL Width: 10 Track Set: 4294967295 PSEL Mask: 1 Demote Mask: 2102011021020110DS Algo: 0Window size: 0
+Off-chip DRAM Size: 4096 MB Channels: 1 Width: 64-bit Data Rate: 1600 MT/s
+
+CPU 0 runs /mnt/beegfs/iconst01/spec2017/Gcc.trace.gz
+NOT SORTED
+TRACE STRING: /mnt/beegfs/iconst01/spec2017/Gcc.trace.gz
+SORTED
+TRACE STRING: /mnt/beegfs/iconst01/spec2017/Gcc.trace.gz
+INITIAL
+TRACE STRING: /mnt/beegfs/iconst01/spec2017/Gcc.trace.gz
+
+champsim_seed used: 269
+
+CPU 0 L1D next line prefetcher
+CPU 0 L2C IP-based stride prefetcher
+Initialize DRRIP state
+Assign rand_sets[0]: 454  LLC: 2048
+rand_sets[0]: 454
+Assign rand_sets[1]: 1662  LLC: 2048
+rand_sets[1]: 1662
+Assign rand_sets[2]: 1921  LLC: 2048
+rand_sets[2]: 1921
+Assign rand_sets[3]: 1131  LLC: 2048
+rand_sets[3]: 1131
+Assign rand_sets[4]: 331  LLC: 2048
+rand_sets[4]: 331
+Assign rand_sets[5]: 1531  LLC: 2048
+rand_sets[5]: 1531
+Assign rand_sets[6]: 482  LLC: 2048
+rand_sets[6]: 482
+Assign rand_sets[7]: 1275  LLC: 2048
+rand_sets[7]: 1275
+Assign rand_sets[8]: 1876  LLC: 2048
+rand_sets[8]: 1876
+Assign rand_sets[9]: 2038  LLC: 2048
+rand_sets[9]: 2038
+Assign rand_sets[10]: 701  LLC: 2048
+rand_sets[10]: 701
+Assign rand_sets[11]: 479  LLC: 2048
+rand_sets[11]: 479
+Assign rand_sets[12]: 892  LLC: 2048
+rand_sets[12]: 892
+Assign rand_sets[13]: 1820  LLC: 2048
+rand_sets[13]: 1820
+Assign rand_sets[14]: 1505  LLC: 2048
+rand_sets[14]: 1505
+Assign rand_sets[15]: 1159  LLC: 2048
+rand_sets[15]: 1159
+Assign rand_sets[16]: 513  LLC: 2048
+rand_sets[16]: 513
+Assign rand_sets[17]: 703  LLC: 2048
+rand_sets[17]: 703
+Assign rand_sets[18]: 561  LLC: 2048
+rand_sets[18]: 561
+Assign rand_sets[19]: 990  LLC: 2048
+rand_sets[19]: 990
+Assign rand_sets[20]: 342  LLC: 2048
+rand_sets[20]: 342
+Assign rand_sets[21]: 882  LLC: 2048
+rand_sets[21]: 882
+Assign rand_sets[22]: 15  LLC: 2048
+rand_sets[22]: 15
+Assign rand_sets[23]: 71  LLC: 2048
+rand_sets[23]: 71
+Assign rand_sets[24]: 1127  LLC: 2048
+rand_sets[24]: 1127
+Assign rand_sets[25]: 1382  LLC: 2048
+rand_sets[25]: 1382
+Assign rand_sets[26]: 647  LLC: 2048
+rand_sets[26]: 647
+Assign rand_sets[27]: 857  LLC: 2048
+rand_sets[27]: 857
+Assign rand_sets[28]: 1450  LLC: 2048
+rand_sets[28]: 1450
+Assign rand_sets[29]: 1160  LLC: 2048
+rand_sets[29]: 1160
+Assign rand_sets[30]: 1852  LLC: 2048
+rand_sets[30]: 1852
+Assign rand_sets[31]: 1881  LLC: 2048
+rand_sets[31]: 1881
+Assign rand_sets[32]: 1770  LLC: 2048
+rand_sets[32]: 1770
+Assign rand_sets[33]: 1622  LLC: 2048
+rand_sets[33]: 1622
+Assign rand_sets[34]: 275  LLC: 2048
+rand_sets[34]: 275
+Assign rand_sets[35]: 635  LLC: 2048
+rand_sets[35]: 635
+Assign rand_sets[36]: 466  LLC: 2048
+rand_sets[36]: 466
+Assign rand_sets[37]: 1413  LLC: 2048
+rand_sets[37]: 1413
+Assign rand_sets[38]: 417  LLC: 2048
+rand_sets[38]: 417
+Assign rand_sets[39]: 472  LLC: 2048
+rand_sets[39]: 472
+Assign rand_sets[40]: 1340  LLC: 2048
+rand_sets[40]: 1340
+Assign rand_sets[41]: 852  LLC: 2048
+rand_sets[41]: 852
+Assign rand_sets[42]: 1365  LLC: 2048
+rand_sets[42]: 1365
+Assign rand_sets[43]: 47  LLC: 2048
+rand_sets[43]: 47
+Assign rand_sets[44]: 823  LLC: 2048
+rand_sets[44]: 823
+Assign rand_sets[45]: 686  LLC: 2048
+rand_sets[45]: 686
+Assign rand_sets[46]: 1637  LLC: 2048
+rand_sets[46]: 1637
+Assign rand_sets[47]: 1115  LLC: 2048
+rand_sets[47]: 1115
+Assign rand_sets[48]: 986  LLC: 2048
+rand_sets[48]: 986
+Assign rand_sets[49]: 258  LLC: 2048
+rand_sets[49]: 258
+Assign rand_sets[50]: 633  LLC: 2048
+rand_sets[50]: 633
+Assign rand_sets[51]: 920  LLC: 2048
+rand_sets[51]: 920
+Assign rand_sets[52]: 204  LLC: 2048
+rand_sets[52]: 204
+Assign rand_sets[53]: 227  LLC: 2048
+rand_sets[53]: 227
+Assign rand_sets[54]: 1818  LLC: 2048
+rand_sets[54]: 1818
+Assign rand_sets[55]: 886  LLC: 2048
+rand_sets[55]: 886
+Assign rand_sets[56]: 1422  LLC: 2048
+rand_sets[56]: 1422
+Assign rand_sets[57]: 607  LLC: 2048
+rand_sets[57]: 607
+Assign rand_sets[58]: 217  LLC: 2048
+rand_sets[58]: 217
+Assign rand_sets[59]: 1945  LLC: 2048
+rand_sets[59]: 1945
+Assign rand_sets[60]: 143  LLC: 2048
+rand_sets[60]: 143
+Assign rand_sets[61]: 1311  LLC: 2048
+rand_sets[61]: 1311
+Assign rand_sets[62]: 319  LLC: 2048
+rand_sets[62]: 319
+Assign rand_sets[63]: 1846  LLC: 2048
+rand_sets[63]: 1846
+ CLEAN-RRIP-POLICY-1: 2-2-0-3-2-3-0-1- CLEAN-RRIP-POLICY-2: 2-2-0-3-2-3-0-1-
+ DIRTY-RRIP-POLICY-1: 1-2-0-3-0-3-1-1- DIRTY-RRIP-POLICY-2: 1-2-0-3-0-3-1-1-
+ PSEL width: 10
+Heartbeat CPU 0 instructions: 10000001 cycles: 7315981 heartbeat IPC: 1.36687 cumulative IPC: 1.36687 (Simulation time: 0 hr 0 min 14 sec) 
+Heartbeat CPU 0 instructions: 20000000 cycles: 14307546 heartbeat IPC: 1.43029 cumulative IPC: 1.39786 (Simulation time: 0 hr 0 min 28 sec) 
+Heartbeat CPU 0 instructions: 30000001 cycles: 21020492 heartbeat IPC: 1.48966 cumulative IPC: 1.42718 (Simulation time: 0 hr 0 min 43 sec) 
+Heartbeat CPU 0 instructions: 40000000 cycles: 27481323 heartbeat IPC: 1.54779 cumulative IPC: 1.45553 (Simulation time: 0 hr 0 min 59 sec) 
+Heartbeat CPU 0 instructions: 50000001 cycles: 33583153 heartbeat IPC: 1.63885 cumulative IPC: 1.48884 (Simulation time: 0 hr 1 min 14 sec) 
+Heartbeat CPU 0 instructions: 60000000 cycles: 40064408 heartbeat IPC: 1.54291 cumulative IPC: 1.49759 (Simulation time: 0 hr 1 min 29 sec) 
+Heartbeat CPU 0 instructions: 70000000 cycles: 47103656 heartbeat IPC: 1.42061 cumulative IPC: 1.48608 (Simulation time: 0 hr 1 min 43 sec) 
+Heartbeat CPU 0 instructions: 80000000 cycles: 54194367 heartbeat IPC: 1.4103 cumulative IPC: 1.47617 (Simulation time: 0 hr 1 min 58 sec) 
+Heartbeat CPU 0 instructions: 90000003 cycles: 61199871 heartbeat IPC: 1.42745 cumulative IPC: 1.47059 (Simulation time: 0 hr 2 min 12 sec) 
+Heartbeat CPU 0 instructions: 100000000 cycles: 68368396 heartbeat IPC: 1.39499 cumulative IPC: 1.46266 (Simulation time: 0 hr 2 min 26 sec) 
+
+Warmup complete CPU 0 instructions: 100000004 cycles: 68368397 (Simulation time: 0 hr 2 min 26 sec) 
+
+Heartbeat CPU 0 instructions: 110000003 cycles: 96173531 heartbeat IPC: 0.359646 cumulative IPC: 0.359646 (Simulation time: 0 hr 2 min 54 sec) 
+Heartbeat CPU 0 instructions: 120000000 cycles: 123679619 heartbeat IPC: 0.363556 cumulative IPC: 0.36159 (Simulation time: 0 hr 3 min 21 sec) 
+Heartbeat CPU 0 instructions: 130000000 cycles: 148705042 heartbeat IPC: 0.399594 cumulative IPC: 0.373429 (Simulation time: 0 hr 3 min 48 sec) 
+Heartbeat CPU 0 instructions: 140000000 cycles: 178487850 heartbeat IPC: 0.335764 cumulative IPC: 0.363242 (Simulation time: 0 hr 4 min 15 sec) 
+Heartbeat CPU 0 instructions: 150000000 cycles: 208538081 heartbeat IPC: 0.332776 cumulative IPC: 0.35671 (Simulation time: 0 hr 4 min 43 sec) 
+Heartbeat CPU 0 instructions: 160000000 cycles: 236003195 heartbeat IPC: 0.364098 cumulative IPC: 0.357921 (Simulation time: 0 hr 5 min 9 sec) 
+Heartbeat CPU 0 instructions: 170000001 cycles: 264131690 heartbeat IPC: 0.355511 cumulative IPC: 0.357575 (Simulation time: 0 hr 5 min 38 sec) 
+Heartbeat CPU 0 instructions: 180000000 cycles: 292666732 heartbeat IPC: 0.350446 cumulative IPC: 0.356668 (Simulation time: 0 hr 6 min 6 sec) 
+Heartbeat CPU 0 instructions: 190000002 cycles: 320832653 heartbeat IPC: 0.355039 cumulative IPC: 0.356486 (Simulation time: 0 hr 6 min 33 sec) 
+Heartbeat CPU 0 instructions: 200000000 cycles: 349268757 heartbeat IPC: 0.351666 cumulative IPC: 0.355998 (Simulation time: 0 hr 7 min 1 sec) 
+Heartbeat CPU 0 instructions: 210000002 cycles: 377237391 heartbeat IPC: 0.357543 cumulative IPC: 0.356138 (Simulation time: 0 hr 7 min 29 sec) 
+Heartbeat CPU 0 instructions: 220000000 cycles: 406676393 heartbeat IPC: 0.339685 cumulative IPC: 0.354706 (Simulation time: 0 hr 7 min 55 sec) 
+Heartbeat CPU 0 instructions: 230000000 cycles: 434348332 heartbeat IPC: 0.361377 cumulative IPC: 0.355211 (Simulation time: 0 hr 8 min 22 sec) 
+Heartbeat CPU 0 instructions: 240000000 cycles: 460291128 heartbeat IPC: 0.385463 cumulative IPC: 0.357213 (Simulation time: 0 hr 8 min 48 sec) 
+Heartbeat CPU 0 instructions: 250000000 cycles: 490474827 heartbeat IPC: 0.331305 cumulative IPC: 0.355361 (Simulation time: 0 hr 9 min 16 sec) 
+Heartbeat CPU 0 instructions: 260000000 cycles: 517590351 heartbeat IPC: 0.368792 cumulative IPC: 0.356171 (Simulation time: 0 hr 9 min 43 sec) 
+Heartbeat CPU 0 instructions: 270000003 cycles: 546104977 heartbeat IPC: 0.350697 cumulative IPC: 0.355845 (Simulation time: 0 hr 10 min 12 sec) 
+Heartbeat CPU 0 instructions: 280000000 cycles: 574383787 heartbeat IPC: 0.353622 cumulative IPC: 0.35572 (Simulation time: 0 hr 10 min 40 sec) 
+Heartbeat CPU 0 instructions: 290000000 cycles: 603361290 heartbeat IPC: 0.345095 cumulative IPC: 0.355145 (Simulation time: 0 hr 11 min 9 sec) 
+Heartbeat CPU 0 instructions: 300000000 cycles: 633673920 heartbeat IPC: 0.329895 cumulative IPC: 0.353791 (Simulation time: 0 hr 11 min 36 sec) 
+Heartbeat CPU 0 instructions: 310000001 cycles: 663307401 heartbeat IPC: 0.337456 cumulative IPC: 0.352977 (Simulation time: 0 hr 12 min 3 sec) 
+Heartbeat CPU 0 instructions: 320000000 cycles: 691793405 heartbeat IPC: 0.35105 cumulative IPC: 0.352889 (Simulation time: 0 hr 12 min 30 sec) 
+Heartbeat CPU 0 instructions: 330000000 cycles: 720645270 heartbeat IPC: 0.346598 cumulative IPC: 0.352611 (Simulation time: 0 hr 12 min 56 sec) 
+Heartbeat CPU 0 instructions: 340000000 cycles: 750124982 heartbeat IPC: 0.339216 cumulative IPC: 0.352032 (Simulation time: 0 hr 13 min 23 sec) 
+Heartbeat CPU 0 instructions: 350000003 cycles: 777281436 heartbeat IPC: 0.368237 cumulative IPC: 0.352653 (Simulation time: 0 hr 13 min 49 sec) 
+Heartbeat CPU 0 instructions: 360000000 cycles: 805775145 heartbeat IPC: 0.350955 cumulative IPC: 0.352587 (Simulation time: 0 hr 14 min 15 sec) 
+Heartbeat CPU 0 instructions: 370000000 cycles: 834223116 heartbeat IPC: 0.351519 cumulative IPC: 0.352547 (Simulation time: 0 hr 14 min 41 sec) 
+Heartbeat CPU 0 instructions: 380000000 cycles: 862923794 heartbeat IPC: 0.348424 cumulative IPC: 0.352398 (Simulation time: 0 hr 15 min 6 sec) 
+Heartbeat CPU 0 instructions: 390000001 cycles: 890683826 heartbeat IPC: 0.36023 cumulative IPC: 0.352663 (Simulation time: 0 hr 15 min 32 sec) 
+Heartbeat CPU 0 instructions: 400000000 cycles: 919461125 heartbeat IPC: 0.347496 cumulative IPC: 0.352488 (Simulation time: 0 hr 15 min 57 sec) 
+Heartbeat CPU 0 instructions: 410000001 cycles: 946851136 heartbeat IPC: 0.365097 cumulative IPC: 0.352881 (Simulation time: 0 hr 16 min 22 sec) 
+Heartbeat CPU 0 instructions: 420000000 cycles: 974244164 heartbeat IPC: 0.365056 cumulative IPC: 0.353249 (Simulation time: 0 hr 16 min 47 sec) 
+Heartbeat CPU 0 instructions: 430000002 cycles: 1002019495 heartbeat IPC: 0.360032 cumulative IPC: 0.353451 (Simulation time: 0 hr 17 min 12 sec) 
+Heartbeat CPU 0 instructions: 440000000 cycles: 1031681416 heartbeat IPC: 0.337133 cumulative IPC: 0.352949 (Simulation time: 0 hr 17 min 38 sec) 
+Heartbeat CPU 0 instructions: 450000002 cycles: 1061034464 heartbeat IPC: 0.34068 cumulative IPC: 0.352586 (Simulation time: 0 hr 18 min 3 sec) 
+Heartbeat CPU 0 instructions: 460000000 cycles: 1088803725 heartbeat IPC: 0.36011 cumulative IPC: 0.352791 (Simulation time: 0 hr 18 min 29 sec) 
+Heartbeat CPU 0 instructions: 470000000 cycles: 1116470161 heartbeat IPC: 0.361449 cumulative IPC: 0.353019 (Simulation time: 0 hr 18 min 54 sec) 
+Heartbeat CPU 0 instructions: 480000000 cycles: 1144383993 heartbeat IPC: 0.358245 cumulative IPC: 0.353155 (Simulation time: 0 hr 19 min 19 sec) 
+Heartbeat CPU 0 instructions: 490000000 cycles: 1171996218 heartbeat IPC: 0.362158 cumulative IPC: 0.35338 (Simulation time: 0 hr 19 min 44 sec) 
+Heartbeat CPU 0 instructions: 500000000 cycles: 1200334086 heartbeat IPC: 0.352885 cumulative IPC: 0.353368 (Simulation time: 0 hr 20 min 9 sec) 
+Heartbeat CPU 0 instructions: 510000000 cycles: 1234462010 heartbeat IPC: 0.293015 cumulative IPC: 0.351601 (Simulation time: 0 hr 20 min 38 sec) 
+Heartbeat CPU 0 instructions: 520000000 cycles: 1262535791 heartbeat IPC: 0.356204 cumulative IPC: 0.351709 (Simulation time: 0 hr 21 min 4 sec) 
+Heartbeat CPU 0 instructions: 530000001 cycles: 1292388705 heartbeat IPC: 0.334976 cumulative IPC: 0.351301 (Simulation time: 0 hr 21 min 30 sec) 
+Heartbeat CPU 0 instructions: 540000000 cycles: 1320732364 heartbeat IPC: 0.352813 cumulative IPC: 0.351336 (Simulation time: 0 hr 21 min 56 sec) 
+Heartbeat CPU 0 instructions: 550000001 cycles: 1350005939 heartbeat IPC: 0.341605 cumulative IPC: 0.351113 (Simulation time: 0 hr 22 min 24 sec) 
+Heartbeat CPU 0 instructions: 560000000 cycles: 1375473884 heartbeat IPC: 0.39265 cumulative IPC: 0.351923 (Simulation time: 0 hr 22 min 50 sec) 
+Heartbeat CPU 0 instructions: 570000000 cycles: 1405239497 heartbeat IPC: 0.335958 cumulative IPC: 0.351567 (Simulation time: 0 hr 23 min 17 sec) 
+Heartbeat CPU 0 instructions: 580000000 cycles: 1433393792 heartbeat IPC: 0.355186 cumulative IPC: 0.351642 (Simulation time: 0 hr 23 min 43 sec) 
+Heartbeat CPU 0 instructions: 590000001 cycles: 1458151292 heartbeat IPC: 0.403918 cumulative IPC: 0.352573 (Simulation time: 0 hr 24 min 8 sec) 
+Heartbeat CPU 0 instructions: 600000000 cycles: 1484234319 heartbeat IPC: 0.383391 cumulative IPC: 0.353141 (Simulation time: 0 hr 24 min 33 sec) 
+Finished CPU 0 instructions: 500000000 cycles: 1415865944 cumulative IPC: 0.353141 (Simulation time: 0 hr 24 min 33 sec) 
+
+CPU 0 Branch Prediction Accuracy: 86.4311% MPKI: 26.2662
+Number of Branches: 96788573 Number of Mispredictions: 13133102
+Number of LOAD Instructions: 164682285
+Number of LOAD Instructions (ROI): 164682285
+Number of STORE Instructions: 78194750
+Number of STORE Instructions (ROI): 78194750
+Total Destination Memory Operands: 83268534
+Total Destination Memory Operands (ROI): 83268534
+Total Source Memory Operands: 164712438
+Total Source Memory Operands (ROI): 164712438
+Number of DEPENDED LOADS: 7056101
+Number of DEPENDED LOADS (ROI): 7056101
+Number of SQ_ADDED: 83268522
+Number of SQ_ADDED (ROI): 83268522
+Number of LQ_ADDED: 236737362
+Number of LQ_ADDED (ROI): 236737362
+Number of Instructions read from trace: 600000066
+
+ChampSim completed all CPUs
+
+Region of Interest Statistics
+
+CPU 0 cumulative IPC: 0.353141 instructions: 500000000 cycles: 1415865944
+ITLB TOTAL     ACCESS:  100521195  HIT:  100316749  MISS:     204446
+ITLB LOAD      ACCESS:  100521195  HIT:  100316749  MISS:     204446
+ITLB RFO       ACCESS:          0  HIT:          0  MISS:          0
+ITLB PREFETCH  ACCESS:          0  HIT:          0  MISS:          0
+ITLB WRITEBACK ACCESS:          0  HIT:          0  MISS:          0
+ITLB PREFETCH  REQUESTED:          0  ISSUED:          0  USEFUL:          0  USELESS:          0
+ITLB TOTAL MSHR MERGED:     172424
+ITLB LOAD MSHR MERGED:     172424
+ITLB RFO MSHR MERGED:          0
+ITLB PREFETCH MSHR MERGED:          0
+ITLB WRITEBACK MSHR MERGED:          0
+ITLB TOTAL ACCESSES:  100693619 HITS:  100316749 MISSES:     376870
+ITLB LOAD ACCESSES:  100693619 HITS:  100316749 MISSES:     376870
+ITLB RFO ACCESSES:          0 HITS:          0 MISSES:          0
+ITLB PREFETCH ACCESSES:          0 HITS:          0 MISSES:          0
+ITLB WRITEBACK ACCESSES:          0 HITS:          0 MISSES:          0
+ITLB RQ ACCESS:  500000057
+ITLB RQ TO_CACHE:  100693619
+ITLB RQ MERGED:  399306438
+ITLB RQ FORWARD:          0
+ITLB WQ ACCESS:          0
+ITLB WQ TO_CACHE:          0
+ITLB WQ MERGED:          0
+ITLB WQ FORWARD:          0
+DTLB TOTAL     ACCESS:  165342117  HIT:  164707765  MISS:     634352
+DTLB LOAD      ACCESS:  106296209  HIT:  105726273  MISS:     569936
+DTLB RFO       ACCESS:   59045908  HIT:   58981492  MISS:      64416
+DTLB PREFETCH  ACCESS:          0  HIT:          0  MISS:          0
+DTLB WRITEBACK ACCESS:          0  HIT:          0  MISS:          0
+DTLB PREFETCH  REQUESTED:          0  ISSUED:          0  USEFUL:          0  USELESS:          0
+DTLB TOTAL MSHR MERGED:      99914
+DTLB LOAD MSHR MERGED:      59402
+DTLB RFO MSHR MERGED:      40512
+DTLB PREFETCH MSHR MERGED:          0
+DTLB WRITEBACK MSHR MERGED:          0
+DTLB TOTAL ACCESSES:  165442031 HITS:  164707765 MISSES:     734266
+DTLB LOAD ACCESSES:  106355611 HITS:  105726273 MISSES:     629338
+DTLB RFO ACCESSES:   59086420 HITS:   58981492 MISSES:     104928
+DTLB PREFETCH ACCESSES:          0 HITS:          0 MISSES:          0
+DTLB WRITEBACK ACCESSES:          0 HITS:          0 MISSES:          0
+DTLB RQ ACCESS:  200314776
+DTLB RQ TO_CACHE:  165442031
+DTLB RQ MERGED:   34872745
+DTLB RQ FORWARD:          0
+DTLB WQ ACCESS:          0
+DTLB WQ TO_CACHE:          0
+DTLB WQ MERGED:          0
+DTLB WQ FORWARD:          0
+L1D TOTAL     ACCESS:  281860916  HIT:  273951545  MISS:    7909371
+L1D LOAD      ACCESS:  110424547  HIT:  107147047  MISS:    3277500
+L1D RFO       ACCESS:   67129619  HIT:   66239455  MISS:     890164
+L1D PREFETCH  ACCESS:  104306750  HIT:  100565043  MISS:    3741707
+L1D WRITEBACK ACCESS:          0  HIT:          0  MISS:          0
+L1D PREFETCH  REQUESTED:  110821936  ISSUED:  109122612  USEFUL:    1662339  USELESS:    2079332
+L1D TOTAL MSHR MERGED:    2853659
+L1D LOAD MSHR MERGED:     494396
+L1D RFO MSHR MERGED:    1855917
+L1D PREFETCH MSHR MERGED:     503346
+L1D WRITEBACK MSHR MERGED:          0
+L1D TOTAL ACCESSES:  284741990 HITS:  273978960 MISSES:   10763030
+L1D LOAD ACCESSES:  110823365 HITS:  107148476 MISSES:    3674889
+L1D RFO ACCESSES:   68974173 HITS:   66239455 MISSES:    2734718
+L1D PREFETCH ACCESSES:  104944452 HITS:  100591029 MISSES:    4353423
+L1D WRITEBACK ACCESSES:          0 HITS:          0 MISSES:          0
+L1D RQ ACCESS:  130762173
+L1D RQ TO_CACHE:  110821939
+L1D RQ MERGED:   19938805
+L1D RQ FORWARD:          0
+L1D WQ ACCESS:   69552603
+L1D WQ TO_CACHE:   68974174
+L1D WQ MERGED:     578429
+L1D WQ FORWARD:      27415
+L1I TOTAL     ACCESS:  126568125  HIT:  122329575  MISS:    4238550
+L1I LOAD      ACCESS:  126568125  HIT:  122329575  MISS:    4238550
+L1I RFO       ACCESS:          0  HIT:          0  MISS:          0
+L1I PREFETCH  ACCESS:          0  HIT:          0  MISS:          0
+L1I WRITEBACK ACCESS:          0  HIT:          0  MISS:          0
+L1I PREFETCH  REQUESTED:          0  ISSUED:          0  USEFUL:          0  USELESS:          0
+L1I TOTAL MSHR MERGED:    1834950
+L1I LOAD MSHR MERGED:    1834950
+L1I RFO MSHR MERGED:          0
+L1I PREFETCH MSHR MERGED:          0
+L1I WRITEBACK MSHR MERGED:          0
+L1I TOTAL ACCESSES:  128403078 HITS:  122329575 MISSES:    6073503
+L1I LOAD ACCESSES:  128403078 HITS:  122329575 MISSES:    6073503
+L1I RFO ACCESSES:          0 HITS:          0 MISSES:          0
+L1I PREFETCH ACCESSES:          0 HITS:          0 MISSES:          0
+L1I WRITEBACK ACCESSES:          0 HITS:          0 MISSES:          0
+L1I RQ ACCESS:  500000057
+L1I RQ TO_CACHE:  128403078
+L1I RQ MERGED:  371596979
+L1I RQ FORWARD:          0
+L1I WQ ACCESS:          0
+L1I WQ TO_CACHE:          0
+L1I WQ MERGED:          0
+L1I WQ FORWARD:          0
+L2C TOTAL     ACCESS:   14905829  HIT:   11159446  MISS:    3746383
+L2C LOAD      ACCESS:    7418833  HIT:    5099042  MISS:    2319791
+L2C RFO       ACCESS:     878704  HIT:     409918  MISS:     468786
+L2C PREFETCH  ACCESS:    4569053  HIT:    3628499  MISS:     940554
+L2C WRITEBACK ACCESS:    2039239  HIT:    2021987  MISS:      17252
+L2C PREFETCH  REQUESTED:     842720  ISSUED:     842720  USEFUL:     203520  USELESS:     736740
+L2C TOTAL MSHR MERGED:       6439
+L2C LOAD MSHR MERGED:        620
+L2C RFO MSHR MERGED:          0
+L2C PREFETCH MSHR MERGED:       5819
+L2C WRITEBACK MSHR MERGED:          0
+L2C TOTAL ACCESSES:   14913155 HITS:   11159898 MISSES:    3753257
+L2C LOAD ACCESSES:    7419043 HITS:    5099252 MISSES:    2319791
+L2C RFO ACCESSES:     878801 HITS:     410015 MISSES:     468786
+L2C PREFETCH ACCESSES:    4576072 HITS:    3628644 MISSES:     947428
+L2C WRITEBACK ACCESSES:    2039239 HITS:    2021987 MISSES:      17252
+L2C RQ ACCESS:    8297847
+L2C RQ TO_CACHE:    8297540
+L2C RQ MERGED:          0
+L2C RQ FORWARD:          0
+L2C WQ ACCESS:    2039239
+L2C WQ TO_CACHE:    2039239
+L2C WQ MERGED:          0
+L2C WQ FORWARD:        452
+LLC TOTAL     ACCESS:    4609662  HIT:    3934311  MISS:     675351
+LLC LOAD      ACCESS:    2319156  HIT:    2011039  MISS:     308117
+LLC RFO       ACCESS:     468775  HIT:     421117  MISS:      47658
+LLC PREFETCH  ACCESS:     941496  HIT:     666899  MISS:     274597
+LLC WRITEBACK ACCESS:     880235  HIT:     835256  MISS:      44979
+LLC PREFETCH  REQUESTED:          0  ISSUED:          0  USEFUL:      12788  USELESS:     261973
+LLC TOTAL MSHR MERGED:         92
+LLC LOAD MSHR MERGED:         26
+LLC RFO MSHR MERGED:          0
+LLC PREFETCH MSHR MERGED:         66
+LLC WRITEBACK MSHR MERGED:          0
+LLC TOTAL ACCESSES:    4609793 HITS:    3934350 MISSES:     675443
+LLC LOAD ACCESSES:    2319171 HITS:    2011054 MISSES:     308117
+LLC RFO ACCESSES:     468786 HITS:     421128 MISSES:      47658
+LLC PREFETCH ACCESSES:     941601 HITS:     666912 MISSES:     274689
+LLC WRITEBACK ACCESSES:     880235 HITS:     835256 MISSES:      44979
+LLC 0 RQ ACCESS:    2787957
+LLC 0 RQ TO_CACHE:    2787931
+LLC 0 RQ MERGED:          0
+LLC 0 RQ FORWARD:          0
+LLC WQ ACCESS:     880235
+LLC WQ TO_CACHE:     880235
+LLC WQ MERGED:          0
+LLC WQ FORWARD:         39
+Major fault: 0 Minor fault: 12862
+CPU 0 L1D next line prefetcher final stats
+CPU 0 L2C PC-based stride prefetcher final stats
+All Misses: 803516
+All Hits: 4623152
+SD Algo Stats - Switches: 0 SRR-Repls: 358013 BRR-Repls: 0
+
+DRAM Statistics
+ CHANNEL 0
+ RQ ROW_BUFFER_HIT:     135102  ROW_BUFFER_MISS:     494393
+ DBUS_CONGESTED:     314233
+ WQ ROW_BUFFER_HIT:       9418  ROW_BUFFER_MISS:     143341  FULL:          0
+
+ AVG_CONGESTED_CYCLE: 13
+LOADS RETIRED: 136549171
+INSTR RETIRED: 500000000

@@ -1,0 +1,530 @@
+New compilationDir is /home/mzako001/Thesis/Results/25-04-18-11-56/assembly_compilation/
+Debug Inputs
+Population size: 50
+Mutation Rate: 0.02
+Crossover Rate: 1.0
+Crossover Type: one point crossover
+Ellitism: true
+Selection Method: Tournament
+Tournament selection size: 5
+ResultsDir: /home/mzako001/Thesis/Results/
+compilationDir: /home/mzako001/Thesis/Results/25-04-18-11-56/assembly_compilation/
+loop Size: 20
+Percentage clue? :True
+amount per instruction type in the loop:
+{'LOAD': 5, 'RFO': 5, 'PREFETCH': 5, 'WRITEBACK': 5}
+actual loop size is 20
+Available operands
+
+id Dem
+values 
+['%0', '%1', '%2', '%3', '%4']
+max 4294967296
+min 0
+stride 1
+
+id Inse
+values 
+['%0', '%1', '%2', '%3']
+max 4294967296
+min 0
+stride 1
+
+id SelfProm
+values 
+['%0', '%1', '%2']
+max 4294967296
+min 0
+stride 1
+
+End of available operands
+
+Available instructions
+
+name Demotion_Clean
+type LOAD
+format L_DemClean op1
+numOfOperands 1
+	Dem
+
+name Demotion_Dirty
+type LOAD
+format L_DemDirty op1
+numOfOperands 1
+	Dem
+
+name Insertion
+type LOAD
+format L_Insert op1
+numOfOperands 1
+	Inse
+
+name SelfPromotion_Clean
+type LOAD
+format L_SPromClean op1
+numOfOperands 1
+	SelfProm
+
+name SelfPromotion_Dirty
+type LOAD
+format L_SPromDirty op1
+numOfOperands 1
+	SelfProm
+
+name Demotion_Clean
+type RFO
+format R_DemClean op1
+numOfOperands 1
+	Dem
+
+name Demotion_Dirty
+type RFO
+format R_DemDirty op1
+numOfOperands 1
+	Dem
+
+name Insertion
+type RFO
+format R_Insert op1
+numOfOperands 1
+	Inse
+
+name SelfPromotion_Clean
+type RFO
+format R_SPromClean op1
+numOfOperands 1
+	SelfProm
+
+name SelfPromotion_Dirty
+type RFO
+format R_SPromDirty op1
+numOfOperands 1
+	SelfProm
+
+name Demotion_Clean
+type PREFETCH
+format P_DemClean op1
+numOfOperands 1
+	Dem
+
+name Demotion_Dirty
+type PREFETCH
+format P_DemDirty op1
+numOfOperands 1
+	Dem
+
+name Insertion
+type PREFETCH
+format P_Insert op1
+numOfOperands 1
+	Inse
+
+name SelfPromotion_Clean
+type PREFETCH
+format P_SPromClean op1
+numOfOperands 1
+	SelfProm
+
+name SelfPromotion_Dirty
+type PREFETCH
+format P_SPromDirty op1
+numOfOperands 1
+	SelfProm
+
+name Demotion_Clean
+type WRITEBACK
+format W_DemClean op1
+numOfOperands 1
+	Dem
+
+name Demotion_Dirty
+type WRITEBACK
+format W_DemDirty op1
+numOfOperands 1
+	Dem
+
+name Insertion
+type WRITEBACK
+format W_Insert op1
+numOfOperands 1
+	Inse
+
+name SelfPromotion_Clean
+type WRITEBACK
+format W_SPromClean op1
+numOfOperands 1
+	SelfProm
+
+name SelfPromotion_Dirty
+type WRITEBACK
+format W_SPromDirty op1
+numOfOperands 1
+	SelfProm
+
+End of available instructions
+
+register initialization
+End of  inputs
+
+Traceback (most recent call last):
+  File "__init__.py", line 23, in <module>
+    algorithm.measureGeneration()
+  File "/home/mzako001/Thesis_All_Selected/GeST/src/Algorithm.py", line 409, in measureGeneration
+    self.measurement.RunSimulations(generation)
+  File "/home/mzako001/Thesis_All_Selected/GeST/src/Measurement/MeasurementIPC.py", line 36, in RunSimulations
+    sleep(3600)
+KeyboardInterrupt
+New compilationDir is /home/mzako001/Thesis/Results/25-04-18-11-59/assembly_compilation/
+Debug Inputs
+Population size: 50
+Mutation Rate: 0.02
+Crossover Rate: 1.0
+Crossover Type: one point crossover
+Ellitism: true
+Selection Method: Tournament
+Tournament selection size: 5
+ResultsDir: /home/mzako001/Thesis/Results/
+compilationDir: /home/mzako001/Thesis/Results/25-04-18-11-59/assembly_compilation/
+loop Size: 20
+Percentage clue? :True
+amount per instruction type in the loop:
+{'LOAD': 5, 'RFO': 5, 'PREFETCH': 5, 'WRITEBACK': 5}
+actual loop size is 20
+Available operands
+
+id Dem
+values 
+['%0', '%1', '%2', '%3', '%4']
+max 4294967296
+min 0
+stride 1
+
+id Inse
+values 
+['%0', '%1', '%2', '%3']
+max 4294967296
+min 0
+stride 1
+
+id SelfProm
+values 
+['%0', '%1', '%2']
+max 4294967296
+min 0
+stride 1
+
+End of available operands
+
+Available instructions
+
+name Demotion_Clean
+type LOAD
+format L_DemClean op1
+numOfOperands 1
+	Dem
+
+name Demotion_Dirty
+type LOAD
+format L_DemDirty op1
+numOfOperands 1
+	Dem
+
+name Insertion
+type LOAD
+format L_Insert op1
+numOfOperands 1
+	Inse
+
+name SelfPromotion_Clean
+type LOAD
+format L_SPromClean op1
+numOfOperands 1
+	SelfProm
+
+name SelfPromotion_Dirty
+type LOAD
+format L_SPromDirty op1
+numOfOperands 1
+	SelfProm
+
+name Demotion_Clean
+type RFO
+format R_DemClean op1
+numOfOperands 1
+	Dem
+
+name Demotion_Dirty
+type RFO
+format R_DemDirty op1
+numOfOperands 1
+	Dem
+
+name Insertion
+type RFO
+format R_Insert op1
+numOfOperands 1
+	Inse
+
+name SelfPromotion_Clean
+type RFO
+format R_SPromClean op1
+numOfOperands 1
+	SelfProm
+
+name SelfPromotion_Dirty
+type RFO
+format R_SPromDirty op1
+numOfOperands 1
+	SelfProm
+
+name Demotion_Clean
+type PREFETCH
+format P_DemClean op1
+numOfOperands 1
+	Dem
+
+name Demotion_Dirty
+type PREFETCH
+format P_DemDirty op1
+numOfOperands 1
+	Dem
+
+name Insertion
+type PREFETCH
+format P_Insert op1
+numOfOperands 1
+	Inse
+
+name SelfPromotion_Clean
+type PREFETCH
+format P_SPromClean op1
+numOfOperands 1
+	SelfProm
+
+name SelfPromotion_Dirty
+type PREFETCH
+format P_SPromDirty op1
+numOfOperands 1
+	SelfProm
+
+name Demotion_Clean
+type WRITEBACK
+format W_DemClean op1
+numOfOperands 1
+	Dem
+
+name Demotion_Dirty
+type WRITEBACK
+format W_DemDirty op1
+numOfOperands 1
+	Dem
+
+name Insertion
+type WRITEBACK
+format W_Insert op1
+numOfOperands 1
+	Inse
+
+name SelfPromotion_Clean
+type WRITEBACK
+format W_SPromClean op1
+numOfOperands 1
+	SelfProm
+
+name SelfPromotion_Dirty
+type WRITEBACK
+format W_SPromDirty op1
+numOfOperands 1
+	SelfProm
+
+End of available instructions
+
+register initialization
+End of  inputs
+
+Traceback (most recent call last):
+  File "__init__.py", line 23, in <module>
+    algorithm.measureGeneration()
+  File "/home/mzako001/Thesis_All_Selected/GeST/src/Algorithm.py", line 409, in measureGeneration
+    self.measurement.RunSimulations(generation)
+  File "/home/mzako001/Thesis_All_Selected/GeST/src/Measurement/MeasurementIPC.py", line 36, in RunSimulations
+    sleep(3600)
+KeyboardInterrupt
+New compilationDir is /home/pchatz06/RRIP_work/pchatz06_work/GLOBAL_SEARCH/Results/25-07-03-16-54/assembly_compilation/
+Debug Inputs
+Population size: 40
+Mutation Rate: 0.02
+Crossover Rate: 1.0
+Crossover Type: one point crossover
+Ellitism: true
+Selection Method: Tournament
+Tournament selection size: 5
+ResultsDir: /home/pchatz06/RRIP_work/pchatz06_work/GLOBAL_SEARCH/Results/
+compilationDir: /home/pchatz06/RRIP_work/pchatz06_work/GLOBAL_SEARCH/Results/25-07-03-16-54/assembly_compilation/
+loop Size: 20
+Percentage clue? :True
+amount per instruction type in the loop:
+{'LOAD': 5, 'RFO': 5, 'PREFETCH': 5, 'WRITEBACK': 5}
+actual loop size is 20
+Available operands
+
+id Dem
+values 
+['%0', '%1', '%2', '%3', '%4']
+max 4294967296
+min 0
+stride 1
+
+id Inse
+values 
+['%0', '%1', '%2', '%3']
+max 4294967296
+min 0
+stride 1
+
+id SelfProm
+values 
+['%0', '%1', '%2']
+max 4294967296
+min 0
+stride 1
+
+End of available operands
+
+Available instructions
+
+name Demotion_Clean
+type LOAD
+format L_DemClean op1
+numOfOperands 1
+	Dem
+
+name Demotion_Dirty
+type LOAD
+format L_DemDirty op1
+numOfOperands 1
+	Dem
+
+name Insertion
+type LOAD
+format L_Insert op1
+numOfOperands 1
+	Inse
+
+name SelfPromotion_Clean
+type LOAD
+format L_SPromClean op1
+numOfOperands 1
+	SelfProm
+
+name SelfPromotion_Dirty
+type LOAD
+format L_SPromDirty op1
+numOfOperands 1
+	SelfProm
+
+name Demotion_Clean
+type RFO
+format R_DemClean op1
+numOfOperands 1
+	Dem
+
+name Demotion_Dirty
+type RFO
+format R_DemDirty op1
+numOfOperands 1
+	Dem
+
+name Insertion
+type RFO
+format R_Insert op1
+numOfOperands 1
+	Inse
+
+name SelfPromotion_Clean
+type RFO
+format R_SPromClean op1
+numOfOperands 1
+	SelfProm
+
+name SelfPromotion_Dirty
+type RFO
+format R_SPromDirty op1
+numOfOperands 1
+	SelfProm
+
+name Demotion_Clean
+type PREFETCH
+format P_DemClean op1
+numOfOperands 1
+	Dem
+
+name Demotion_Dirty
+type PREFETCH
+format P_DemDirty op1
+numOfOperands 1
+	Dem
+
+name Insertion
+type PREFETCH
+format P_Insert op1
+numOfOperands 1
+	Inse
+
+name SelfPromotion_Clean
+type PREFETCH
+format P_SPromClean op1
+numOfOperands 1
+	SelfProm
+
+name SelfPromotion_Dirty
+type PREFETCH
+format P_SPromDirty op1
+numOfOperands 1
+	SelfProm
+
+name Demotion_Clean
+type WRITEBACK
+format W_DemClean op1
+numOfOperands 1
+	Dem
+
+name Demotion_Dirty
+type WRITEBACK
+format W_DemDirty op1
+numOfOperands 1
+	Dem
+
+name Insertion
+type WRITEBACK
+format W_Insert op1
+numOfOperands 1
+	Inse
+
+name SelfPromotion_Clean
+type WRITEBACK
+format W_SPromClean op1
+numOfOperands 1
+	SelfProm
+
+name SelfPromotion_Dirty
+type WRITEBACK
+format W_SPromDirty op1
+numOfOperands 1
+	SelfProm
+
+End of available instructions
+
+register initialization
+End of  inputs
+
+test/
+Mpike
+Traceback (most recent call last):
+  File "__init__.py", line 21, in <module>
+    algorithm.createInitialPopulation()
+  File "/home/pchatz06/RRIP_work/pchatz06_work/GLOBAL_SEARCH/GeST/src/Algorithm.py", line 330, in createInitialPopulation
+    individuals.append(self.__CreateIndividualFromFile__(i));
+  File "/home/pchatz06/RRIP_work/pchatz06_work/GLOBAL_SEARCH/GeST/src/Algorithm.py", line 613, in __CreateIndividualFromFile__
+    with open(path+str(myID)+".txt",'r') as file:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/pchatz06/Individuals/1.txt'
