@@ -52,7 +52,6 @@ class Algorithm(object):
         self.general_initialization(configurationFile, rand, suffix, bench_list)
         '''specific initializations'''
         self.__instructions_operands_init__()
-        self.suffix = suffix
         self.seen_sequences = set()
         print("End of  inputs\n");
 
@@ -68,6 +67,7 @@ class Algorithm(object):
     def intitializeAlgorithmAndRunParameters(self, configurationFile, rand, suffix, bench_list):
 
         ##genetic algorithm parameters
+        self.suffix = suffix
         self.populationSize = self.xmldoc.getElementsByTagName('population_size')[0].attributes['value'].value;
         self.mutationRate = self.xmldoc.getElementsByTagName('mutation_rate')[0].attributes['value'].value;
         self.crossoverType = self.xmldoc.getElementsByTagName('crossover_type')[0].attributes['value'].value;

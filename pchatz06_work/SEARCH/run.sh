@@ -29,11 +29,6 @@ else
     exit 1
 fi
 
-# Debug output
-echo "Search Type : $search_type"
-echo "Benchmarks  : $bench_list_raw"
-echo "Suffix      : $suffix"
-
 # Show what will run
 echo "Search Type : $search_type"
 echo "Benchmarks  : $bench_list_raw"
