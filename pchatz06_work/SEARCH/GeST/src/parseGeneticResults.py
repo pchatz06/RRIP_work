@@ -19,7 +19,7 @@ from Operand import Operand
 import re;
 
 
-path = "/home/pchatz06/RRIP_work/pchatz06_work/GLOBAL_SEARCH/Results/25-07-03-16-56/" 
+path = "/home/pchatz06/RRIP_work/pchatz06_work/SEARCH/BENCH_DIR/GeST_Results/25-07-08-15-58/" 
 files=[]
 for root, dirs, filenames in os.walk(path): #takes as input the dir with the saved state
     for f in filenames:

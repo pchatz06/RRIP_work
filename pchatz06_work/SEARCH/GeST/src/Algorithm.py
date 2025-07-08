@@ -53,6 +53,7 @@ class Algorithm(object):
         '''specific initializations'''
         self.__instructions_operands_init__()
         self.suffix = suffix
+        self.seen_sequences = set()
         print("End of  inputs\n");
 
     def general_initialization(self, configurationFile, rand, suffix, bench_list):
@@ -133,7 +134,7 @@ class Algorithm(object):
         if (not os.path.exists(self.dirToSaveResults)):
             os.mkdir(self.dirToSaveResults);
         self.timeStart = datetime.datetime.now().strftime("%y-%m-%d-%H-%M");
-        self.savedStateDir = self.dirToSaveResults + self.timeStart + "/"
+        self.savedStateDir = self.dirToSaveResults + self.suffix + "/" # edited! by me (pchatz06)
         if (not os.path.exists(self.savedStateDir)):
             os.mkdir(
                 self.savedStateDir);  # create a dir in results dir named after start time that will be used to save state like population and rand state
@@ -442,26 +443,26 @@ class Algorithm(object):
                 measurement_str = ("%.6f" % float(measurement)).replace(".", "DOT").strip() + "_"
                 measurementStr = measurementStr + measurement_str
 
-            if int(self.saveWholeSource) == 1:
-                fpath = ""
-                if (individual.belongsToInitialSeed()):
-                    fpath = self.dirToSaveResults + str(individual.generation) + "_" + str(
-                        individual.myId) + "_" + measurementStr + "0_0" + ".txt"
-                else:
-                    fpath = self.dirToSaveResults + str(individual.generation) + "_" + str(
-                        individual.myId) + "_" + measurementStr + str(individual.parents[0].myId) + "_" + str(
-                        individual.parents[1].myId) + ".txt"
-                shutil.copy(f"/home/pchatz06/RRIP_work/pchatz06_work/GLOBAL_SEARCH/BENCH_DIR/Individuals/{self.suffix}/" + str(individual.generation) + "_" + str(individual.myId) + ".txt", fpath)
-            else:
-                if (individual.belongsToInitialSeed()):
-                    f = open(self.dirToSaveResults + str(individual.generation) + "_" + str(
-                        individual.myId) + "_" + measurementStr + "0_0" + ".txt", mode="w")
-                else:
-                    f = open(self.dirToSaveResults + str(individual.generation) + "_" + str(
-                        individual.myId) + "_" + measurementStr + str(individual.parents[0].myId) + "_" + str(
-                        individual.parents[1].myId) + ".txt", mode="w")
-                f.write(individual.__str__());
-                f.close();
+            # if int(self.saveWholeSource) == 1:
+            #     fpath = ""
+            #     if (individual.belongsToInitialSeed()):
+            #         fpath = self.dirToSaveResults + str(individual.generation) + "_" + str(
+            #             individual.myId) + "_" + measurementStr + "0_0" + ".txt"
+            #     else:
+            #         fpath = self.dirToSaveResults + str(individual.generation) + "_" + str(
+            #             individual.myId) + "_" + measurementStr + str(individual.parents[0].myId) + "_" + str(
+            #             individual.parents[1].myId) + ".txt"
+            #     shutil.copy(f"/home/pchatz06/RRIP_work/pchatz06_work/GLOBAL_SEARCH/BENCH_DIR/Individuals/{self.suffix}/" + str(individual.generation) + "_" + str(individual.myId) + ".txt", fpath)
+            # else:
+            #     if (individual.belongsToInitialSeed()):
+            #         f = open(self.dirToSaveResults + str(individual.generation) + "_" + str(
+            #             individual.myId) + "_" + measurementStr + "0_0" + ".txt", mode="w")
+            #     else:
+            #         f = open(self.dirToSaveResults + str(individual.generation) + "_" + str(
+            #             individual.myId) + "_" + measurementStr + str(individual.parents[0].myId) + "_" + str(
+            #             individual.parents[1].myId) + ".txt", mode="w")
+            #     f.write(individual.__str__());
+            #     f.close();
 
             individual.clearParents();  # TODO this is just a cheap hack I do for now in order to avoid the recursive grow in length of .pkl files. This is only okay given that I don't actually need anymore that parents.. fon now is okay
         ##save a file describing the population so it can be loaded later. useful in case of you want to start a run based on the state of previous runs
@@ -660,45 +661,60 @@ class Algorithm(object):
             self.population.setCumulativeFitness();
 
         while childsCreated < int(self.populationSize):
-            if (self.selectionMethod == Algorithm.WHEEL_SELECTION):
-                # Create two children by crossovering two parent selected with the wheel method
-                indiv1 = self.__roulletteWheelSelection__();
-                indiv2 = self.__roulletteWheelSelection__();
-                # while indiv1 == indiv2:
-                #     indiv2 = self.__roulletteWheelSelection__();  ##the parents must be different TODO check how others do it
+            tries = 1000
+            same_child_found = True
+            while tries > 0 and same_child_found:
+                if (self.selectionMethod == Algorithm.WHEEL_SELECTION):
+                    # Create two children by crossovering two parent selected with the wheel method
+                    indiv1 = self.__roulletteWheelSelection__();
+                    indiv2 = self.__roulletteWheelSelection__();
+                    # while indiv1 == indiv2:
+                    #     indiv2 = self.__roulletteWheelSelection__();  ##the parents must be different TODO check how others do it
 
-            else:  # tournament
-                indiv1 = self.__tournamentSelection__();
-                indiv2 = self.__tournamentSelection__();
-                #print("Parent - " + str(indiv1.myId))
-                #print("Parent - " + str(indiv2.myId))
-
-                while str(indiv1.myId) == str(indiv2.myId):
+                else:  # tournament
                     indiv1 = self.__tournamentSelection__();
                     indiv2 = self.__tournamentSelection__();
-                    #print("Same parent chosen in tournament")
-                
-                print("Parent 1 chosen : " + str(indiv1.myId))
-                print("Parent 2 chosen : " + str(indiv2.myId))
+                    #print("Parent - " + str(indiv1.myId))
+                    #print("Parent - " + str(indiv2.myId))
 
-            if (self.rand.random() <= float(
-                    self.crossoverRate)):  # According to some sources there should be a slight chance some parents to not change , hence the crossoverRate parameter
-                if (self.crossoverType == Algorithm.UNIFORM_CROSSOVER):
-                    children = self.__uniform_crossover__(indiv1, indiv2);
-                elif (self.crossoverType == Algorithm.ONEPOINT_CROSSOVER):
-                    children = self.__onePoint_crossover__(indiv1, indiv2)
-            else:
-                children = [];
-                children.append(indiv1);
-                children.append(indiv2);
-            
-            print("The children created are " + str(children[0].myId) + " and " + str(children[1].myId))
-            for child in children:
-                self.__mutation__(child);  # mutate each child and add it to the list
-                child.fixUnconditionalBranchLabels();  ##Due to crossover and mutation we must fix any possible duplicate branch labels
-                individuals.append(
-                    child);  # I don't want to waste any child so some populations can be little bigger in number of individuals
-                childsCreated += 1;
+                    while str(indiv1.myId) == str(indiv2.myId):
+                        indiv1 = self.__tournamentSelection__();
+                        indiv2 = self.__tournamentSelection__();
+                        #print("Same parent chosen in tournament")
+                    
+                    print("Parent 1 chosen : " + str(indiv1.myId))
+                    print("Parent 2 chosen : " + str(indiv2.myId))
+
+                if (self.rand.random() <= float(
+                        self.crossoverRate)):  # According to some sources there should be a slight chance some parents to not change , hence the crossoverRate parameter
+                    if (self.crossoverType == Algorithm.UNIFORM_CROSSOVER):
+                        children = self.__uniform_crossover__(indiv1, indiv2);
+                    elif (self.crossoverType == Algorithm.ONEPOINT_CROSSOVER):
+                        children = self.__onePoint_crossover__(indiv1, indiv2)
+                else:
+                    children = [];
+                    children.append(indiv1);
+                    children.append(indiv2);
+                
+                print("The children created are " + str(children[0].myId) + " and " + str(children[1].myId))
+                for child in children:
+                    self.__mutation__(child);  # mutate each child and add it to the list
+                    
+                    if child.__str__() in seen_sequences and tries > 1:
+                        same_child_found = True
+                        tries = tries - 1
+                        break
+                    else:
+                        if tries == 1 and child.__str__() in seen_sequences:
+                            print("Repeated turnament selection and operators (mutation + crossover) but still created a Duplicate-(a seen before) individual!!!")
+                        same_child_found = False
+                        seen_sequences.add(child.__str__())
+                        child.fixUnconditionalBranchLabels();  ##Due to crossover and mutation we must fix any possible duplicate branch labels
+                        individuals.append(
+                            child);  # I don't want to waste any child so some populations can be little bigger in number of individuals
+                        childsCreated += 1;
+                        
+                
 
         self.population = Population(individuals);
 
