@@ -1,0 +1,44 @@
+#!/bin/tcsh
+
+#SBATCH -A local
+#SBATCH -p COMPUTE
+
+set home_path = "."
+set binary_path = "./bin"
+set executable = "run_1champ.sh"
+set binary = "perceptron-next_line-ip_stride-drrip-flex-1core"
+
+set pselist = '10'
+set pselmask = '1'
+set dsalgo = '0'
+set window = '0'
+set srthr = '0'
+set brthr = '0'
+set boost = '0'
+set hitmask = '0'
+
+set bcode = $1
+set plist = $2
+set dirty_plist = $3
+set demmask = $4
+set id = $5
+set suffix = $6
+
+
+# Load benchmark list
+set bench_file = "../BENCH_DIR/${suffix}/benchmarks.txt"
+
+if (! -f $bench_file) then
+    echo "Benchmark file $bench_file not found!"
+    exit 1
+endif
+
+set bench_list = `cat $bench_file`
+set benchmarks = (`echo $bench_list | tr ':' ' '`)
+set benchmark = $benchmarks[$bcode]
+
+set warmup_inst = 100
+set sim_inst = 500
+
+
+$home_path/$executable $binary $warmup_inst $sim_inst "$benchmark" "$plist" "$pselist" "$pselmask" "$dsalgo" "$window" "$srthr" "$brthr" "$boost" "$hitmask" "$demmask" "$dirty_plist" "$id" "$suffix"
