@@ -52,7 +52,7 @@ class Algorithm(object):
         self.general_initialization(configurationFile, rand, suffix, bench_list)
         '''specific initializations'''
         self.__instructions_operands_init__()
-        self.seen_sequences = set()
+        
         print("End of  inputs\n");
 
     def general_initialization(self, configurationFile, rand, suffix, bench_list):
@@ -67,6 +67,7 @@ class Algorithm(object):
     def intitializeAlgorithmAndRunParameters(self, configurationFile, rand, suffix, bench_list):
 
         ##genetic algorithm parameters
+        self.seen_sequences = set()
         self.suffix = suffix
         self.populationSize = self.xmldoc.getElementsByTagName('population_size')[0].attributes['value'].value;
         self.mutationRate = self.xmldoc.getElementsByTagName('mutation_rate')[0].attributes['value'].value;
@@ -700,15 +701,15 @@ class Algorithm(object):
                 for child in children:
                     self.__mutation__(child);  # mutate each child and add it to the list
                     
-                    if child.__str__() in seen_sequences and tries > 1:
+                    if child.__str__() in self.seen_sequences and tries > 1:
                         same_child_found = True
                         tries = tries - 1
                         break
                     else:
-                        if tries == 1 and child.__str__() in seen_sequences:
+                        if tries == 1 and child.__str__() in self.seen_sequences:
                             print("Repeated turnament selection and operators (mutation + crossover) but still created a Duplicate-(a seen before) individual!!!")
                         same_child_found = False
-                        seen_sequences.add(child.__str__())
+                        self.seen_sequences.add(child.__str__())
                         child.fixUnconditionalBranchLabels();  ##Due to crossover and mutation we must fix any possible duplicate branch labels
                         individuals.append(
                             child);  # I don't want to waste any child so some populations can be little bigger in number of individuals
