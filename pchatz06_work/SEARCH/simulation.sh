@@ -1,3 +1,4 @@
+trap "echo 'Terminating all child processes'; kill -- -$$" SIGINT SIGTERM EXIT
 ./run.sh local Blender &
 ./run.sh local Bwaves &
 ./run.sh local Cam4 &
