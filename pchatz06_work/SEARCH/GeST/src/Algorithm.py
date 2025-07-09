@@ -705,10 +705,9 @@ class Algorithm(object):
                 if (str(children[0]) in self.seen_sequences or str(children[1]) in self.seen_sequences) and tries > 1:
                     same_child_found = True
                     tries = tries - 1
-                    break
                 else:
                     if tries == 1 and (str(children[0]) in self.seen_sequences or str(children[1]) in self.seen_sequences):
-                        print("Repeated turnament selection and operators (mutation + crossover) but still created a Duplicate-(a seen before) individual!!!")
+                        print("Repeated tuurnament selection and operators (mutation + crossover) but still created a Duplicate-(a seen before) individual!!!")
                     same_child_found = False
                     self.seen_sequences.add(str(children[0]))
                     self.seen_sequences.add(str(children[1]))
