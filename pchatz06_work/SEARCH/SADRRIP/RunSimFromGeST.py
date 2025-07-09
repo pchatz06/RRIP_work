@@ -93,6 +93,7 @@ for individual , filename in enumerate(file_list):
     # Command that allows us to run the simulations on the cluster
     batch_command = (
         f"sbatch --array=1-{num_benchmarks} "
+        f"--output=/dev/null --error=/dev/null "
         f"--export=ALL,script={switch_script},"
         f"plist={plist}{plist},"
         f"dplist={dirty_plist}{dirty_plist},"
