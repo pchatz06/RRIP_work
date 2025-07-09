@@ -19,7 +19,7 @@ from Operand import Operand
 import re;
 
 
-path = "/home/pchatz06/RRIP_work/pchatz06_work/SEARCH/BENCH_DIR/GeST_Results/08-18-21-local_Gcc/" 
+path = "/home/pchatz06/RRIP_work/pchatz06_work/SEARCH/BENCH_DIR/GeST_Results/08-19-46-local_Gcc/" 
 files=[]
 for root, dirs, filenames in os.walk(path): #takes as input the dir with the saved state
     for f in filenames:
@@ -52,15 +52,17 @@ for f in files:
     count=0;
     
     for indiv in pop.individuals:
-        print(counter_gen, indiv.getMeasurements())
-    #    unique_individuals.add(str(indiv))
-    #    count_ins = 0
+    #    print(counter_gen, indiv.getFitness())
+        unique_individuals.add(str(indiv))
+        # print(indiv.myId)
+        count_ins = 0
     #    for ins in indiv.sequence:
     #        # print(ins.operands[0])
     #        inst[count_ins].append(str(ins.operands[0]))
     #        count_ins = count_ins + 1
 
-    # print("Unique individuals:", len(unique_individuals)) 
+    print(pop.getSize())
+    print("Unique individuals:", len(unique_individuals)) 
     counter_gen = counter_gen + 1   
     # print(str(columns[-1])+" "+str(round(float(best.getFitness()),6))+" "+str(round(float(average),6))  );
 #print (allKeys);

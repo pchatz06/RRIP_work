@@ -698,22 +698,25 @@ class Algorithm(object):
                     children.append(indiv2);
                 
                 print("The children created are " + str(children[0].myId) + " and " + str(children[1].myId))
-                for child in children:
-                    self.__mutation__(child);  # mutate each child and add it to the list
-                    
-                    if child.__str__() in self.seen_sequences and tries > 1:
-                        same_child_found = True
-                        tries = tries - 1
-                        break
-                    else:
-                        if tries == 1 and child.__str__() in self.seen_sequences:
-                            print("Repeated turnament selection and operators (mutation + crossover) but still created a Duplicate-(a seen before) individual!!!")
-                        same_child_found = False
-                        self.seen_sequences.add(child.__str__())
-                        child.fixUnconditionalBranchLabels();  ##Due to crossover and mutation we must fix any possible duplicate branch labels
-                        individuals.append(
-                            child);  # I don't want to waste any child so some populations can be little bigger in number of individuals
-                        childsCreated += 1;
+                
+                self.__mutation__(children[0]) # mutate each child and add it to the list
+                self.__mutation__(children[1])
+
+                if (str(children[0]) in self.seen_sequences or str(children[1]) in self.seen_sequences) and tries > 1:
+                    same_child_found = True
+                    tries = tries - 1
+                    break
+                else:
+                    if tries == 1 and (str(children[0]) in self.seen_sequences or str(children[1]) in self.seen_sequences):
+                        print("Repeated turnament selection and operators (mutation + crossover) but still created a Duplicate-(a seen before) individual!!!")
+                    same_child_found = False
+                    self.seen_sequences.add(str(children[0]))
+                    self.seen_sequences.add(str(children[1]))
+                    children[0].fixUnconditionalBranchLabels();  ##Due to crossover and mutation we must fix any possible duplicate branch labels
+                    children[1].fixUnconditionalBranchLabels(); 
+                    individuals.append(children[0]);  # I don't want to waste any child so some populations can be little bigger in number of individuals
+                    individuals.append(children[1]);
+                    childsCreated += 2;
                         
                 
 
