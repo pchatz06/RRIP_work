@@ -9,6 +9,7 @@ import sys
 
 import pickle
 import pprint;
+import argparse
 
 sys.path.append(os.path.abspath("SEARCH/GeST/src"))
 
@@ -17,34 +18,18 @@ from Individual import Individual
 from Instruction import Instruction
 from Operand import Operand
 
-RESULTS_DIR = sys.argv[1]
-SUFFIX = sys.argv[2]
-
-# RESULTS_DIR = "/home/pchatz06/RRIP_work/pchatz06_work/SEARCH/BENCH_DIR/"
-GENERATIONS = 100
-# SUFFIX = "10-13-27-M5-Onepoint"
-
 plot_all_individuals = True
 plot_best_individuals = True
 plot_99_percentile_individuals = True
 plot_all_graph = True
 
-baseline_ipc = {
-    "Blender": 0.661, "Bwaves": 1.016, "Cam4": 0.725, "cactuBSSN": 0.761,
-    "Exchange": 1.127, "Gcc": 0.353, "Lbm": 0.652, "Mcf": 0.400,
-    "Parest": 0.935, "Povray": 0.356, "Wrf": 0.823, "Xalancbmk": 0.395,
-    "Fotonik3d": 0.621, "Imagick": 2.193, "Leela": 0.548, "Omnetpp": 0.246,
-    "Perlbench": 0.448, "Roms": 1.079, "x264": 1.372, "Xz": 0.894
-}
 
-
-
-def createFolder(name):
+def createFolder(folder_name):
     if not os.path.exists(folder_name):
         os.makedirs(folder_name)
         print(f"Folder '{folder_name}' created.")
 
-def createPlots(speed_up_best_of_each_gen, speed_up_all_indivs, speed_up_99_percentile_individuals, benchmark, s_type):
+def createPlots(speed_up_best_of_each_gen, speed_up_all_indivs, speed_up_99_percentile_individuals, benchmark, SUFFIX):
     if plot_best_individuals:
         plt.plot(speed_up_best_of_each_gen, marker='o')
         plt.title("Speedup over Generations")
@@ -61,7 +46,7 @@ def createPlots(speed_up_best_of_each_gen, speed_up_all_indivs, speed_up_99_perc
 
         plt.grid(True)
         plt.tight_layout()
-        plt.savefig(f"GRAPHS/{SUFFIX}/{s_type}/Best_Individual_Of_Each_Generation/speed_up_per_gen_{benchmark}.png")
+        plt.savefig(f"GRAPHS/{SUFFIX}/Best_Individual_Of_Each_Generation/speed_up_per_gen_{benchmark}.png")
         plt.close()
 
     if plot_all_individuals:
@@ -84,7 +69,7 @@ def createPlots(speed_up_best_of_each_gen, speed_up_all_indivs, speed_up_99_perc
 
         plt.grid(True)
         plt.tight_layout()
-        plt.savefig(f"GRAPHS/{SUFFIX}/{s_type}/All_Individuals_Of_Each_Generation/speed_up_per_gen_{benchmark}.png")
+        plt.savefig(f"GRAPHS/{SUFFIX}/All_Individuals_Of_Each_Generation/speed_up_per_gen_{benchmark}.png")
         plt.close()
 
     if plot_99_percentile_individuals:
@@ -107,229 +92,284 @@ def createPlots(speed_up_best_of_each_gen, speed_up_all_indivs, speed_up_99_perc
 
         plt.grid(True)
         plt.tight_layout()
-        plt.savefig(f"GRAPHS/{SUFFIX}/{s_type}/99th_Percentile_Individuals_Of_Each_Generation/speed_up_per_gen_{benchmark}.png")
+        plt.savefig(f"GRAPHS/{SUFFIX}/99th_Percentile_Individuals_Of_Each_Generation/speed_up_per_gen_{benchmark}.png")
         plt.close()
 
+def main():
+    parser = argparse.ArgumentParser(description="Plot graphs from data directories.")
+
+    parser.add_argument("-global", dest="global_path", type=str, help="Path to global results")
+    parser.add_argument("-local", dest="local_path", type=str, help="Path to local results")
 
 
+    args = parser.parse_args()
+
+    FLAG_GLOBAL = False
+    FLAG_LOCAL = False
+
+    DIR_GLOBAL = ""
+    DIR_LOCAL = ""
+    GENERATIONS = 50
+
+    if args.global_path:
+        FLAG_GLOBAL = True
+        DIR_GLOBAL = args.global_path
+    else:
+        print("No global path provided")
+
+    if args.local_path:
+        FLAG_LOCAL = True
+        DIR_LOCAL = args.local_path
+    else:
+        print("No local path provided")
 
 
+    baseline_ipc = {
+        "Blender": 0.661, "Bwaves": 1.016, "Cam4": 0.725, "cactuBSSN": 0.761,
+        "Exchange": 1.127, "Gcc": 0.353, "Lbm": 0.652, "Mcf": 0.400,
+        "Parest": 0.935, "Povray": 0.356, "Wrf": 0.823, "Xalancbmk": 0.395,
+        "Fotonik3d": 0.621, "Imagick": 2.193, "Leela": 0.548, "Omnetpp": 0.246,
+        "Perlbench": 0.448, "Roms": 1.079, "x264": 1.372, "Xz": 0.894
+    }
 
-speed_up_per_workload_of_best_global_policy = []
-speed_up_per_workload_of_personal_best_global_policy = []
-speed_up_per_workload_of_local_global_policy = []
+    speed_up_per_workload_of_best_global_policy = []
+    speed_up_per_workload_of_personal_best_global_policy = []
+    speed_up_per_workload_of_local_global_policy = []
 
-folder_name = f"GRAPHS/{SUFFIX}/global/Best_Individual_Of_Each_Generation"
-createFolder(folder_name)
-folder_name = f"GRAPHS/{SUFFIX}/local/Best_Individual_Of_Each_Generation"
-createFolder(folder_name)
-folder_name = f"GRAPHS/{SUFFIX}/global/All_Individuals_Of_Each_Generation"
-createFolder(folder_name)
-folder_name = f"GRAPHS/{SUFFIX}/local/All_Individuals_Of_Each_Generation"
-createFolder(folder_name)
-folder_name = f"GRAPHS/{SUFFIX}/global/99th_Percentile_Individuals_Of_Each_Generation"
-createFolder(folder_name)
-folder_name = f"GRAPHS/{SUFFIX}/local/99th_Percentile_Individuals_Of_Each_Generation"
-createFolder(folder_name)
+    if FLAG_GLOBAL:
+        RESULTS_DIR = DIR_GLOBAL
+        SUFFIX = RESULTS_DIR.split("/")[-1]
+        # print("SUFFIX USED: ", SUFFIX)
 
+        folder_name = f"GRAPHS/{SUFFIX}/Best_Individual_Of_Each_Generation"
+        createFolder(folder_name)
+        folder_name = f"GRAPHS/{SUFFIX}/All_Individuals_Of_Each_Generation"
+        createFolder(folder_name)
+        folder_name = f"GRAPHS/{SUFFIX}/99th_Percentile_Individuals_Of_Each_Generation"
+        createFolder(folder_name)
 
+        BENCH_PATH = "/GeST_Results"
+        BENCH_RES_DIR = RESULTS_DIR + BENCH_PATH
+        BENCH_RES_DIR = BENCH_RES_DIR + "/"
+        # print(BENCH_RES_DIR)
+        # print("-------------")
 
-
-BENCH_PATH = SUFFIX +"/global/GeST_Results"
-BENCH_RES_DIR = os.path.join(RESULTS_DIR, BENCH_PATH)
-BENCH_RES_DIR = BENCH_RES_DIR + "/"
-print(BENCH_RES_DIR)
-print("-------------")
-
-speed_up_best_of_each_gen = []
-speed_up_all_indivs = []
-speed_up_99_percentile_individuals = []
+        speed_up_best_of_each_gen = []
+        speed_up_all_indivs = []
+        speed_up_99_percentile_individuals = []
 
 
-files=[]
-for root, dirs, filenames in os.walk(BENCH_RES_DIR): #takes as input the dir with the saved state
-    for f in filenames:
-        if((".pkl" in f) and ("rand" not in f)):
-            files.append(f);
+        files=[]
+        for root, dirs, filenames in os.walk(BENCH_RES_DIR): #takes as input the dir with the saved state
+            for f in filenames:
+                if((".pkl" in f) and ("rand" not in f)):
+                    files.append(f);
 
-files.sort(key=lambda x:  int(x.split('.')[0]));
-pop=Population([]);
-best_global_avg = -1
-generation_counter = 1
-for f in files:
-    input=open(BENCH_RES_DIR+f,"rb");
-    pop=pickle.load(input);
-    input.close();
-    best=pop.getFittest();
-    best_global_avg = best
-    speed_up_best_of_each_gen.append(float(best.getFitness()));    
-    for indiv in pop.individuals:
-        speed_up_all_indivs.append([float(indiv.getFitness()), generation_counter])
-    
-    generation_counter = generation_counter + 1
+        files.sort(key=lambda x:  int(x.split('.')[0]));
+        pop=Population([]);
+        best_global_avg = -1
+        generation_counter = 1
+        for f in files:
+            input=open(BENCH_RES_DIR+f,"rb");
+            pop=pickle.load(input);
+            input.close();
+            best=pop.getFittest();
+            best_global_avg = best
+            speed_up_best_of_each_gen.append(float(best.getFitness()));    
+            for indiv in pop.individuals:
+                speed_up_all_indivs.append([float(indiv.getFitness()), generation_counter])
+            
+            generation_counter = generation_counter + 1
 
-threshold = max(speed_up_best_of_each_gen)*0.99
+        threshold = max(speed_up_best_of_each_gen)*0.99
 
-for gen in range(len(speed_up_best_of_each_gen)):
-    count = 0
-    for y, x in speed_up_all_indivs:
-        if x == gen and y > threshold:
-            speed_up_99_percentile_individuals.append([y, x])
-            count += 1
-        if count == 5:
-            break
+        for gen in range(len(speed_up_best_of_each_gen)):
+            count = 0
+            for y, x in speed_up_all_indivs:
+                if x == gen and y > threshold:
+                    speed_up_99_percentile_individuals.append([y, x])
+                    count += 1
+                if count == 5:
+                    break
 
-createPlots(speed_up_best_of_each_gen, speed_up_all_indivs, speed_up_99_percentile_individuals, "AVERAGE_SPEED_UP", "global")
+        createPlots(speed_up_best_of_each_gen, speed_up_all_indivs, speed_up_99_percentile_individuals, "AVERAGE_SPEED_UP", SUFFIX)
 
-for benchmark, base_ipc in baseline_ipc.items():
-    BENCH_PATH = SUFFIX + "/global"
-    DIR = os.path.join(RESULTS_DIR, BENCH_PATH)
-    BENCH_RES_DIR = os.path.join(DIR, "Results/")
 
-    print(BENCH_RES_DIR)
-    print("-------------")
+        for benchmark, base_ipc in baseline_ipc.items():
 
-    speed_up_best_of_each_gen = []
-    speed_up_all_indivs = []
-    speed_up_99_percentile_individuals = []
+            BENCH_RES_DIR = RESULTS_DIR + "/Results/"
 
-    for target_generation in range(1, GENERATIONS + 1):
-        pattern = re.compile(r"-" + re.escape(str(target_generation)) + r"-(\d+)$")
-        # Store individual IDs
-        individual_ids = []
-        ipc_results = []
+            # print(BENCH_RES_DIR)
+            # print("-------------")
+
+            speed_up_best_of_each_gen = []
+            speed_up_all_indivs = []
+            speed_up_99_percentile_individuals = []
+
+            for target_generation in range(1, GENERATIONS + 1):
+                pattern = re.compile(r"-" + re.escape(str(target_generation)) + r"-(\d+)$")
+                # Store individual IDs
+                individual_ids = []
+                ipc_results = []
+                
+
+                for filename in os.listdir(BENCH_RES_DIR):
+                    if filename.startswith("results-"):
+                        match = pattern.search(filename)
+                        if match:
+                            individual_id = int(match.group(1))
+                            filepath = os.path.join(BENCH_RES_DIR, filename)
+                            try:
+                                with open(f"{filepath}/{benchmark}.out", "r") as file:
+                                    for line in file:
+                                        if "CPU 0 cumulative IPC:" in line:
+                                            parts = line.strip().split()
+                                            try:
+                                                ipc_value = float(parts[4])
+                                                ipc_results.append((individual_id, ipc_value))
+                                            except ValueError:
+                                                print(f"Could not parse IPC value in {filepath}")
+                                            break
+                            except Exception as e:
+                                continue
+                                #print(f"Error reading {filepath}: {e}")
+
+                
+                # Sort results by IPC descending
+                # print(ipc_results)
+                if ipc_results:
+                    ipc_results.sort(key=lambda x: x[1], reverse=True)
+
+                    # # Print sorted results
+                    # for ind_id, ipc in ipc_results:
+                    #     print(f"Individual {ind_id}: {ipc}")
+                    speed_up_best_of_each_gen.append(float(ipc_results[0][1])/float(base_ipc))
+
+                    for i in range(len(ipc_results)):
+                        speed_up_all_indivs.append([float(ipc_results[i][1])/float(base_ipc), target_generation])
+                        if ipc_results[i][0] == best_global_avg.myId:
+                            if [benchmark, float(ipc_results[i][1])/float(base_ipc)] not in speed_up_per_workload_of_best_global_policy:
+                                speed_up_per_workload_of_best_global_policy.append([benchmark, float(ipc_results[i][1])/float(base_ipc)])
+
+            speed_up_per_workload_of_personal_best_global_policy.append([benchmark, max(speed_up_best_of_each_gen)])      
+            threshold = max(speed_up_best_of_each_gen)*0.99
+
+            for gen in range(len(speed_up_best_of_each_gen)):
+                count = 0
+                for y, x in speed_up_all_indivs:
+                    if x == gen and y > threshold:
+                        speed_up_99_percentile_individuals.append([y, x])
+                        count += 1
+                    if count == 5:
+                        break
+
+            createPlots(speed_up_best_of_each_gen, speed_up_all_indivs, speed_up_99_percentile_individuals, benchmark, SUFFIX)
+
+    if FLAG_LOCAL:
         
+        RESULTS_DIR = DIR_LOCAL
+        SUFFIX = RESULTS_DIR.split("/")[-1]
 
-        for filename in os.listdir(BENCH_RES_DIR):
-            if filename.startswith("results-"):
-                match = pattern.search(filename)
-                if match:
-                    individual_id = int(match.group(1))
-                    filepath = os.path.join(BENCH_RES_DIR, filename)
-                    try:
-                        with open(f"{filepath}/{benchmark}.out", "r") as file:
-                            for line in file:
-                                if "CPU 0 cumulative IPC:" in line:
-                                    parts = line.strip().split()
-                                    try:
-                                        ipc_value = float(parts[4])
-                                        ipc_results.append((individual_id, ipc_value))
-                                    except ValueError:
-                                        print(f"Could not parse IPC value in {filepath}")
-                                    break
-                    except Exception as e:
-                        print(f"Error reading {filepath}: {e}")
+        folder_name = f"GRAPHS/{SUFFIX}/Best_Individual_Of_Each_Generation"
+        createFolder(folder_name)
 
-        
-        # Sort results by IPC descending
-        # print(ipc_results)
-        if ipc_results:
-            ipc_results.sort(key=lambda x: x[1], reverse=True)
+        folder_name = f"GRAPHS/{SUFFIX}/All_Individuals_Of_Each_Generation"
+        createFolder(folder_name)
 
-            # # Print sorted results
-            # for ind_id, ipc in ipc_results:
-            #     print(f"Individual {ind_id}: {ipc}")
-            speed_up_best_of_each_gen.append(float(ipc_results[0][1])/float(base_ipc))
+        folder_name = f"GRAPHS/{SUFFIX}/99th_Percentile_Individuals_Of_Each_Generation"
+        createFolder(folder_name)
 
-            for i in range(len(ipc_results)):
-                speed_up_all_indivs.append([float(ipc_results[i][1])/float(base_ipc), target_generation])
-                if ipc_results[i][0] == best_global_avg.myId:
-                    if [benchmark, float(ipc_results[i][1])/float(base_ipc)] not in speed_up_per_workload_of_best_global_policy:
-                        speed_up_per_workload_of_best_global_policy.append([benchmark, float(ipc_results[i][1])/float(base_ipc)])
+        for benchmark, base_ipc in baseline_ipc.items():
+            BENCH_PATH = "/" + str(benchmark)
+            BENCH_RES_DIR = RESULTS_DIR + BENCH_PATH + "/Results/"
 
-    speed_up_per_workload_of_personal_best_global_policy.append([benchmark, max(speed_up_best_of_each_gen)])      
-    threshold = max(speed_up_best_of_each_gen)*0.99
+            # print(BENCH_RES_DIR)
+            # print("-------------")
 
-    for gen in range(len(speed_up_best_of_each_gen)):
-        count = 0
-        for y, x in speed_up_all_indivs:
-            if x == gen and y > threshold:
-                speed_up_99_percentile_individuals.append([y, x])
-                count += 1
-            if count == 5:
-                break
+            speed_up_best_of_each_gen = []
+            speed_up_all_indivs = []
+            speed_up_99_percentile_individuals = []
 
-    createPlots(speed_up_best_of_each_gen, speed_up_all_indivs, speed_up_99_percentile_individuals, benchmark, "global")
+            for target_generation in range(1, GENERATIONS + 1):
+                pattern = re.compile(r"-" + re.escape(str(target_generation)) + r"-(\d+)$")
+                # Store individual IDs
+                individual_ids = []
+                ipc_results = []
+                
 
-for benchmark, base_ipc in baseline_ipc.items():
-    BENCH_PATH = SUFFIX + "/local_" + str(benchmark)
-    DIR = os.path.join(RESULTS_DIR, BENCH_PATH)
-    BENCH_RES_DIR = os.path.join(DIR, "Results/")
+                for filename in os.listdir(BENCH_RES_DIR):
+                    if filename.startswith("results-"):
+                        match = pattern.search(filename)
+                        if match:
+                            individual_id = int(match.group(1))
+                            filepath = os.path.join(BENCH_RES_DIR, filename)
+                            try:
+                                with open(f"{filepath}/{benchmark}.out", "r") as file:
+                                    for line in file:
+                                        if "CPU 0 cumulative IPC:" in line:
+                                            parts = line.strip().split()
+                                            try:
+                                                ipc_value = float(parts[4])
+                                                ipc_results.append((individual_id, ipc_value))
+                                            except ValueError:
+                                                print(f"Could not parse IPC value in {filepath}")
+                                            break
+                            except Exception as e:
+                                continue
+                                #print(f"Error reading {filepath}: {e}")
 
-    print(BENCH_RES_DIR)
-    print("-------------")
+                
+                # Sort results by IPC descending
+                # print(ipc_results)
+                if ipc_results:
+                    ipc_results.sort(key=lambda x: x[1], reverse=True)
 
-    speed_up_best_of_each_gen = []
-    speed_up_all_indivs = []
-    speed_up_99_percentile_individuals = []
+                    # # Print sorted results
+                    # for ind_id, ipc in ipc_results:
+                    #     print(f"Individual {ind_id}: {ipc}")
+                    speed_up_best_of_each_gen.append(float(ipc_results[0][1])/float(base_ipc))
 
-    for target_generation in range(1, GENERATIONS + 1):
-        pattern = re.compile(r"-" + re.escape(str(target_generation)) + r"-(\d+)$")
-        # Store individual IDs
-        individual_ids = []
-        ipc_results = []
-        
-
-        for filename in os.listdir(BENCH_RES_DIR):
-            if filename.startswith("results-"):
-                match = pattern.search(filename)
-                if match:
-                    individual_id = int(match.group(1))
-                    filepath = os.path.join(BENCH_RES_DIR, filename)
-                    try:
-                        with open(f"{filepath}/{benchmark}.out", "r") as file:
-                            for line in file:
-                                if "CPU 0 cumulative IPC:" in line:
-                                    parts = line.strip().split()
-                                    try:
-                                        ipc_value = float(parts[4])
-                                        ipc_results.append((individual_id, ipc_value))
-                                    except ValueError:
-                                        print(f"Could not parse IPC value in {filepath}")
-                                    break
-                    except Exception as e:
-                        print(f"Error reading {filepath}: {e}")
-
-        
-        # Sort results by IPC descending
-        # print(ipc_results)
-        if ipc_results:
-            ipc_results.sort(key=lambda x: x[1], reverse=True)
-
-            # # Print sorted results
-            # for ind_id, ipc in ipc_results:
-            #     print(f"Individual {ind_id}: {ipc}")
-            speed_up_best_of_each_gen.append(float(ipc_results[0][1])/float(base_ipc))
-
-            for i in range(len(ipc_results)):
-                speed_up_all_indivs.append([float(ipc_results[i][1])/float(base_ipc), target_generation])
+                    for i in range(len(ipc_results)):
+                        speed_up_all_indivs.append([float(ipc_results[i][1])/float(base_ipc), target_generation])
 
 
-    speed_up_per_workload_of_local_global_policy.append([benchmark, max(speed_up_best_of_each_gen)])
-    threshold = max(speed_up_best_of_each_gen)*0.99
+            speed_up_per_workload_of_local_global_policy.append([benchmark, max(speed_up_best_of_each_gen)])
+            threshold = max(speed_up_best_of_each_gen)*0.99
 
-    for gen in range(len(speed_up_best_of_each_gen)):
-        count = 0
-        for y, x in speed_up_all_indivs:
-            if x == gen and y > threshold:
-                speed_up_99_percentile_individuals.append([y, x])
-                count += 1
-            if count == 5:
-                break
+            for gen in range(len(speed_up_best_of_each_gen)):
+                count = 0
+                for y, x in speed_up_all_indivs:
+                    if x == gen and y > threshold:
+                        speed_up_99_percentile_individuals.append([y, x])
+                        count += 1
+                    if count == 5:
+                        break
 
-    createPlots(speed_up_best_of_each_gen, speed_up_all_indivs, speed_up_99_percentile_individuals, benchmark, "local")
+            createPlots(speed_up_best_of_each_gen, speed_up_all_indivs, speed_up_99_percentile_individuals, benchmark, SUFFIX)
 
 
-if speed_up_per_workload_of_best_global_policy and speed_up_per_workload_of_personal_best_global_policy and speed_up_per_workload_of_local_global_policy:
-    # Extract names and values
-    benchmarks = [item[0] for item in speed_up_per_workload_of_best_global_policy]
-    values1 = [item[1] for item in speed_up_per_workload_of_best_global_policy]
-    values2 = [item[1] for item in speed_up_per_workload_of_personal_best_global_policy]
-    values3 = [item[1] for item in speed_up_per_workload_of_local_global_policy]
+    global_dict = dict(speed_up_per_workload_of_best_global_policy)
+    personal_dict = dict(speed_up_per_workload_of_personal_best_global_policy)
+    local_dict = dict(speed_up_per_workload_of_local_global_policy)
 
-    # X axis positions
+    # Determine benchmark set
+    if FLAG_GLOBAL and not FLAG_LOCAL:
+        benchmarks = list(global_dict.keys())
+    elif FLAG_LOCAL and not FLAG_GLOBAL:
+        benchmarks = list(local_dict.keys())
+    elif FLAG_GLOBAL and FLAG_LOCAL:
+        benchmarks = sorted(set(global_dict.keys()) | set(local_dict.keys()))
+    else:
+        raise ValueError("At least one of FLAG_GLOBAL or FLAG_LOCAL must be True.")
+
+    # Collect values for each benchmark (use None or np.nan if not present)
+    values1 = [global_dict.get(b, np.nan) for b in benchmarks]
+    values2 = [personal_dict.get(b, np.nan) for b in benchmarks]
+    values3 = [local_dict.get(b, np.nan) for b in benchmarks]
+
+    # X axis
     x = np.arange(len(benchmarks))
-    width = 0.25  # width of each bar
+    width = 0.25
 
     # Create plot
     plt.figure(figsize=(16, 6))
@@ -337,20 +377,21 @@ if speed_up_per_workload_of_best_global_policy and speed_up_per_workload_of_pers
     plt.bar(x,         values2, width, label='personal_best_global_policy', color='orange')
     plt.bar(x + width, values3, width, label='local_best_policy', color='green')
 
-    # Add labels and title
+    # Labels and formatting
     plt.xlabel('Benchmark')
     plt.ylabel('Speedup')
     plt.title('Comparison of Benchmark Speedups')
     plt.xticks(x, benchmarks, rotation=45, ha='right')
-    # plt.ylim(0.950, 1.200)  # Set y-axis limits
-    # plt.yticks(np.arange(0.950, 1.201, 0.025))
-
-    plt.ylim(0.800, 1.500)  # Set y-axis limits
-    plt.yticks(np.arange(0.800, 1.501, 0.050))
+    plt.ylim(0.800, 1.500)
+    plt.yticks(np.arange(0.500, 1.501, 0.050))
     plt.legend()
     plt.tight_layout()
     plt.grid(axis='y', linestyle='--', alpha=0.7)
 
     # Save plot
-    plt.savefig(f"GRAPHS/{SUFFIX}/benchmark_comparison.png", dpi=300)
+    plt.savefig(f"GRAPHS/benchmark_comparison.png", dpi=300)
     plt.close()
+
+
+if __name__ == "__main__":
+    main()

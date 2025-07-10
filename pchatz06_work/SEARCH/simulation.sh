@@ -7,6 +7,8 @@ fi
 
 mutation_rate="$1"       # 'local' or 'global'
 crossover="$2"
+echo $mutation_rate
+echo $crossover
 
 ./run.sh local Blender "$1" "$2" &
 ./run.sh local Bwaves "$1" "$2" &

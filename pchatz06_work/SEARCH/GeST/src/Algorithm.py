@@ -71,17 +71,19 @@ class Algorithm(object):
         self.suffix = suffix
 
         if "local" in self.suffix:
-            split_index = suffix.find("local")
-            root_dir = suffix[:split_index - 1] 
-            after_dir = suffix[split_index:]
+            split_index = self.suffix.find("-local")
+            root_dir = self.suffix[:split_index + len("-local")]  # Include '-local'
+            after_dir = self.suffix[split_index + len("-local") + 1:]
         
         if "global" in self.suffix:
-            split_index = suffix.find("global")
-            root_dir = suffix[:split_index - 1]
-            after_dir = suffix[split_index:]
+            split_index = suffix.find("-global")
+            root_dir = suffix[:split_index + len("-global")]
+            after_dir = "/"
+        
         
         parts = root_dir.split("-")
-        mutation, crossover = parts[-2:]  # ['M5', 'Onepoint']
+        print(parts)
+        mutation, crossover, skip = parts[-3:]  # ['M5', 'Onepoint']
         mutation = float(float(mutation[1:]) / 100)
         
         if crossover == 'Onepoint':
