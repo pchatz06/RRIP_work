@@ -31,9 +31,10 @@ set hitlist=`echo $13`
 set demlist=`echo $14`
 set d_optionlist=`echo $15`
 set my_id=$16
-set suffix=$17
+set root_dir=$17
+set after_dir=$18
 
-setenv RESULTS ../BENCH_DIR/${suffix}/Results
+setenv RESULTS ../BENCH_DIR/${root_dir}/${after_dir}/Results
 
 #echo $optionlist
 
@@ -55,7 +56,7 @@ set outp=$RESULTS/$rdir/$trace.out
 
 #echo $outp
 
-./bin/$binary -warmup_instructions ${n_warm}000000 -simulation_instructions ${n_sim}000000 -rrip_policies $option -dirty_rrip_policies $d_option -psel_width $pso -psel_mask $mask -hit_mask $hit -dsalgo $dsalgo -window_size $window -sr_thr $srt -br_thr $brt -boost $boost -demote_mask $dem -traces ${TRACE_DIR}${trace}.trace.gz >& $outp
+./bin/$binary -warmup_instructions ${n_warm}0000 -simulation_instructions ${n_sim}00000 -rrip_policies $option -dirty_rrip_policies $d_option -psel_width $pso -psel_mask $mask -hit_mask $hit -dsalgo $dsalgo -window_size $window -sr_thr $srt -br_thr $brt -boost $boost -demote_mask $dem -traces ${TRACE_DIR}${trace}.trace.gz >& $outp
 
 end
 end

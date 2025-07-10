@@ -5,6 +5,6 @@
 #SBATCH --cpus-per-task 1
 #SBATCH --mem-per-cpu 100M
 
-./$script ${SLURM_ARRAY_TASK_ID} $plist $dplist $demmask $id $suffix
+./$script ${SLURM_ARRAY_TASK_ID} $plist $dplist $demmask $id $root_dir $after_dir
 
 

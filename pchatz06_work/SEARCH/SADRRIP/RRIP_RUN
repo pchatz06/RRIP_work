@@ -22,11 +22,12 @@ set plist = $2
 set dirty_plist = $3
 set demmask = $4
 set id = $5
-set suffix = $6
+set root_dir = $6
+set after_dir = $7
 
 
 # Load benchmark list
-set bench_file = "../BENCH_DIR/${suffix}/benchmarks.txt"
+set bench_file = "../BENCH_DIR/${root_dir}/${after_dir}/benchmarks.txt"
 
 if (! -f $bench_file) then
     echo "Benchmark file $bench_file not found!"
@@ -41,4 +42,4 @@ set warmup_inst = 100
 set sim_inst = 500
 
 
-$home_path/$executable $binary $warmup_inst $sim_inst "$benchmark" "$plist" "$pselist" "$pselmask" "$dsalgo" "$window" "$srthr" "$brthr" "$boost" "$hitmask" "$demmask" "$dirty_plist" "$id" "$suffix"
+$home_path/$executable $binary $warmup_inst $sim_inst "$benchmark" "$plist" "$pselist" "$pselmask" "$dsalgo" "$window" "$srthr" "$brthr" "$boost" "$hitmask" "$demmask" "$dirty_plist" "$id" "$root_dir" "$after_dir"

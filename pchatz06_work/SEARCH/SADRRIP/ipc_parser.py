@@ -5,8 +5,9 @@ import sys
 
 generation = sys.argv[1]
 myID = sys.argv[2]
-suffix = sys.argv[3]
-bench_list = sys.argv[4]
+root_dir = sys.argv[3]
+after_dir = sys.argv[4]
+bench_list = sys.argv[5]
 
 Benchmarks = bench_list.split(":")
 
@@ -38,7 +39,7 @@ lru_baseline = {
 
 
 # Get a list of all files in the directory
-folder_list = os.listdir(f'../BENCH_DIR/{str(suffix)}/Results')
+folder_list = os.listdir(f'../BENCH_DIR/{root_dir}/{after_dir}/Results')
 
 # Get the folder that has the unique id generation-myID at the end of the name
 folder_list = [folder for folder in folder_list if folder.endswith("-" + generation + "-" + myID)]
@@ -49,7 +50,7 @@ folder = folder_list[0]
 
 for benchmark in Benchmarks:
 
-    full_filename = f"../BENCH_DIR/{str(suffix)}/Results/" + folder + "/" + benchmark + ".out"
+    full_filename = f"../BENCH_DIR/{root_dir}/{after_dir}/Results/" + folder + "/" + benchmark + ".out"
 #    print(full_filename)
     # Check if file exists
     if not os.path.isfile(full_filename):

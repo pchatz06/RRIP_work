@@ -104,7 +104,14 @@ class Individual(object):
             return 1
         else:
             return 0
-        
+    
+    def getUniqueKey(self):
+        uniqueKey = []
+        for i in self.sequence:
+            uniqueKey.append(str(i))
+        # print(tuple(uniqueKey))
+        return (tuple(uniqueKey))
+
     def pickle(self,filename):
         pickle.dump(self, filename);
     

@@ -1,22 +1,23 @@
 trap "echo 'Terminating all child processes'; kill -- -$$" SIGINT SIGTERM EXIT
-./run.sh local Blender &
-./run.sh local Bwaves &
-./run.sh local Cam4 &
-./run.sh local cactuBSSN &
-./run.sh local Exchange &
-./run.sh local Gcc &
-./run.sh local Lbm &
-./run.sh local Mcf &
-./run.sh local Parest &
-./run.sh local Povray &
-./run.sh local Wrf &
-./run.sh local Xalancbmk &
-./run.sh local Fotonik3d &
-./run.sh local Imagick &
-./run.sh local Leela &
-./run.sh local Omnetpp &
-./run.sh local Perlbench &
-./run.sh local Roms &
-./run.sh local x264 &
-./run.sh local Xz &
-./run.sh global Blender:Bwaves:Cam4:cactuBSSN:Exchange:Gcc:Lbm:Mcf:Parest:Povray:Wrf:Xalancbmk:Fotonik3d:Imagick:Leela:Omnetpp:Perlbench:Roms:x264:Xz
+
+./run.sh local Blender M10 Onepoint &
+./run.sh local Bwaves M10 Onepoint &
+./run.sh local Cam4 M10 Onepoint &
+./run.sh local cactuBSSN M10 Onepoint &
+./run.sh local Exchange M10 Onepoint &
+./run.sh local Gcc M10 Onepoint &
+./run.sh local Lbm M10 Onepoint &
+./run.sh local Mcf M10 Onepoint &
+./run.sh local Parest M10 Onepoint &
+./run.sh local Povray M10 Onepoint &
+./run.sh local Wrf M10 Onepoint &
+./run.sh local Xalancbmk M10 Onepoint &
+./run.sh local Fotonik3d M10 Onepoint &
+./run.sh local Imagick M10 Onepoint &
+./run.sh local Leela M10 Onepoint &
+./run.sh local Omnetpp M10 Onepoint &
+./run.sh local Perlbench M10 Onepoint &
+./run.sh local Roms M10 Onepoint &
+./run.sh local x264 M10 Onepoint &
+./run.sh local Xz M10 Onepoint &
+./run.sh global Blender:Bwaves:Cam4:cactuBSSN:Exchange:Gcc:Lbm:Mcf:Parest:Povray:Wrf:Xalancbmk:Fotonik3d:Imagick:Leela:Omnetpp:Perlbench:Roms:x264:Xz M10 Onepoint

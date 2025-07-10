@@ -69,9 +69,33 @@ class Algorithm(object):
         ##genetic algorithm parameters
         self.seen_sequences = set()
         self.suffix = suffix
+
+        if "local" in self.suffix:
+            split_index = suffix.find("local")
+            root_dir = suffix[:split_index - 1] 
+            after_dir = suffix[split_index:]
+        
+        if "global" in self.suffix:
+            split_index = suffix.find("global")
+            root_dir = suffix[:split_index - 1]
+            after_dir = suffix[split_index:]
+        
+        parts = root_dir.split("-")
+        mutation, crossover = parts[-2:]  # ['M5', 'Onepoint']
+        mutation = float(float(mutation[1:]) / 100)
+        
+        if crossover == 'Onepoint':
+            crossover = "1"
+        elif crossover == 'Uniform':
+            crossover = "0"
+
         self.populationSize = self.xmldoc.getElementsByTagName('population_size')[0].attributes['value'].value;
-        self.mutationRate = self.xmldoc.getElementsByTagName('mutation_rate')[0].attributes['value'].value;
-        self.crossoverType = self.xmldoc.getElementsByTagName('crossover_type')[0].attributes['value'].value;
+        # self.mutationRate = self.xmldoc.getElementsByTagName('mutation_rate')[0].attributes['value'].value;
+        self.mutationRate = str(mutation)
+        # self.crossoverType = self.xmldoc.getElementsByTagName('crossover_type')[0].attributes['value'].value;
+        self.crossoverType = crossover
+
+
         self.crossoverRate = self.xmldoc.getElementsByTagName('crossover_rate')[0].attributes['value'].value;
         self.uniformRate = self.xmldoc.getElementsByTagName('uniform_rate')[0].attributes['value'].value;
         self.ellitism = self.xmldoc.getElementsByTagName('ellitism')[0].attributes['value'].value;
@@ -98,9 +122,13 @@ class Algorithm(object):
             self.measurementClassConfFile = self.measurementClassConfFile + ".xml"
         self.measurement = self.measurementClass(
             "../configurationFiles/measurement/" + self.measurementClassConfFile)
-        self.measurement.init(suffix, bench_list)
+        self.measurement.init(root_dir, after_dir, bench_list)
 
         self.dirToSaveResults = self.xmldoc.getElementsByTagName('dirToSaveResults')[0].attributes['value'].value;
+        # pchatz06 Edit
+        self.dirToSaveResults = self.dirToSaveResults + f"/{root_dir}/{after_dir}/GeST_Results"
+
+        
         self.seedDir = self.xmldoc.getElementsByTagName('seedDir')[0].attributes['value'].value;
         self.compilationDir = self.xmldoc.getElementsByTagName('compilationDir')[0].attributes['value'].value;
 
@@ -135,7 +163,13 @@ class Algorithm(object):
         if (not os.path.exists(self.dirToSaveResults)):
             os.mkdir(self.dirToSaveResults);
         self.timeStart = datetime.datetime.now().strftime("%y-%m-%d-%H-%M");
-        self.savedStateDir = self.dirToSaveResults + self.suffix + "/" # edited! by me (pchatz06)
+
+
+        # edited! by me (pchatz06)
+        self.savedStateDir = self.dirToSaveResults + "/" # edited! by me (pchatz06)
+
+
+
         if (not os.path.exists(self.savedStateDir)):
             os.mkdir(
                 self.savedStateDir);  # create a dir in results dir named after start time that will be used to save state like population and rand state
@@ -678,7 +712,7 @@ class Algorithm(object):
                     #print("Parent - " + str(indiv1.myId))
                     #print("Parent - " + str(indiv2.myId))
 
-                    while str(indiv1.myId) == str(indiv2.myId):
+                    while indiv1.getUniqueKey() == indiv2.getUniqueKey():
                         indiv1 = self.__tournamentSelection__();
                         indiv2 = self.__tournamentSelection__();
                         #print("Same parent chosen in tournament")
@@ -699,23 +733,31 @@ class Algorithm(object):
                 
                 print("The children created are " + str(children[0].myId) + " and " + str(children[1].myId))
                 
+                children[0] = children[0].copy()
+                children[1] = children[1].copy()
+
                 self.__mutation__(children[0]) # mutate each child and add it to the list
                 self.__mutation__(children[1])
 
-                if (str(children[0]) in self.seen_sequences or str(children[1]) in self.seen_sequences) and tries > 1:
+                child0_key = children[0].getUniqueKey()
+                child1_key = children[1].getUniqueKey()
+                
+                if ((child0_key == child1_key) or (child0_key in self.seen_sequences) or (child1_key in self.seen_sequences)) and tries > 1:
                     same_child_found = True
-                    tries = tries - 1
+                    children = []
+                    print("it went wrong")
+                    tries -= 1
                 else:
-                    if tries == 1 and (str(children[0]) in self.seen_sequences or str(children[1]) in self.seen_sequences):
-                        print("Repeated tuurnament selection and operators (mutation + crossover) but still created a Duplicate-(a seen before) individual!!!")
+                    if tries == 1 and (child0_key in self.seen_sequences or child1_key in self.seen_sequences):
+                        print("Repeated tournament selection and operators (mutation + crossover) but still created a Duplicate-(a seen before) individual!!!")
+                    
                     same_child_found = False
-                    self.seen_sequences.add(str(children[0]))
-                    self.seen_sequences.add(str(children[1]))
-                    children[0].fixUnconditionalBranchLabels();  ##Due to crossover and mutation we must fix any possible duplicate branch labels
-                    children[1].fixUnconditionalBranchLabels(); 
-                    individuals.append(children[0]);  # I don't want to waste any child so some populations can be little bigger in number of individuals
-                    individuals.append(children[1]);
-                    childsCreated += 2;
+                    self.seen_sequences.add(child0_key)
+                    self.seen_sequences.add(child1_key)
+
+                    individuals.append(children[0])
+                    individuals.append(children[1])
+                    childsCreated += 2
                         
                 
 
@@ -723,6 +765,7 @@ class Algorithm(object):
 
     def __mutation__(self, individual):  ##options for mutation whole instructions or instruction's operands
         instructions = individual.getInstructions();
+
         for i in range(instructions.__len__()):
             if self.rand.random() <= float(self.mutationRate):
 
@@ -732,6 +775,7 @@ class Algorithm(object):
                 instruction.mutateOperands(self.rand);  ##initialize randomy the instruction operands
                 print(" to " + instruction.__str__())
                 instructions[i] = instruction;
+                
                 '''if(self.rand.randint(0,1) ==1): #in this case change the whole instructions
                     instruction=self.rand.choice(self.allInstructionArray).copy(); #choose random one instruction
                     instruction.mutateOperands(self.rand); ##initialize randomy the instruction operands

@@ -40,9 +40,8 @@ class Measurement(ABC):
         self.sourceFilePath=None #to be set in setSourceFilePath funtion
         super().__init__() #abstract class init
         
-    def init(self, suffix): #should be called after constructor.. this can be overridden by child measurement classes to add new or use other configuration parameters..
-
-        self.targetRunDir= self.tryGetStringValue('targetRunDir') + "/" + str(suffix)
+    def init(self, root_dir, after_dir): #should be called after constructor.. this can be overridden by child measurement classes to add new or use other configuration parameters..
+        self.targetRunDir= self.tryGetStringValue('targetRunDir') + f"/{root_dir}/{after_dir}/Individuals"
         os.makedirs(self.targetRunDir, exist_ok=True)
 
         self.targetHostname= self.tryGetStringValue('targetHostname')

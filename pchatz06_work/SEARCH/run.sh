@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Usage check
-if [ "$#" -ne 2 ]; then
-    echo "Usage: $0 <search_type: local|global> <bench_list (colon-separated)>"
+if [ "$#" -ne 4 ]; then
+    echo "Usage: $0 <search_type: local|global> <bench_list (colon-separated)> <mutation_rate (M5)> <crossover (Random/Onepoint)>"
     echo "bench_list= Blender:Bwaves:Cam4:cactuBSSN:Exchange:Gcc:Lbm:Mcf:Parest:Povray:Wrf:Xalancbmk:Fotonik3d:Imagick:Leela:Omnetpp:Perlbench:Roms:x264:Xz"
     exit 1
 fi
@@ -10,6 +10,8 @@ fi
 # Arguments
 search_type="$1"       # 'local' or 'global'
 bench_list_raw="$2"    # e.g., Blender:Gcc:Wrf
+mutation_rate="$3"
+crossover="$4"
 
 # Format current date-time
 timestamp=$(date +"%d-%H-%M")
@@ -18,12 +20,11 @@ timestamp=$(date +"%d-%H-%M")
 if [ "$search_type" == "local" ]; then
     # Use bench list in the suffix
     bench_tag=$(echo "$bench_list_raw" | tr ':' '_')
-    suffix="${timestamp}-local_${bench_tag}"
+    suffix="${timestamp}-${mutation_rate}-${crossover}-local_${bench_tag}"
 elif [ "$search_type" == "global" ]; then
     # Count number of benchmarks
     IFS=':' read -r -a bench_array <<< "$bench_list_raw"
-    num_bench=${#bench_array[@]}
-    suffix="${timestamp}-global-${num_bench}"
+    suffix="${timestamp}-${mutation_rate}-${crossover}-global"
 else
     echo "Invalid search type: $search_type (must be 'local' or 'global')"
     exit 1
