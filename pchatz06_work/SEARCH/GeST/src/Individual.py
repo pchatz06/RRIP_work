@@ -39,7 +39,7 @@ class Individual(object):
     
     def getInstructions(self):
         return self.sequence;
-    
+
     def fixUnconditionalBranchLabels(self):
         automatically_incremented={};
         for ins in self.sequence:

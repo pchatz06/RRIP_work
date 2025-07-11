@@ -767,12 +767,13 @@ class Algorithm(object):
 
     def __mutation__(self, individual):  ##options for mutation whole instructions or instruction's operands
         instructions = individual.getInstructions();
+        
 
         for i in range(instructions.__len__()):
             if self.rand.random() <= float(self.mutationRate):
 
                 # instruction=self.rand.choice(self.allInstructionArray).copy(); #choose random one instruction
-                instruction = instructions[i]  # choose the instruction at position i one instruction
+                instruction = instructions[i].copy()  # choose the instruction at position i one instruction
                 print("The instruction from individual " + str(individual.myId) + " was mutated from " + instruction.__str__(), end="")
                 instruction.mutateOperands(self.rand);  ##initialize randomy the instruction operands
                 print(" to " + instruction.__str__())
