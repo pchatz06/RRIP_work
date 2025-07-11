@@ -18,10 +18,10 @@ from Individual import Individual
 from Instruction import Instruction
 from Operand import Operand
 
-plot_all_individuals = True
-plot_best_individuals = True
-plot_99_percentile_individuals = True
-plot_all_graph = True
+plot_all_individuals = False
+plot_best_individuals = False
+plot_99_percentile_individuals = False
+
 
 
 def createFolder(folder_name):
@@ -353,12 +353,16 @@ def main():
     local_dict = dict(speed_up_per_workload_of_local_global_policy)
 
     # Determine benchmark set
+    title = ""
     if FLAG_GLOBAL and not FLAG_LOCAL:
         benchmarks = list(global_dict.keys())
+        title = DIR_GLOBAL.split("/")[-1]
     elif FLAG_LOCAL and not FLAG_GLOBAL:
         benchmarks = list(local_dict.keys())
+        title = DIR_LOCAL.split("/")[-1]
     elif FLAG_GLOBAL and FLAG_LOCAL:
         benchmarks = sorted(set(global_dict.keys()) | set(local_dict.keys()))
+        title = DIR_GLOBAL.split("/")[-1] + " " + DIR_LOCAL.split("/")[-1]
     else:
         raise ValueError("At least one of FLAG_GLOBAL or FLAG_LOCAL must be True.")
 
@@ -380,7 +384,7 @@ def main():
     # Labels and formatting
     plt.xlabel('Benchmark')
     plt.ylabel('Speedup')
-    plt.title('Comparison of Benchmark Speedups')
+    plt.title(f'{title}')
     plt.xticks(x, benchmarks, rotation=45, ha='right')
     plt.ylim(0.800, 1.500)
     plt.yticks(np.arange(0.500, 1.501, 0.050))
@@ -389,7 +393,7 @@ def main():
     plt.grid(axis='y', linestyle='--', alpha=0.7)
 
     # Save plot
-    plt.savefig(f"GRAPHS/benchmark_comparison.png", dpi=300)
+    plt.savefig(f"GRAPHS/{title}.png", dpi=300)
     plt.close()
 
 
