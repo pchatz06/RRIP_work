@@ -18,9 +18,9 @@ from Individual import Individual
 from Instruction import Instruction
 from Operand import Operand
 
-plot_all_individuals = False
-plot_best_individuals = False
-plot_99_percentile_individuals = False
+plot_all_individuals = True
+plot_best_individuals = True
+plot_99_percentile_individuals = True
 
 
 
@@ -386,12 +386,14 @@ def main():
     plt.ylabel('Speedup')
     plt.title(f'{title}')
     plt.xticks(x, benchmarks, rotation=45, ha='right')
-    plt.ylim(0.800, 1.500)
-    plt.yticks(np.arange(0.500, 1.501, 0.050))
+    plt.ylim(0.950, 1.200)
+    plt.yticks(np.arange(0.950, 1.201, 0.025))
     plt.legend()
     plt.tight_layout()
     plt.grid(axis='y', linestyle='--', alpha=0.7)
-
+    
+    # Highlight the y=1.000 line in red
+    plt.axhline(y=1.000, color='red', linestyle='--', linewidth=1.5)
     # Save plot
     plt.savefig(f"GRAPHS/{title}.png", dpi=300)
     plt.close()

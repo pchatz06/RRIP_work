@@ -45,6 +45,7 @@ class Algorithm(object):
     ONEPOINT_CROSSOVER = "1"
     WHEEL_SELECTION = "1";
     TOURNAMENT_SELECTION = "0";
+    
 
     def __init__(self, configurationFile,
                  suffix, bench_list, rand=Random()):  # reads configuration file and initializes the first population
@@ -67,9 +68,8 @@ class Algorithm(object):
     def intitializeAlgorithmAndRunParameters(self, configurationFile, rand, suffix, bench_list):
 
         ##genetic algorithm parameters
-        self.seen_sequences = set()
         self.suffix = suffix
-
+        self.SEEN_SEQUENCES = set()
         if "local" in self.suffix:
             split_index = self.suffix.find("-local")
             root_dir = self.suffix[:split_index + len("-local")]  # Include '-local'
@@ -374,6 +374,8 @@ class Algorithm(object):
                     individuals.append(self.__CreateIndividualFromFile__(i));
                 else:
                     individuals.append(self.__randomlyCreateIndividual__());
+            for i in individuals:
+                self.SEEN_SEQUENCES.add(i.getUniqueKey())
 
             self.population = Population(individuals);
         else:  # initial population based on existing individuals.. Useful for continuing runs that where stopped
@@ -735,8 +737,6 @@ class Algorithm(object):
                 
                 print("The children created are " + str(children[0].myId) + " and " + str(children[1].myId))
                 
-                children[0] = children[0].copy()
-                children[1] = children[1].copy()
 
                 self.__mutation__(children[0]) # mutate each child and add it to the list
                 self.__mutation__(children[1])
@@ -744,18 +744,18 @@ class Algorithm(object):
                 child0_key = children[0].getUniqueKey()
                 child1_key = children[1].getUniqueKey()
                 
-                if ((child0_key == child1_key) or (child0_key in self.seen_sequences) or (child1_key in self.seen_sequences)) and tries > 1:
+                if ((child0_key == child1_key) or (child0_key in self.SEEN_SEQUENCES) or (child1_key in self.SEEN_SEQUENCES)) and tries > 1:
                     same_child_found = True
                     children = []
                     print("it went wrong")
                     tries -= 1
                 else:
-                    if tries == 1 and (child0_key in self.seen_sequences or child1_key in self.seen_sequences):
+                    if tries == 1 and (child0_key in self.SEEN_SEQUENCES or child1_key in self.SEEN_SEQUENCES):
                         print("Repeated tournament selection and operators (mutation + crossover) but still created a Duplicate-(a seen before) individual!!!")
                     
                     same_child_found = False
-                    self.seen_sequences.add(child0_key)
-                    self.seen_sequences.add(child1_key)
+                    self.SEEN_SEQUENCES.add(child0_key)
+                    self.SEEN_SEQUENCES.add(child1_key)
 
                     individuals.append(children[0])
                     individuals.append(children[1])

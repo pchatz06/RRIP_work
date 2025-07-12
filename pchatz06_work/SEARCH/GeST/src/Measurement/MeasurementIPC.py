@@ -36,7 +36,7 @@ class MeasurementIPC(Measurement):
         execution_command = "cd ../../SADRRIP ; python3 RunSimFromGeST.py " + str(generation) + " " + str(self.root_dir) + " " + str(self.after_dir) + " " + str(self.bench_list) + f" >> ../BENCH_DIR/{self.root_dir}/{self.after_dir}/trash.txt"
         subprocess.run(execution_command, shell=True)
 
-        sleep(100)
+        sleep(5)
         # print("Checking if job is finshed after 60 min")
         while True:
             output = subprocess.check_output("squeue -u pchatz06 | wc -l", shell=True)
@@ -46,7 +46,7 @@ class MeasurementIPC(Measurement):
                 break
             else:
                 # print("Jobs not finished there are still " + str(output) + "more jobs")
-                sleep(100)
+                sleep(5)
 
     def GetMeasurement(self, generation, myID):
 

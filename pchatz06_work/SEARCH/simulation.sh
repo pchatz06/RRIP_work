@@ -3,26 +3,30 @@
 trap "echo 'Terminating all child processes'; kill -- -$$" SIGINT SIGTERM EXIT
 
 # Check arguments
-if [[ "$#" -ne 3 ]]; then
-    echo "Usage: $0 [-local|-global|-localglobal] [mutation_rate (M5, M10, etc)] [crossover (Onepoint/Uniform)]"
+if [[ "$#" -ne 4 ]]; then
+    echo "Usage: $0 [benchmarks file path] [-local|-global|-localglobal] [mutation_rate (M5, M10, etc)] [crossover (Onepoint/Uniform)]"
     exit 1
 fi
 
-MODE=$1
-ARG1=$2
-ARG2=$3
+bench_path=$1
+MODE=$2
+ARG1=$3
+ARG2=$4
 
 # Read benchmarks into array
 benchmarks=()
 while IFS= read -r line || [[ -n "$line" ]]; do
     benchmarks+=("$line")
-done < benchmarks.txt
+done < "$bench_path"
 
 # Run local mode
 if [[ "$MODE" == "-local" || "$MODE" == "-localglobal" ]]; then
     for bm in "${benchmarks[@]}"; do
         ./run.sh local "$bm" "$ARG1" "$ARG2" &
     done
+    if [[ "$MODE" != "-localglobal" ]]; then
+        wait  # Only wait if not -localglobal
+    fi
 fi
 
 # Run global mode (all benchmarks as colon-separated string)

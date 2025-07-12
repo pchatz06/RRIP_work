@@ -106,11 +106,11 @@ class Individual(object):
             return 0
     
     def getUniqueKey(self):
-        uniqueKey = []
+        uniqueKey = ""
         for i in self.sequence:
-            uniqueKey.append(str(i))
-        # print(tuple(uniqueKey))
-        return (tuple(uniqueKey))
+            uniqueKey = uniqueKey + f"{str(i).strip()}"
+        # print(str(uniqueKey))
+        return (str(uniqueKey))
 
     def pickle(self,filename):
         pickle.dump(self, filename);
