@@ -352,6 +352,16 @@ def main():
     personal_dict = dict(speed_up_per_workload_of_personal_best_global_policy)
     local_dict = dict(speed_up_per_workload_of_local_global_policy)
 
+    # Helper function to compute and insert average
+    def add_average_entry(d, label="Average"):
+        if d:
+            avg = sum(d.values()) / len(d)
+            d[label] = avg
+
+    add_average_entry(global_dict)
+    add_average_entry(personal_dict)
+    add_average_entry(local_dict)
+
     # Determine benchmark set
     title = ""
     if FLAG_GLOBAL and not FLAG_LOCAL:
@@ -366,6 +376,7 @@ def main():
     else:
         raise ValueError("At least one of FLAG_GLOBAL or FLAG_LOCAL must be True.")
 
+    benchmarks = [b for b in benchmarks if b != "Average"] + ["Average"]
     # Collect values for each benchmark (use None or np.nan if not present)
     values1 = [global_dict.get(b, np.nan) for b in benchmarks]
     values2 = [personal_dict.get(b, np.nan) for b in benchmarks]
