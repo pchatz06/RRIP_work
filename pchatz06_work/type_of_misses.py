@@ -86,6 +86,8 @@ def main():
                                             parts = line.strip().split()
                                             try:
                                                 ipc_value = float(parts[4])
+                                                if (individual_id, ipc_value) in ipc_results:
+                                                    break
                                                 ipc_results.append((individual_id, ipc_value))
                                             except ValueError:
                                                 print(f"Could not parse IPC value in {filepath}")
@@ -199,7 +201,7 @@ def main():
                 axs[i].grid(True)
                 # axs[i].set_ylim([0.5, 1.5])
                 r = compute_correlation(x, y)
-                axs[i].set_title(f"{title}, LC={r:.4f}, DP:{len(misses)}")
+                axs[i].set_title(f"{title}, LC={r:.4f}, DP:{len(ipc_results)}")
                 #axs[i].text(0.5, -0.45, f"Linear_Correlation = {r:.2f}", transform=axs[i].transAxes, ha='center', fontsize=10)
                 if i == 0:
                     axs[i].set_ylabel("IPC")
@@ -246,6 +248,8 @@ def main():
                                             parts = line.strip().split()
                                             try:
                                                 ipc_value = float(parts[4])
+                                                if (individual_id, ipc_value) in ipc_results:
+                                                    break
                                                 ipc_results.append((individual_id, ipc_value))
                                             except ValueError:
                                                 print(f"Could not parse IPC value in {filepath}")
@@ -359,7 +363,7 @@ def main():
                 axs[i].grid(True)
                 # axs[i].set_ylim([0.5, 1.5])
                 r = compute_correlation(x, y)
-                axs[i].set_title(f"{title}, LC={r:.4f}, DP:{len(misses)}")
+                axs[i].set_title(f"{title}, LC={r:.4f}, DP:{len(ipc_results)}")
                 #axs[i].text(0.5, -0.45, f"Linear_Correlation = {r:.2f}", transform=axs[i].transAxes, ha='center', fontsize=10)
                 if i == 0:
                     axs[i].set_ylabel("IPC")
