@@ -31,13 +31,15 @@ def createFolder(folder_name):
 
 def createPlots(speed_up_best_of_each_gen, speed_up_all_indivs, speed_up_99_percentile_individuals, benchmark, SUFFIX):
     if plot_best_individuals:
+        plt.figure(figsize=(12, 6))
         plt.plot(speed_up_best_of_each_gen, marker='o')
-        plt.title("Speedup over Generations")
+        plt.title(f"Speedup over Generations {benchmark}")
         plt.xlabel("Generation Index")
         plt.ylabel("Speedup Value")
 
         # Use plain style and no offset on y-axis
         plt.ticklabel_format(style='plain', axis='y')
+        plt.xticks(rotation=90)
         plt.gca().yaxis.get_major_formatter().set_useOffset(False)
 
         # Force x-axis to show integers, step of 1
@@ -53,14 +55,16 @@ def createPlots(speed_up_best_of_each_gen, speed_up_all_indivs, speed_up_99_perc
         y_values = [point[0] for point in speed_up_all_indivs]
         x_values = [point[1] for point in speed_up_all_indivs]
 
+        plt.figure(figsize=(12, 6))
         plt.plot(x_values, y_values, marker='o', linestyle='None')
 
-        plt.title("Speedup over Generations")
+        plt.title(f"Speedup over Generations {benchmark}")
         plt.xlabel("Generation Index")
         plt.ylabel("Speedup Value")
 
         # Y-axis formatting
         plt.ticklabel_format(style='plain', axis='y')
+        plt.xticks(rotation=90)
         plt.gca().yaxis.get_major_formatter().set_useOffset(False)
 
         # X-axis: integers spaced by 1
@@ -76,14 +80,16 @@ def createPlots(speed_up_best_of_each_gen, speed_up_all_indivs, speed_up_99_perc
         y_values = [point[0] for point in speed_up_99_percentile_individuals]
         x_values = [point[1] for point in speed_up_99_percentile_individuals]
 
+        plt.figure(figsize=(12, 6))
         plt.plot(x_values, y_values, marker='o', linestyle='None')
 
-        plt.title("Speedup over Generations")
+        plt.title(f"Speedup over Generations {benchmark}")
         plt.xlabel("Generation Index")
         plt.ylabel("Speedup Value")
 
         # Y-axis formatting
         plt.ticklabel_format(style='plain', axis='y')
+        plt.xticks(rotation=90)
         plt.gca().yaxis.get_major_formatter().set_useOffset(False)
 
         # X-axis: integers spaced by 1
@@ -125,12 +131,24 @@ def main():
 
 
     baseline_ipc = {
-        "Blender": 0.661, "Bwaves": 1.016, "Cam4": 0.725, "cactuBSSN": 0.761,
-        "Exchange": 1.127, "Gcc": 0.353, "Lbm": 0.652, "Mcf": 0.400,
-        "Parest": 0.935, "Povray": 0.356, "Wrf": 0.823, "Xalancbmk": 0.395,
-        "Fotonik3d": 0.621, "Imagick": 2.193, "Leela": 0.548, "Omnetpp": 0.246,
-        "Perlbench": 0.448, "Roms": 1.079, "x264": 1.372, "Xz": 0.894
+        "x264": 1.372, "cactuBSSN": 0.761, "Fotonik3d": 0.621, "Gcc": 0.353, 
+        "Cam4": 0.725, "Xz": 0.894, "Omnetpp": 0.246, "Roms": 1.079, 
+        "Blender": 0.661, "Mcf": 0.400, "Wrf": 0.823, "Lbm": 0.652, 
+        "Parest": 0.935, "Xalancbmk": 0.395
     }
+    good_SRRIP_ipc = {
+        "Blender": 1.0137, "Bwaves": 1.0001, "Cam4": 1.0085, "CactuBSSN": 0.9926,
+        "Exchange": 1.0003, "Fotonik3d": 0.9985, "Gcc": 1.0010, "Imagick": 0.9993,
+        "Lbm": 1.0705, "Leela": 1.0007, "Mcf": 1.0042, "Omnetpp": 1.0071,
+        "Parest": 1.0958, "Perlbench": 0.9991, "Povray": 0.9999, "Roms": 0.9709,
+        "Wrf": 1.0035, "Xalancbmk": 1.0973, "x264": 0.9951, "Xz": 1.0064
+    }
+    #     "Blender": 0.661, "Bwaves": 1.016, "Cam4": 0.725, "cactuBSSN": 0.761,
+    #     "Exchange": 1.127, "Gcc": 0.353, "Lbm": 0.652, "Mcf": 0.400,
+    #     "Parest": 0.935, "Povray": 0.356, "Wrf": 0.823, "Xalancbmk": 0.395,
+    #     "Fotonik3d": 0.621, "Imagick": 2.193, "Leela": 0.548, "Omnetpp": 0.246,
+    #     "Perlbench": 0.448, "Roms": 1.079, "x264": 1.372, "Xz": 0.894
+    # }
 
     speed_up_per_workload_of_best_global_policy = []
     speed_up_per_workload_of_personal_best_global_policy = []
@@ -361,7 +379,7 @@ def main():
     add_average_entry(global_dict)
     add_average_entry(personal_dict)
     add_average_entry(local_dict)
-
+    add_average_entry(good_SRRIP_ipc)
     # Determine benchmark set
     title = ""
     if FLAG_GLOBAL and not FLAG_LOCAL:
@@ -371,26 +389,34 @@ def main():
         benchmarks = list(local_dict.keys())
         title = DIR_LOCAL.split("/")[-1]
     elif FLAG_GLOBAL and FLAG_LOCAL:
-        benchmarks = sorted(set(global_dict.keys()) | set(local_dict.keys()))
+        benchmarks = set(global_dict.keys()) | set(local_dict.keys())
         title = DIR_GLOBAL.split("/")[-1] + " " + DIR_LOCAL.split("/")[-1]
     else:
         raise ValueError("At least one of FLAG_GLOBAL or FLAG_LOCAL must be True.")
 
-    benchmarks = [b for b in benchmarks if b != "Average"] + ["Average"]
+
+    benchmarks = [b for b in baseline_ipc if b in benchmarks] + ["Average"]
+
     # Collect values for each benchmark (use None or np.nan if not present)
     values1 = [global_dict.get(b, np.nan) for b in benchmarks]
     values2 = [personal_dict.get(b, np.nan) for b in benchmarks]
     values3 = [local_dict.get(b, np.nan) for b in benchmarks]
+    values4 = [good_SRRIP_ipc.get(b, np.nan) for b in benchmarks]
+
+    print("global_best:", values1)
+    print("global_personal_best:", values2)
+    print("local_best:", values3)
 
     # X axis
     x = np.arange(len(benchmarks))
-    width = 0.25
+    width = 0.2
 
     # Create plot
     plt.figure(figsize=(16, 6))
-    plt.bar(x - width, values1, width, label='best_global_policy', color='skyblue')
-    plt.bar(x,         values2, width, label='personal_best_global_policy', color='orange')
-    plt.bar(x + width, values3, width, label='local_best_policy', color='green')
+    plt.bar(x - 1.5 * width, values4, width, label='good_SRRIP', color='skyblue')
+    plt.bar(x - 0.5 * width, values1, width, label='best_global_policy', color='pink')
+    plt.bar(x + 0.5 * width, values2, width, label='personal_best_global_policy', color='orange')
+    plt.bar(x + 1.5 * width, values3, width, label='local_best_policy', color='green')
 
     # Labels and formatting
     plt.xlabel('Benchmark')

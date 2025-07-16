@@ -160,11 +160,12 @@ def main():
 
             # Normalize all miss lists
             ipc_results = [x[1] for x in ipc_results]
-            llc_total_misses = [x[1] for x in llc_total_misses]
-            llc_load_misses = [x[1] for x in llc_load_misses]
-            llc_rfo_misses = [x[1] for x in llc_rfo_misses]
-            llc_prefetch_misses = [x[1] for x in llc_prefetch_misses]
-            llc_writeback_misses = [x[1] for x in llc_writeback_misses]
+            llc_total_misses = [(x[1]/500000000)*1000 for x in llc_total_misses]
+            llc_load_misses = [(x[1]/500000000)*1000 for x in llc_load_misses]
+            llc_rfo_misses = [(x[1]/500000000)*1000 for x in llc_rfo_misses]
+            llc_prefetch_misses = [(x[1]/500000000)*1000 for x in llc_prefetch_misses]
+            llc_writeback_misses = [(x[1]/500000000)*1000 for x in llc_writeback_misses]
+
 
             # llc_total_misses_norm = normalize(llc_total_misses)
             # llc_load_misses_norm = normalize(llc_load_misses)
@@ -187,7 +188,8 @@ def main():
             #     ("Prefetch Misses", llc_prefetch_misses_norm),
             #     ("Writeback Misses", llc_writeback_misses_norm)
             # ]
-
+            plt.suptitle("IPC vs. Different LLC Miss Types")
+            plt.tight_layout()
 
             fig, axs = plt.subplots(1, 5, figsize=(20, 4))
             fig.suptitle("IPC vs. LLC Miss Types")
@@ -196,19 +198,21 @@ def main():
                 y = ipc_results
                 axs[i].scatter(misses, ipc_results)
                 
-                axs[i].set_xlabel("Misses")
+                axs[i].set_xlabel("MPKI")
                 axs[i].tick_params(axis='x', rotation=25)
                 axs[i].grid(True)
                 # axs[i].set_ylim([0.5, 1.5])
                 r = compute_correlation(x, y)
+                with open(f"GRAPHS/Misses_Comparisson/{SUFFIX}/Correlation_analysis.txt", "a") as file:
+                    file.write(f"{benchmark}, {title}, LC={r:.4f}, DP:{len(ipc_results)}, Range:{min(misses)} - {max(misses)}\n")
+
                 axs[i].set_title(f"{title}, LC={r:.4f}, DP:{len(ipc_results)}")
                 #axs[i].text(0.5, -0.45, f"Linear_Correlation = {r:.2f}", transform=axs[i].transAxes, ha='center', fontsize=10)
                 if i == 0:
                     axs[i].set_ylabel("IPC")
             
 
-            plt.suptitle("IPC vs. Different LLC Miss Types")
-            plt.tight_layout()
+            
 
 
 
@@ -322,11 +326,11 @@ def main():
 
             # Normalize all miss lists
             ipc_results = [x[1] for x in ipc_results]
-            llc_total_misses = [x[1] for x in llc_total_misses]
-            llc_load_misses = [x[1] for x in llc_load_misses]
-            llc_rfo_misses = [x[1] for x in llc_rfo_misses]
-            llc_prefetch_misses = [x[1] for x in llc_prefetch_misses]
-            llc_writeback_misses = [x[1] for x in llc_writeback_misses]
+            llc_total_misses = [(x[1]/500000000)*1000 for x in llc_total_misses]
+            llc_load_misses = [(x[1]/500000000)*1000 for x in llc_load_misses]
+            llc_rfo_misses = [(x[1]/500000000)*1000 for x in llc_rfo_misses]
+            llc_prefetch_misses = [(x[1]/500000000)*1000 for x in llc_prefetch_misses]
+            llc_writeback_misses = [(x[1]/500000000)*1000 for x in llc_writeback_misses]
 
             # llc_total_misses_norm = normalize(llc_total_misses)
             # llc_load_misses_norm = normalize(llc_load_misses)
@@ -349,7 +353,8 @@ def main():
             #     ("Prefetch Misses", llc_prefetch_misses_norm),
             #     ("Writeback Misses", llc_writeback_misses_norm)
             # ]
-
+            folder_name = f"GRAPHS/Misses_Comparisson/{SUFFIX}"
+            createFolder(folder_name)
 
             fig, axs = plt.subplots(1, 5, figsize=(20, 4))
             fig.suptitle("IPC vs. LLC Miss Types")
@@ -358,11 +363,15 @@ def main():
                 y = ipc_results
                 axs[i].scatter(misses, ipc_results)
                 
-                axs[i].set_xlabel("Misses")
+                axs[i].set_xlabel("MPKI")
                 axs[i].tick_params(axis='x', rotation=25)
                 axs[i].grid(True)
                 # axs[i].set_ylim([0.5, 1.5])
                 r = compute_correlation(x, y)
+                with open(f"GRAPHS/Misses_Comparisson/{SUFFIX}/Correlation_analysis.txt", "a") as file:
+                    file.write(f"{benchmark}, {title}, LC={r:.4f}, DP:{len(ipc_results)}, Range:{min(misses)} - {max(misses)}\n")
+
+
                 axs[i].set_title(f"{title}, LC={r:.4f}, DP:{len(ipc_results)}")
                 #axs[i].text(0.5, -0.45, f"Linear_Correlation = {r:.2f}", transform=axs[i].transAxes, ha='center', fontsize=10)
                 if i == 0:
@@ -374,8 +383,7 @@ def main():
 
 
 
-            folder_name = f"GRAPHS/Misses_Comparisson/{SUFFIX}"
-            createFolder(folder_name)
+            
             plt.savefig(f"GRAPHS/Misses_Comparisson/{SUFFIX}/{benchmark}.png")
             plt.close()
 
