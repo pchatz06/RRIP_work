@@ -33,7 +33,7 @@ def createPlots(speed_up_best_of_each_gen, speed_up_all_indivs, speed_up_99_perc
     if plot_best_individuals:
         plt.figure(figsize=(12, 6))
         plt.plot(speed_up_best_of_each_gen, marker='o')
-        plt.title(f"Speedup over Generations {benchmark}")
+        plt.title(f"{benchmark}")
         plt.xlabel("Generation Index")
         plt.ylabel("Speedup Value")
 
@@ -58,7 +58,7 @@ def createPlots(speed_up_best_of_each_gen, speed_up_all_indivs, speed_up_99_perc
         plt.figure(figsize=(12, 6))
         plt.plot(x_values, y_values, marker='o', linestyle='None')
 
-        plt.title(f"Speedup over Generations {benchmark}")
+        plt.title(f"{benchmark}")
         plt.xlabel("Generation Index")
         plt.ylabel("Speedup Value")
 
@@ -83,7 +83,7 @@ def createPlots(speed_up_best_of_each_gen, speed_up_all_indivs, speed_up_99_perc
         plt.figure(figsize=(12, 6))
         plt.plot(x_values, y_values, marker='o', linestyle='None')
 
-        plt.title(f"Speedup over Generations {benchmark}")
+        plt.title(f"{benchmark}")
         plt.xlabel("Generation Index")
         plt.ylabel("Speedup Value")
 
@@ -143,6 +143,7 @@ def main():
         "Parest": 1.0958, "Perlbench": 0.9991, "Povray": 0.9999, "Roms": 0.9709,
         "Wrf": 1.0035, "Xalancbmk": 1.0973, "x264": 0.9951, "Xz": 1.0064
     }
+    # baseline_ipc = {
     #     "Blender": 0.661, "Bwaves": 1.016, "Cam4": 0.725, "cactuBSSN": 0.761,
     #     "Exchange": 1.127, "Gcc": 0.353, "Lbm": 0.652, "Mcf": 0.400,
     #     "Parest": 0.935, "Povray": 0.356, "Wrf": 0.823, "Xalancbmk": 0.395,
