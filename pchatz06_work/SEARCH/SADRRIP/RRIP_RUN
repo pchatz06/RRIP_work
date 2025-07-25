@@ -39,7 +39,7 @@ set benchmarks = (`echo $bench_list | tr ':' ' '`)
 set benchmark = $benchmarks[$bcode]
 
 set warmup_inst = 100
-set sim_inst = 500
+set sim_inst = 150
 
 
 $home_path/$executable $binary $warmup_inst $sim_inst "$benchmark" "$plist" "$pselist" "$pselmask" "$dsalgo" "$window" "$srthr" "$brthr" "$boost" "$hitmask" "$demmask" "$dirty_plist" "$id" "$root_dir" "$after_dir"

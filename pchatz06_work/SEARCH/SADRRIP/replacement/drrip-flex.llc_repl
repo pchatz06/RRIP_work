@@ -48,6 +48,7 @@ uint32_t dem_policy[PNUM][NUM_TYPES][MOD_TYPES];//structure to save the demote m
 #define DEM_P3 3 // demote policy 3 (maximal)
 #define DEM_P4 4 // 1.5
 
+#define NEW_PROMOTION 1
 
 
 
@@ -81,7 +82,6 @@ uint32_t rrpvcounters[maxRRPV+1];	// track hits with each state durin gan interv
 //uint32_t insRRPV; - may be define this to be pstate 
 uint32_t replaceCount;				// number of misses in current interval
 
-
 uint64_t allhits = 0;
 uint64_t allmisses = 0;
 
@@ -92,7 +92,15 @@ void update_state(uint32_t &s, uint32_t pol, uint32_t type, uint8_t hit, uint8_t
 		case 1:
 		case 2:
 		case 3:
-		s = drrip_policy[pol][type][hit][dirty];
+    if (hit && NEW_PROMOTION){
+      if (s < drrip_policy[pol][type][hit][dirty])
+        s = 0;
+      else
+        s = s - drrip_policy[pol][type][hit][dirty];
+    }
+    else{
+      s = drrip_policy[pol][type][hit][dirty];             
+    }
 		break;
 		case 4:
 		// do nothing

@@ -6,19 +6,28 @@ from time import sleep
 from datetime import datetime
 
 
+
+if len(sys.argv) != 4:
+    print("Usage: python3 run_srrip.py policy_file benchmark_file output_name")
+    print("Error: Incorrect number of arguments provided...")
+    sys.exit(1)
+
 policy = sys.argv[1]
 bench_list = sys.argv[2]
-root_dir = "../Run_benchmarks/" 
-after_dir = "SRRIP/" 
+name = sys.argv[3]
 
+root_dir = "../Run_workloads_with_policy/" 
+#after_dir = f"SRRIP_BEST_PERSONAL_{bench_list}"
+# after_dir = "SRRIP_BEST_GLOBAL_VALIDATION"
+after_dir = f"{name}"
 # Change working directory to the script's directory
 script_dir = os.path.dirname(os.path.realpath(sys.argv[0]))
 os.chdir(script_dir)
-error = open(f"../Run_benchmarks/SRRIP/error.out", 'a')
+os.makedirs(f"../Run_workloads_with_policy/{after_dir}/", exist_ok=True)
+error = open(f"../Run_workloads_with_policy/{after_dir}/error.out", 'a')
 
 # Create a bash file
-os.makedirs(f"../Run_benchmarks/SRRIP/", exist_ok=True)
-sbatch = open(f"../Run_benchmarks/SRRIP/batch" + ".sh", 'w')
+sbatch = open(f"../Run_workloads_with_policy/{after_dir}/batch" + ".sh", 'w')
 
 
 
@@ -76,18 +85,15 @@ with open(bench_list, 'r') as f:
     lines = [line.strip() for line in f if line.strip()]
 
 num_benchmarks = len(lines)
-
 colon_separated = ":".join(lines)
 
-with open(f"../Run_benchmarks/SRRIP/benchmarks.txt", 'w') as bfile:
+with open(f"../Run_workloads_with_policy/{after_dir}/benchmarks.txt", 'w') as bfile:
     bfile.write(colon_separated)
 
 
 batch_script = "RRIP_BATCH_RUN"
 switch_script = "RRIP_RUN"
-# Get the ID that GeST gave to the individual
 myID = 1 
-# Command that allows us to run the simulations on the cluster
 batch_command = (
     f"sbatch --array=1-{num_benchmarks} "
     f"--output=/dev/null --error=/dev/null "
@@ -109,8 +115,8 @@ sbatch.close()
 
 # Write in the error.out file the time the simumation/s have started, make the batch file executable and then run it
 error.write("Simulations " + "started at " + datetime.now().strftime("%H:%M:%S") + "\n")
-subprocess.call("chmod u+x " + f"../Run_benchmarks/SRRIP/batch" + ".sh", shell=True)
-subprocess.call(f"../Run_benchmarks/SRRIP/batch" + ".sh", shell=True)
+subprocess.call("chmod u+x " + f"../Run_workloads_with_policy/{after_dir}/batch" + ".sh", shell=True)
+subprocess.call(f"../Run_workloads_with_policy/{after_dir}/batch" + ".sh", shell=True)
 
 # Close the error file
 error.close()
