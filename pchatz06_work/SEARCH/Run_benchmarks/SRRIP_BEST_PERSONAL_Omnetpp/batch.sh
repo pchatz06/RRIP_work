@@ -1,0 +1,1 @@
+sbatch --array=1-1 --output=/dev/null --error=/dev/null --export=ALL,script=RRIP_RUN,plist=1113230211132302,dplist=1103030211030302,demmask=4044104440441044,id='1-1',root_dir=../Run_benchmarks/,after_dir=SRRIP_BEST_PERSONAL_Omnetpp RRIP_BATCH_RUN

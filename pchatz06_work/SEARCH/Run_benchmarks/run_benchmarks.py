@@ -41,7 +41,7 @@ with open(benchmarks_file, 'r') as file:
 commands = []
 for benchmark in benchmarks:
     out_file = os.path.join(output_dir, f"{benchmark}.out")
-    cmd = f"{binary_path} -warmup_instructions 100000000 -simulation_instructions 500000000 -traces /mnt/beegfs/iconst01/spec2017/{benchmark}.trace.gz >& {out_file}"
+    cmd = f"{binary_path} -warmup_instructions 100000000 -simulation_instructions 100000000 -traces /mnt/beegfs/iconst01/spec2017/{benchmark}.trace.gz >& {out_file}"
     commands.append(cmd)
 
 # === Generate SLURM script ===

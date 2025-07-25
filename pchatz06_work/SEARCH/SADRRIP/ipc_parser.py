@@ -24,21 +24,19 @@ folder = folder_list[0]
 # Assume lru_baseline is available as in your snippet
 # For demonstration, let's mock it
 lru_baseline = {
-    "gcc_r" : 0.453,
-    "mcf_r" : 0.529,
+    "gcc_r" : 0.3751,
+    "mcf_r" : 0.3382,
     "cactuBSSN_r" : 0.8389,
     "namd_r" : 1.4088,
     "parest_r" : 0.8258,
-    "lbm_r" : 0.8614,
+    "lbm_r" : 0.5297,
     "omnetpp_r" : 0.2437,
-    "wrf_r" : 1.1651,
-    "cam4_r" : 0.7568,
+    "wrf_r" : 0.828,
+    "cam4_r" : 0.7362,
     "fotonik3d_r" : 0.6822,
     "roms_r" : 0.9455,
-    "xz_r" : 0.6539
+    "xz_r" : 0.6097 
 }
-
-INSTRUCTIONS = 150000000
 
 # --- 1. Process Benchmarks ---
 benchmarks_raw = bench_list.split(":")
@@ -51,7 +49,6 @@ for benchmark_full_name in benchmarks_raw:
     input_name = parts[3]
     region_name = parts[4]
     
-    # Extract normalized weight
     try:
         
         match = re.search(r'w_\d+\.\d+_(\d+\.\d+)', benchmark_full_name)

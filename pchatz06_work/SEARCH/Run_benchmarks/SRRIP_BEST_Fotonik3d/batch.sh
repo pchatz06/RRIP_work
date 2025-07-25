@@ -1,0 +1,1 @@
+sbatch --array=1-1 --output=/dev/null --error=/dev/null --export=ALL,script=RRIP_RUN,plist=2323230223232302,dplist=1303030213030302,demmask=4041100440411004,id='1-1',root_dir=../Run_benchmarks/,after_dir=SRRIP_BEST_Fotonik3d RRIP_BATCH_RUN

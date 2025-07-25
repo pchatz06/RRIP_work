@@ -18,9 +18,9 @@ from Individual import Individual
 from Instruction import Instruction
 from Operand import Operand
 
-plot_all_individuals = True
-plot_best_individuals = True
-plot_99_percentile_individuals = True
+plot_all_individuals = False
+plot_best_individuals = False
+plot_99_percentile_individuals = False
 
 
 
@@ -130,26 +130,26 @@ def main():
         print("No local path provided")
 
 
-    baseline_ipc = {
-        "x264": 1.372, "cactuBSSN": 0.761, "Fotonik3d": 0.621, "Gcc": 0.353, 
-        "Cam4": 0.725, "Xz": 0.894, "Omnetpp": 0.246, "Roms": 1.079, 
-        "Blender": 0.661, "Mcf": 0.400, "Wrf": 0.823, "Lbm": 0.652, 
-        "Parest": 0.935, "Xalancbmk": 0.395
-    }
+    # baseline_ipc = {
+    #     "x264": 1.372, "cactuBSSN": 0.761, "Fotonik3d": 0.621, "Gcc": 0.353, 
+    #     "Cam4": 0.725, "Xz": 0.894, "Omnetpp": 0.246, "Roms": 1.079, 
+    #     "Blender": 0.661, "Mcf": 0.400, "Wrf": 0.823, "Lbm": 0.652, 
+    #     "Parest": 0.935, "Xalancbmk": 0.395
+    # }
     good_SRRIP_ipc = {
-        "Blender": 1.0137, "Bwaves": 1.0001, "Cam4": 1.0085, "CactuBSSN": 0.9926,
+        "Blender": 1.0137, "Bwaves": 1.0001, "Cam4": 1.0085, "cactuBSSN": 0.9926,
         "Exchange": 1.0003, "Fotonik3d": 0.9985, "Gcc": 1.0010, "Imagick": 0.9993,
         "Lbm": 1.0705, "Leela": 1.0007, "Mcf": 1.0042, "Omnetpp": 1.0071,
         "Parest": 1.0958, "Perlbench": 0.9991, "Povray": 0.9999, "Roms": 0.9709,
         "Wrf": 1.0035, "Xalancbmk": 1.0973, "x264": 0.9951, "Xz": 1.0064
     }
-    # baseline_ipc = {
-    #     "Blender": 0.661, "Bwaves": 1.016, "Cam4": 0.725, "cactuBSSN": 0.761,
-    #     "Exchange": 1.127, "Gcc": 0.353, "Lbm": 0.652, "Mcf": 0.400,
-    #     "Parest": 0.935, "Povray": 0.356, "Wrf": 0.823, "Xalancbmk": 0.395,
-    #     "Fotonik3d": 0.621, "Imagick": 2.193, "Leela": 0.548, "Omnetpp": 0.246,
-    #     "Perlbench": 0.448, "Roms": 1.079, "x264": 1.372, "Xz": 0.894
-    # }
+    baseline_ipc = {
+        "Blender": 0.661, "Bwaves": 1.016, "Cam4": 0.725, "cactuBSSN": 0.761,
+        "Exchange": 1.127, "Gcc": 0.353, "Lbm": 0.652, "Mcf": 0.400,
+        "Parest": 0.935, "Povray": 0.356, "Wrf": 0.823, "Xalancbmk": 0.395,
+        "Fotonik3d": 0.621, "Imagick": 2.193, "Leela": 0.548, "Omnetpp": 0.246,
+        "Perlbench": 0.448, "Roms": 1.079, "x264": 1.372, "Xz": 0.894
+    }
 
     speed_up_per_workload_of_best_global_policy = []
     speed_up_per_workload_of_personal_best_global_policy = []
@@ -188,6 +188,7 @@ def main():
         pop=Population([]);
         best_global_avg = -1
         generation_counter = 1
+        # individuals_all = []
         for f in files:
             input=open(BENCH_RES_DIR+f,"rb");
             pop=pickle.load(input);
@@ -196,6 +197,7 @@ def main():
             best_global_avg = best
             speed_up_best_of_each_gen.append(float(best.getFitness()));    
             for indiv in pop.individuals:
+                # individuals_all.append(indiv)
                 speed_up_all_indivs.append([float(indiv.getFitness()), generation_counter])
             
             generation_counter = generation_counter + 1
@@ -263,7 +265,12 @@ def main():
                     # for ind_id, ipc in ipc_results:
                     #     print(f"Individual {ind_id}: {ipc}")
                     speed_up_best_of_each_gen.append(float(ipc_results[0][1])/float(base_ipc))
-
+                    # print(f"Searching for personal best... {benchmark}")
+                    # for i in individuals_all:
+                    #     if ipc_results[0][0] == i.myId:
+                    #         with open(f"SEARCH/SADRRIP/personal_best_global_policy/{benchmark}.txt", 'w') as pers_file:
+                    #            pers_file.write(str(i)) 
+                    
                     for i in range(len(ipc_results)):
                         speed_up_all_indivs.append([float(ipc_results[i][1])/float(base_ipc), target_generation])
                         if ipc_results[i][0] == best_global_avg.myId:
@@ -407,7 +414,7 @@ def main():
     print("global_best:", values1)
     print("global_personal_best:", values2)
     print("local_best:", values3)
-
+    print("good_srrip:", values4)
     # X axis
     x = np.arange(len(benchmarks))
     width = 0.2

@@ -1,0 +1,1 @@
+sbatch --array=1-232 --output=/dev/null --error=/dev/null --export=ALL,script=RRIP_RUN,plist=3333323233333232,dplist=3333323233333232,demmask=4044404440444044,id='1-232',root_dir=../Run_workloads_with_policy/,after_dir=GOOD_SRRIP RRIP_BATCH_RUN

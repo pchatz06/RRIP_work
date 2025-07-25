@@ -8,6 +8,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 '''
+import os
 import random
 from time import sleep
 import subprocess
@@ -36,25 +37,44 @@ class MeasurementIPC(Measurement):
         execution_command = "cd ../../SADRRIP ; python3 RunSimFromGeST.py " + str(generation) + " " + str(self.root_dir) + " " + str(self.after_dir) + " " + str(self.bench_list) + f" >> ../BENCH_DIR/{self.root_dir}/{self.after_dir}/trash.txt"
         subprocess.run(execution_command, shell=True)
 
-        sleep(200)
-        # print("Checking if job is finshed after 60 min")
+        sleep(100)
+        benchmarks = self.bench_list.split(":")
+        
+        if generation > 1:
+            threshold_to_reach = (50 * len(benchmarks)) + (51 * len(benchmarks) * (generation - 1))
+        else:
+            threshold_to_reach = 50 * len(benchmarks)
+
+        folder_list = os.listdir(f'/home/pchatz06/RRIP_work/pchatz06_work/SEARCH/BENCH_DIR/{self.root_dir}/{self.after_dir}/Results')
+
         while True:
-            output = subprocess.check_output("squeue -u pchatz06 | wc -l", shell=True)
-            output = output.decode().replace("\n", "")
-            # print(output)
-            if output == "1":
+            counter = 0
+            for folder in folder_list:
+                print(folder)            
+                for benchmark in benchmarks:
+                    print(benchmark)
+                    output_filename = f"{benchmark}.out"
+                    champsim_full_filename = f"/home/pchatz06/RRIP_work/pchatz06_work/SEARCH/BENCH_DIR/{self.root_dir}/{self.after_dir}/Results/" + folder + "/" + output_filename
+
+                    with open(champsim_full_filename, 'r') as f:
+                        for line in f:
+                            if "Finished CPU" in line and "IPC:" in line:
+                                counter = counter + 1
+                                break;
+
+            if counter == threshold_to_reach:
                 break
             else:
-                # print("Jobs not finished there are still " + str(output) + "more jobs")
-                sleep(100)
-
+                print(f"Finished {counter} out of {threshold_to_reach}.")
+                sleep(10)
+        
     def GetMeasurement(self, generation, myID):
 
         output_command = "cd ../../SADRRIP ; python3 ipc_parser.py " + str(generation) + " " + str(myID) + " " + str(self.root_dir) + " " + str(self.after_dir) + " " + str(self.bench_list)
         ipc = subprocess.check_output(output_command, shell=True)
         ipc = ipc.decode().replace("\n", "")
         # print("Average IPC of individuals is " + ipc)
-
+        
         measurements = [];
         measurements.append(ipc);
         return measurements;

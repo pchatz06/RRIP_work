@@ -28,4 +28,5 @@ for filename in os.listdir(output_dir):
 
 # Print results
 for ipc_res in ipc_results:
-    print(ipc_res)
+    print(f"\"{ipc_res[0].split('.')[0]}\", {ipc_res[1]},")
+

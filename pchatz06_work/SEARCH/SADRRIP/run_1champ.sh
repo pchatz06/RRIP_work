@@ -56,7 +56,7 @@ set outp=$RESULTS/$rdir/$trace.out
 
 #echo $outp
 
-./bin/$binary -warmup_instructions ${n_warm}000000 -simulation_instructions ${n_sim}000000 -rrip_policies $option -dirty_rrip_policies $d_option -psel_width $pso -psel_mask $mask -hit_mask $hit -dsalgo $dsalgo -window_size $window -sr_thr $srt -br_thr $brt -boost $boost -demote_mask $dem -traces ${TRACE_DIR}${trace} >& $outp
+./bin/$binary -warmup_instructions ${n_warm}000 -simulation_instructions ${n_sim}000 -rrip_policies $option -dirty_rrip_policies $d_option -psel_width $pso -psel_mask $mask -hit_mask $hit -dsalgo $dsalgo -window_size $window -sr_thr $srt -br_thr $brt -boost $boost -demote_mask $dem -traces ${TRACE_DIR}${trace} >& $outp
 
 end
 end

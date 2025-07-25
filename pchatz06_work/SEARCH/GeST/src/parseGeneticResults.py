@@ -18,8 +18,30 @@ from Instruction import Instruction
 from Operand import Operand
 import re;
 
-
-path = "/home/pchatz06/RRIP_work/pchatz06_work/SEARCH/BENCH_DIR/14-18-55-M2-Onepoint-local/Bwaves/GeST_Results/" 
+spec_benchmarks = [
+    "Blender",
+    "Bwaves",
+    "Cam4",
+    "cactuBSSN",
+    "Exchange",
+    "Gcc",
+    "Lbm",
+    "Mcf",
+    "Parest",
+    "Povray",
+    "Wrf",
+    "Xalancbmk",
+    "Fotonik3d",
+    "Imagick",
+    "Leela",
+    "Omnetpp",
+    "Perlbench",
+    "Roms",
+    "x264",
+    "Xz"
+]
+# for benchmark in spec_benchmarks:
+path = f"/home/pchatz06/RRIP_work/pchatz06_work/SEARCH/BENCH_DIR/557.xz_r-25-14-45-M5-Onepoint-global/GeST_Results/"
 files=[]
 for root, dirs, filenames in os.walk(path): #takes as input the dir with the saved state
     for f in filenames:
@@ -37,14 +59,18 @@ print("generation best average");
 insHash={};
 unique_individuals = set()
 counter_gen = 1
+best = ""
 inst = [[] for _ in range(20)]
 for f in files:
     input=open(path+f,"rb");
     pop=pickle.load(input);
     # print(pop)
     input.close();
-    
+    # best = pop.getFittest()
+    # print(best.getFitness())
     for indiv in pop.individuals:
+        #print(indiv.myId, indiv.getFitness(), end = " ")
+        print(indiv.getFitness())
     #    print(counter_gen, indiv.getFitness())
         # print(str(indiv))
         # print(indiv.myId)
@@ -57,19 +83,22 @@ for f in files:
         
         # print(indiv.myId)
         count_ins = 0
-    #    for ins in indiv.sequence:
-    #        # print(ins.operands[0])
-    #        inst[count_ins].append(str(ins.operands[0]))
-    #        count_ins = count_ins + 1
-
+        for ins in indiv.sequence:
+        #        print(ins.operands[0])
+           # inst[count_ins].append(str(ins.operands[0]))
+            #print(str(ins.operands[0])[1], end=" ")
+            count_ins = count_ins + 1
+       # print(inst)
+       # print()
     # print(pop.getSize())
-    print("Unique individuals:", len(unique_individuals)) 
+    # print("Unique individuals:", len(unique_individuals)) 
     counter_gen = counter_gen + 1  
     #print(pop.getSize()) 
     # print(str(columns[-1])+" "+str(round(float(best.getFitness()),6))+" "+str(round(float(average),6))  );
-#print (allKeys);
-#for i in range(20):
+# with open(f"../../SADRRIP/best_local_plocies/{benchmark}.txt", 'w') as pol:
+#     pol.write(str(best))
+# for i in range(20):
 #    print(inst[i])
-
+print(str(best))
 print("end of generation best average");
 
